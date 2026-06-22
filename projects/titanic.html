@@ -5,130 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Titanic Machine Learning Pipeline project by Dan Kuenkas." />
   <title>Titanic Machine Learning Pipeline | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=4" />
+  <link rel="stylesheet" href="../styles.css?v=6" />
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="site-bg">
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="orb orb-three"></div>
-    <div class="noise"></div>
+  <div class="progress-bar" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <div class="background-stage">
+    <div class="grid-layer"></div>
+    <div class="grain-layer"></div>
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    <div class="shape shape-c"></div>
   </div>
 
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html#top">
-        <span class="brand-mark">DK</span>
-        <span>Dan Kuenkas</span>
-      </a>
+  <nav class="topbar">
+    <a class="logo" href="../index.html#top">
+      <span>DK</span>
+      <strong>Dan Kuenkas</strong>
+    </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+    <div class="desktop-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
 
-      <div class="nav-links" id="navLinks">
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <span>Menu</span>
+      <i></i>
+    </button>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-panel">
+      <div class="menu-head">
+        <span>Navigation</span>
+        <button class="menu-close" id="menuClose" type="button">Close</button>
+      </div>
+      <div class="menu-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#skills">Skills</a>
         <a href="../index.html#contact">Contact</a>
       </div>
+      <div class="menu-socials">
+        <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:danku2001@gmail.com">Email</a>
+      </div>
     </div>
-  </nav>
+  </div>
 
   <header class="project-hero" id="top">
-    <div class="container">
-      <div class="eyebrow reveal">
-        <span class="pulse-dot"></span>
-        Machine Learning · Data Processing · Evaluation
-      </div>
-      <h1 class="reveal delay-1">Titanic Machine Learning Pipeline</h1>
-      <p class="hero-subtitle reveal delay-2">A supervised learning project for predicting Titanic passenger survival.</p>
+    <p class="small-title reveal">Machine Learning · Data Processing · Evaluation</p>
+    <h1 class="reveal delay-1">Titanic Machine Learning Pipeline</h1>
+    <p class="reveal delay-2">A supervised learning project for predicting Titanic passenger survival.</p>
 
-      <div class="tags reveal delay-2">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>Scikit-learn</span>
-            <span>Random Forest</span>
-            <span>Logistic Regression</span>
-            <span>GridSearchCV</span>
-      </div>
+    <div class="work-tags reveal delay-2">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Scikit-learn</span>
+          <span>Random Forest</span>
+          <span>Logistic Regression</span>
+          <span>GridSearchCV</span>
+    </div>
 
-      <div class="hero-actions reveal delay-2">
-        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
-        <a class="btn primary magnetic" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">Open GitHub</a>
-      </div>
+    <div class="page-actions reveal delay-3">
+        <a href="../index.html#projects">Back to projects</a>
+        <a href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">Open GitHub</a>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container case-layout">
+      <div class="case-layout">
         <aside class="case-card reveal">
           <h2>Quick facts</h2>
           <div class="fact-list">
-            <div class="fact">
-              <strong>Project type</strong>
-              <span>Machine learning assignment</span>
-            </div>
-            <div class="fact">
-              <strong>Main stack</strong>
-              <span>Python, Pandas, Scikit-learn</span>
-            </div>
-            <div class="fact">
-              <strong>Focus</strong>
-              <span>ML workflow and evaluation</span>
-            </div>
-            <div class="fact">
-              <strong>Repository</strong>
-              <span>Public GitHub project</span>
-            </div>
+          <div class="fact">
+            <strong>Project type</strong>
+            <span>Machine learning assignment</span>
+          </div>
+          <div class="fact">
+            <strong>Main stack</strong>
+            <span>Python, Pandas, Scikit-learn</span>
+          </div>
+          <div class="fact">
+            <strong>Focus</strong>
+            <span>ML workflow and evaluation</span>
+          </div>
+          <div class="fact">
+            <strong>Repository</strong>
+            <span>Public GitHub project</span>
+          </div>
           </div>
         </aside>
 
         <div class="case-stack">
-          <article class="case-card reveal">
-            <h2>Problem / Goal</h2>
-            <p class="muted">The goal was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
-          </article>
-          <article class="case-card reveal">
-            <h2>Key Features</h2>
-            <ul class="clean-list">
-              <li>Exploratory Data Analysis.</li>
-              <li>Missing-value handling.</li>
-              <li>Feature engineering, including FamilySize and FarePerPerson.</li>
-              <li>Random Forest and Logistic Regression models.</li>
-              <li>Hyperparameter tuning with GridSearchCV.</li>
-              <li>Evaluation using F1 Score and confusion matrix.</li>
-            </ul>
-          </article>
-          <article class="case-card reveal">
-            <h2>Technical Highlights</h2>
-            <ul class="clean-list">
-              <li>Built a full ML workflow from preprocessing to evaluation.</li>
-              <li>Compared multiple models.</li>
-              <li>Used feature engineering to improve the dataset representation.</li>
-              <li>Evaluated performance using classification metrics.</li>
-            </ul>
-          </article>
-          <article class="case-card reveal">
-            <h2>What I Learned</h2>
-            <p class="muted">This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
-          </article>
+        <article class="case-card reveal">
+          <h2>Problem / Goal</h2>
+          <p>The goal was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
+        </article>
+        <article class="case-card reveal">
+          <h2>Key Features</h2>
+          <ul>
+            <li>Exploratory Data Analysis.</li>
+            <li>Missing-value handling.</li>
+            <li>Feature engineering, including FamilySize and FarePerPerson.</li>
+            <li>Random Forest and Logistic Regression models.</li>
+            <li>Hyperparameter tuning with GridSearchCV.</li>
+            <li>Evaluation using F1 Score and confusion matrix.</li>
+          </ul>
+        </article>
+        <article class="case-card reveal">
+          <h2>Technical Highlights</h2>
+          <ul>
+            <li>Built a full ML workflow from preprocessing to evaluation.</li>
+            <li>Compared multiple models.</li>
+            <li>Used feature engineering to improve the dataset representation.</li>
+            <li>Evaluated performance using classification metrics.</li>
+          </ul>
+        </article>
+        <article class="case-card reveal">
+          <h2>What I Learned</h2>
+          <p>This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
+        </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Dan Kuenkas</span>
-      <a href="../index.html#projects">Back to projects</a>
-    </div>
+    <span>© <span id="year"></span> Dan Kuenkas</span>
+    <a href="../index.html#projects">Back to projects</a>
   </footer>
 
-  <script src="../script.js?v=4"></script>
+  <script src="../script.js?v=6"></script>
 </body>
 </html>
