@@ -3,402 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dan Kuenkas portfolio - software, backend, full-stack, AI security, and technical analysis projects." />
+  <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
   <title>Dan Kuenkas | Software Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="site-bg">
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="orb orb-three"></div>
-    <div class="noise"></div>
+  <div class="progress-bar" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <div class="background-stage">
+    <div class="grid-layer"></div>
+    <div class="grain-layer"></div>
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    <div class="shape shape-c"></div>
   </div>
 
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">DK</span>
-        <span>Dan Kuenkas</span>
-      </a>
+  <nav class="topbar">
+    <a class="logo" href="#top" aria-label="Go to top">
+      <span>DK</span>
+      <strong>Dan Kuenkas</strong>
+    </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+    <div class="desktop-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-      <div class="nav-links" id="navLinks">
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <span>Menu</span>
+      <i></i>
+    </button>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-panel">
+      <div class="menu-head">
+        <span>Navigation</span>
+        <button class="menu-close" id="menuClose" type="button">Close</button>
+      </div>
+      <div class="menu-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
+      <div class="menu-socials">
+        <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:danku2001@gmail.com">Email</a>
+      </div>
     </div>
-  </nav>
+  </div>
 
   <header class="hero" id="top">
-    <div class="container hero-grid">
-      <section class="hero-copy reveal">
-        <div class="eyebrow">
-          <span class="pulse-dot"></span>
-          Computer Science Student · NOC Analyst · Software Projects
+    <div class="hero-inner">
+      <div class="hero-kicker reveal">
+        <span class="live-dot"></span>
+        Computer Science Student · Software Development · Backend & Full-Stack Projects
+      </div>
+
+      <h1 class="hero-title reveal delay-1">
+        Building practical software systems with clean APIs, data workflows, and AI-security thinking.
+      </h1>
+
+      <p class="hero-text reveal delay-2">
+        I am a Computer Science student building backend, full-stack, data, and AI-security projects.
+        I am looking for software development opportunities where I can work with APIs, databases,
+        systems, and real-world product problems.
+      </p>
+
+      <div class="hero-actions reveal delay-3">
+        <a class="primary-action" href="#projects">View selected work</a>
+        <a class="secondary-action" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+        <a class="secondary-action" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <aside class="hero-status reveal delay-2">
+      <div class="status-card tilt-card">
+        <span class="status-label">Current focus</span>
+        <div class="status-lines">
+          <p><b>01</b> Backend systems and REST APIs</p>
+          <p><b>02</b> Full-stack project architecture</p>
+          <p><b>03</b> AI agents and security analysis</p>
+          <p><b>04</b> Data and technical analysis workflows</p>
         </div>
+      </div>
+    </aside>
 
-        <h1>Building practical software systems with backend, full-stack, AI, and security focus.</h1>
-
-        <p class="hero-subtitle">
-          I am a Computer Science student and NOC Analyst with hands-on experience in production monitoring,
-          technical troubleshooting, full-stack projects, backend services, data workflows, and AI-based security analysis.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary magnetic" href="#projects">Explore Projects</a>
-          <a class="btn magnetic" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn magnetic" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost magnetic" href="mailto:danku2001@gmail.com">Email Me</a>
-        </div>
-
-        <div class="hero-meta">
-          <span>Israel</span>
-          <span>Software · Data · Technical Analysis</span>
-          <span>Open to junior opportunities</span>
-        </div>
-      </section>
-
-      <aside class="hero-panel reveal delay-1" aria-label="Portfolio highlights">
-        <div class="panel-glow"></div>
-        <div class="terminal-card">
-          <div class="terminal-top">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="terminal-line"><span class="muted-code">focus</span> backend + full-stack</div>
-          <div class="terminal-line"><span class="muted-code">ai</span> LLM agents + security review</div>
-          <div class="terminal-line"><span class="muted-code">ops</span> production monitoring</div>
-          <div class="terminal-line"><span class="muted-code">data</span> analysis + ML workflows</div>
-        </div>
-
-        <div class="metric-grid">
-          <div class="metric-card">
-            <strong>7</strong>
-            <span>Projects</span>
-          </div>
-          <div class="metric-card">
-            <strong>AI</strong>
-            <span>Security + CV</span>
-          </div>
-          <div class="metric-card">
-            <strong>API</strong>
-            <span>Backend Systems</span>
-          </div>
-          <div class="metric-card">
-            <strong>NOC</strong>
-            <span>Production Awareness</span>
-          </div>
-        </div>
-      </aside>
+    <div class="scroll-hint">
+      <span></span>
+      Scroll
     </div>
   </header>
 
+  <section class="marquee" aria-label="Technical focus">
+    <div class="marquee-track">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>Node.js</span>
+      <span>React</span>
+      <span>MySQL</span>
+      <span>MongoDB</span>
+      <span>REST APIs</span>
+      <span>LLM Agents</span>
+      <span>AWS IAM</span>
+      <span>Data Analysis</span>
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>Node.js</span>
+      <span>React</span>
+      <span>MySQL</span>
+      <span>MongoDB</span>
+      <span>REST APIs</span>
+      <span>LLM Agents</span>
+      <span>AWS IAM</span>
+      <span>Data Analysis</span>
+    </div>
+  </section>
+
   <main>
-    <section class="section" id="about">
-      <div class="container split">
-        <div class="section-label reveal">About</div>
-        <div class="section-content reveal delay-1">
-          <h2>Junior developer profile with real production awareness.</h2>
-          <p class="lead">
-            My background combines Computer Science studies, hands-on NOC work, and project-based software development.
-            I build systems that connect frontend, backend, databases, APIs, data analysis, and AI workflows.
+    <section class="section about-section" id="about">
+      <div class="section-shell">
+        <div class="section-number reveal">01</div>
+        <div class="section-main reveal delay-1">
+          <p class="small-title">About</p>
+          <h2>Software development profile with production awareness.</h2>
+          <p class="large-copy">
+            My work combines Computer Science studies, practical software projects, and hands-on experience
+            around production systems. I enjoy building systems that connect frontend, backend, databases,
+            APIs, data analysis, and AI workflows.
           </p>
-          <p class="muted">
-            Through my NOC role, I work around production environments, alerts, logs, dashboards, technical escalation,
-            and operational troubleshooting. That experience helps me think beyond code and understand how systems behave
-            when they are monitored, used, and supported in real environments.
+          <p class="muted-copy">
+            My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards, incidents,
+            and system stability. I use that perspective as an advantage in development, not as the role I am
+            targeting next.
           </p>
 
-          <div class="focus-grid">
-            <article class="focus-card">
-              <span>01</span>
-              <h3>Backend & APIs</h3>
-              <p>Node.js, Express, REST APIs, validation, logging, databases, and service separation.</p>
-            </article>
-            <article class="focus-card">
-              <span>02</span>
-              <h3>Full-Stack Systems</h3>
-              <p>React interfaces connected to backend services and structured data storage.</p>
-            </article>
-            <article class="focus-card">
-              <span>03</span>
-              <h3>AI & Security</h3>
-              <p>LLM agents, AWS IAM policy analysis, automated review flows, and structured reports.</p>
-            </article>
-            <article class="focus-card">
-              <span>04</span>
-              <h3>Data & Analysis</h3>
-              <p>Python, Pandas, Scikit-learn, ML pipelines, and technical analysis workflows.</p>
-            </article>
+          <div class="focus-list">
+            <div class="focus-item reveal">
+              <span>Backend</span>
+              <p>REST APIs, validation, logging, database integration, and service structure.</p>
+            </div>
+            <div class="focus-item reveal delay-1">
+              <span>Full-Stack</span>
+              <p>React interfaces connected to backend services and structured data layers.</p>
+            </div>
+            <div class="focus-item reveal delay-2">
+              <span>AI & Security</span>
+              <p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section projects-section" id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <div class="section-label">Projects</div>
-            <h2>Selected work</h2>
-          </div>
-          <p class="section-note">Strongest projects are placed first for recruiter scanning.</p>
+      <div class="section-shell wide">
+        <div class="section-intro reveal">
+          <p class="small-title">Selected work</p>
+          <h2>Projects built around real engineering problems.</h2>
+          <p class="muted-copy">
+            The strongest projects are shown first. Each project has a focused case-study page with goals,
+            features, technical highlights, and what I learned.
+          </p>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card featured-card reveal">
-            <div class="card-shine"></div>
-            <div class="card-top">
-              <span class="project-type">AI Security</span>
-              <span class="pill hot">Featured</span>
+        <div class="project-showcase">
+          <article class="work-card big tilt-card reveal">
+            <div class="work-meta">
+              <span>AI Security</span>
+              <span>Private</span>
             </div>
             <h3>IAM Policy Security Review Agent</h3>
             <p>
-              Multi-agent AI system for analyzing AWS IAM policies, detecting risky permissions, and generating
-              structured remediation recommendations.
+              Multi-agent AI system for reviewing AWS IAM policies, detecting risky permissions,
+              and generating remediation recommendations.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>Python</span><span>Groq API</span><span>LLM Agents</span><span>AWS IAM</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/iam-policy-agent.html">View Case Study</a>
-              <span class="private-label">Private project</span>
-            </div>
+            <a href="projects/iam-policy-agent.html">Open case study</a>
           </article>
 
-          <article class="project-card featured-card reveal delay-1">
-            <div class="card-shine"></div>
-            <div class="card-top">
-              <span class="project-type">Computer Vision</span>
-              <span class="pill hot">Featured</span>
+          <article class="work-card big tilt-card reveal delay-1">
+            <div class="work-meta">
+              <span>Computer Vision</span>
+              <span>Featured</span>
             </div>
             <h3>HelmetGuard</h3>
             <p>
-              Construction-site helmet classification project combining synthetic images, real data, fine-tuning,
-              and comparison of ResNet18 and Vision Transformer models.
+              Construction-site safety classification using synthetic images, real data, and fine-tuned
+              vision models.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>Python</span><span>Stable Diffusion</span><span>ResNet18</span><span>ViT</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/genai.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/genai.html">Open case study</a>
           </article>
 
-          <article class="project-card reveal delay-2">
-            <div class="card-top">
-              <span class="project-type">Full Stack</span>
-              <span class="pill">React + API</span>
+          <article class="work-card tilt-card reveal delay-2">
+            <div class="work-meta">
+              <span>Full Stack</span>
+              <span>React + API</span>
             </div>
             <h3>Campus Sensors & Shading System</h3>
             <p>
-              Smart-campus platform for monitoring sensors, managing infrastructure components, and controlling
-              shading behavior through frontend, backend, and database layers.
+              Smart-campus platform for monitoring sensors and controlling shading behavior.
             </p>
-            <div class="tags">
-              <span>React</span><span>Node.js</span><span>Express</span><span>MySQL</span>
+            <div class="work-tags">
+              <span>React</span><span>Node.js</span><span>MySQL</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/campus.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/campus.html">Open case study</a>
           </article>
 
-          <article class="project-card reveal">
-            <div class="card-top">
-              <span class="project-type">Java System</span>
-              <span class="pill">Client-Server</span>
+          <article class="work-card tilt-card reveal">
+            <div class="work-meta">
+              <span>Java</span>
+              <span>Client-Server</span>
             </div>
             <h3>Store Network System</h3>
             <p>
-              Java client-server system simulating a multi-branch clothing store network with roles, inventory,
-              reports, sockets, threads, and design patterns.
+              Java system simulating a clothing store network with roles, inventory, reports, sockets,
+              and threads.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>Java</span><span>OOP</span><span>Sockets</span><span>Threads</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/store.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/store.html">Open case study</a>
           </article>
 
-          <article class="project-card reveal delay-1">
-            <div class="card-top">
-              <span class="project-type">Backend API</span>
-              <span class="pill">Testing</span>
+          <article class="work-card tilt-card reveal delay-1">
+            <div class="work-meta">
+              <span>Backend</span>
+              <span>Testing</span>
             </div>
             <h3>Cost Manager API</h3>
             <p>
-              Backend expense-management system with users, expenses, monthly reports, logging, validation,
-              MongoDB integration, and automated API tests.
+              Expense-management backend with services, reports, validation, logging, MongoDB,
+              and API tests.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Jest</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/cost-manager.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/cost-manager.html">Open case study</a>
           </article>
 
-          <article class="project-card reveal delay-2">
-            <div class="card-top">
-              <span class="project-type">Game Logic</span>
-              <span class="pill">Client-Server</span>
+          <article class="work-card tilt-card reveal delay-2">
+            <div class="work-meta">
+              <span>Game Logic</span>
+              <span>Client-Server</span>
             </div>
-            <h3>Connect Four Client-Server Game</h3>
+            <h3>Connect Four Game</h3>
             <p>
-              Two-player Connect Four game with room creation, turn handling, server-side game-state management,
-              and win/draw detection.
+              Two-player game with room creation, turn handling, server-side state, and win detection.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>JavaScript</span><span>Node.js</span><span>MySQL</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/connect4.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/connect4.html">Open case study</a>
           </article>
 
-          <article class="project-card reveal">
-            <div class="card-top">
-              <span class="project-type">Machine Learning</span>
-              <span class="pill">Data</span>
+          <article class="work-card tilt-card reveal">
+            <div class="work-meta">
+              <span>Machine Learning</span>
+              <span>Data</span>
             </div>
             <h3>Titanic ML Pipeline</h3>
             <p>
-              Supervised learning workflow covering data cleaning, feature engineering, model training,
-              hyperparameter tuning, and evaluation.
+              Supervised learning workflow with data cleaning, feature engineering, training,
+              tuning, and evaluation.
             </p>
-            <div class="tags">
+            <div class="work-tags">
               <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
             </div>
-            <div class="card-actions">
-              <a class="card-link" href="projects/titanic.html">View Case Study</a>
-              <a class="card-link subtle" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
-            </div>
+            <a href="projects/titanic.html">Open case study</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="experience">
-      <div class="container split">
-        <div class="section-label reveal">Experience</div>
-        <div class="section-content reveal delay-1">
-          <h2>Production monitoring and technical analysis.</h2>
-          <article class="timeline-card">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-top">
+    <section class="section experience-section" id="experience">
+      <div class="section-shell">
+        <div class="section-number reveal">02</div>
+        <div class="section-main reveal delay-1">
+          <p class="small-title">Experience</p>
+          <h2>Production monitoring experience used as a development advantage.</h2>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-year">2026 - Present</span>
+              <div>
                 <h3>NOC Analyst · Swiftness</h3>
-                <span>Jan 2026 - Present</span>
+                <ul>
+                  <li>Monitor production systems and operational environments in real time.</li>
+                  <li>Investigate alerts, logs, dashboards, incidents, and service issues.</li>
+                  <li>Escalate technical issues with clear operational context.</li>
+                  <li>Analyze recurring patterns and support system stability.</li>
+                </ul>
               </div>
-              <ul class="clean-list">
-                <li>Monitor production systems and operational environments in real time.</li>
-                <li>Investigate incidents, alerts, logs, dashboards, and service issues.</li>
-                <li>Escalate technical issues to relevant teams with clear operational context.</li>
-                <li>Analyze recurring operational patterns and support system stability.</li>
-              </ul>
-            </div>
-          </article>
+            </article>
 
-          <article class="timeline-card education-card">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-top">
+            <article class="timeline-item reveal delay-1">
+              <span class="timeline-year">2024 - Present</span>
+              <div>
                 <h3>B.Sc. Computer Science · HIT</h3>
-                <span>2024 - Present</span>
+                <p>
+                  Academic foundation in algorithms, data structures, databases, machine learning,
+                  OOP, and client-server architecture.
+                </p>
               </div>
-              <p class="muted">
-                Academic foundation in algorithms, data structures, databases, machine learning, OOP,
-                and client-server architecture.
-              </p>
-            </div>
-          </article>
+            </article>
 
-          <article class="timeline-card education-card">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-top">
+            <article class="timeline-item reveal delay-2">
+              <span class="timeline-year">2025</span>
+              <div>
                 <h3>Full-Stack Development · INT & HIT</h3>
-                <span>2025</span>
+                <p>Full-stack development with Node.js and JavaScript.</p>
               </div>
-              <p class="muted">
-                Full-stack development with Node.js and JavaScript.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="direction">
-      <div class="container split">
-        <div class="section-label reveal">Direction</div>
-        <div class="section-content reveal delay-1">
-          <h2>Roles I am targeting</h2>
-          <div class="role-grid">
-            <div class="role-card">Junior Software Developer</div>
-            <div class="role-card">Junior Backend Developer</div>
-            <div class="role-card">Junior Full-Stack Developer</div>
-            <div class="role-card">Data / Technical Analyst</div>
-            <div class="role-card">NOC / SRE-oriented Junior Engineer</div>
-            <div class="role-card">AI / Security Project Roles</div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <div class="section-label">Skills</div>
-            <h2>Technical toolkit</h2>
+    <section class="section direction-section">
+      <div class="section-shell">
+        <div class="section-number reveal">03</div>
+        <div class="section-main reveal delay-1">
+          <p class="small-title">Direction</p>
+          <h2>What I am looking for</h2>
+          <p class="large-copy">
+            I am focused on software development opportunities that fit a Computer Science student with
+            strong project work, production awareness, and motivation to grow in backend, full-stack,
+            data, and AI/security-related development.
+          </p>
+
+          <div class="direction-grid">
+            <span>Software Development Position</span>
+            <span>Backend / API Development</span>
+            <span>Full-Stack Development</span>
+            <span>Data & Technical Analysis</span>
+            <span>Production-Aware Software Teams</span>
+            <span>AI / Security-Oriented Software Projects</span>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="skills-grid">
-          <div class="skill-card reveal">
+    <section class="section skills-section" id="skills">
+      <div class="section-shell wide">
+        <div class="section-intro reveal">
+          <p class="small-title">Skills</p>
+          <h2>Technical toolkit</h2>
+        </div>
+
+        <div class="skill-strip">
+          <div class="skill-block reveal">
             <h3>Programming</h3>
             <p>JavaScript, Python, Java, C, C++, C#</p>
           </div>
-          <div class="skill-card reveal delay-1">
-            <h3>Web Development</h3>
+          <div class="skill-block reveal delay-1">
+            <h3>Web</h3>
             <p>React, Node.js, Express.js, REST APIs, HTML, CSS, Vite</p>
           </div>
-          <div class="skill-card reveal delay-2">
+          <div class="skill-block reveal delay-2">
             <h3>Databases</h3>
             <p>MySQL, SQL, MongoDB, Mongoose</p>
           </div>
-          <div class="skill-card reveal">
+          <div class="skill-block reveal">
             <h3>Data & ML</h3>
             <p>Pandas, Scikit-learn, Matplotlib, Data Processing, Image Classification</p>
           </div>
-          <div class="skill-card reveal delay-1">
-            <h3>Systems & Concepts</h3>
+          <div class="skill-block reveal delay-1">
+            <h3>Systems</h3>
             <p>OOP, Algorithms, Data Structures, Client-Server Architecture, Threads</p>
           </div>
-          <div class="skill-card reveal delay-2">
+          <div class="skill-block reveal delay-2">
             <h3>Security & AI</h3>
             <p>AWS IAM, IAM Policy Analysis, LLM Agents, Groq API, Security Automation</p>
           </div>
-          <div class="skill-card reveal">
+          <div class="skill-block reveal">
             <h3>Tools</h3>
             <p>Git, GitHub, Jupyter Notebook, Google Colab, Monitoring Dashboards</p>
           </div>
-          <div class="skill-card reveal delay-1">
+          <div class="skill-block reveal delay-1">
             <h3>Languages</h3>
             <p>Hebrew - Native, English - High level, Arabic - Advanced</p>
           </div>
@@ -407,31 +401,27 @@
     </section>
 
     <section class="section contact-section" id="contact">
-      <div class="container contact-card reveal">
-        <div>
-          <div class="section-label">Contact</div>
-          <h2>Let’s build something practical.</h2>
-          <p class="muted">
-            I am open to junior software, backend, full-stack, data-analysis, and technical roles.
-            Feel free to reach out by email or view my projects on GitHub.
-          </p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn primary magnetic" href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
-          <a class="btn magnetic" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn magnetic" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="contact-panel reveal">
+        <p class="small-title">Contact</p>
+        <h2>Let’s talk about software projects.</h2>
+        <p>
+          I am looking for software development opportunities focused on backend systems, full-stack
+          applications, APIs, databases, data analysis, and AI/security-oriented projects.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
+          <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Dan Kuenkas</span>
-      <a href="#top">Back to top</a>
-    </div>
+    <span>© <span id="year"></span> Dan Kuenkas</span>
+    <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
