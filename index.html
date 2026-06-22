@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
   <title>Dan Kuenkas | Power Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 </head>
 <body data-page="home">
   <div class="loader" id="loader">
@@ -32,7 +32,7 @@
     <nav class="quick-nav">
       <a href="#projects">Work</a>
       <a href="#about">About</a>
-      <a href="play.html">Let’s play</a>
+      
     </nav>
 
     <div class="top-actions">
@@ -56,8 +56,8 @@
         <a href="#about"><span>03</span> About</a>
         <a href="#experience"><span>04</span> Experience</a>
         <a href="#skills"><span>05</span> Skills</a>
-        <a href="play.html"><span>06</span> Let’s play</a>
-        <a href="#contact"><span>07</span> Contact</a>
+        
+        <a href="#contact"><span>06</span> Contact</a>
       </nav>
       <div class="menu-footer">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
@@ -72,16 +72,15 @@
       <div class="hero-copy">
         <p class="eyebrow reveal">Software Development · Backend · Full-Stack · AI Security</p>
         <h1 class="mega-title reveal delay-1">
-          Practical software. Sharp execution.
+          Building software that solves real problems.
         </h1>
         <p class="hero-text reveal delay-2">
-          Computer Science student building backend, full-stack, data, and AI-security projects.
-          Focused on APIs, databases, technical analysis, and real-world problem solving.
+          Computer Science student focused on backend, full-stack, data, and AI-security projects. I build practical systems around APIs, databases, technical analysis, and real product problems.
         </p>
 
         <div class="hero-actions reveal delay-3">
           <a class="main-cta" href="#projects">See projects</a>
-          <a class="play-cta" href="play.html">Let’s play</a>
+          
           <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -203,14 +202,7 @@
           <p>Supervised learning workflow with preprocessing and evaluation.</p>
           <b>ML</b>
         </a>
-
-        <a class="project-card game-card reveal delay-1 magnetic-card" href="play.html">
-          <span>Bonus</span>
-          <h3>Play Tic-Tac-Toe</h3>
-          <p>Try to beat the portfolio. Win and get a glowing confetti blast.</p>
-          <b>Let’s play</b>
-        </a>
-      </div>
+</div>
     </section>
 
     <section class="section split" id="about">
@@ -340,9 +332,24 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Dan Kuenkas</span>
-    <a href="#top">Back to top</a>
+    <div class="footer-actions">
+      <button class="egg-trigger" id="eggTrigger" type="button" aria-label="Open hidden challenge"></button>
+      <a href="#top">Back to top</a>
+    </div>
   </footer>
 
-  <script src="script.js?v=16"></script>
+  <div class="egg-panel" id="eggPanel" aria-hidden="true">
+    <div class="egg-card">
+      <p class="eyebrow">Hidden challenge unlocked</p>
+      <h2>Think you can beat DanBot?</h2>
+      <p>A tiny game is hidden inside the portfolio. Win and the screen lights up.</p>
+      <div class="egg-actions">
+        <a class="main-cta" href="play.html">Play the challenge</a>
+        <button class="ghost-cta" id="eggClose" type="button">Not now</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=17"></script>
 </body>
 </html>
