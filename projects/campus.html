@@ -1,87 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Sensors | Dan Kuenkas</title>
+  <meta name="description" content="Campus Sensors & Shading System project by Dan Kuenkas." />
+  <title>Campus Sensors & Shading System | Dan Kuenkas</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="container header" style="padding:36px 0 18px;">
-    <div class="badge">Project</div>
-    <h1 style="font-size:34px;">Campus Sensors & Shading System</h1>
-    <p class="subtitle">Full-stack system for managing campus areas and sensors.</p>
+  <header class="header page-header">
+    <div class="container">
+      <span class="badge">Full Stack</span>
+      <h1>Campus Sensors & Shading System</h1>
+      <p class="subtitle">A full-stack smart-campus system for monitoring sensors and controlling shading behavior.</p>
 
-    <div class="mini">
-      <span>Type: Full-Stack</span><span class="dot">•</span>
-      <span>Focus: Backend + DB</span><span class="dot">•</span>
-      <span>Year: 2025</span>
-    </div>
+      <div class="tags">
+          <span>React</span>
+          <span>Vite</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MySQL</span>
+          <span>REST API</span>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary" href="../index.html">Back to Home</a>
-      <a class="btn" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noreferrer">Repo</a>
+      <div class="cta">
+        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
+        <a class="btn" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section" style="border-top:0;">
-      <div class="grid two">
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Overview</h3>
-            <span class="pill">System</span>
-          </div>
-          <p class="muted">
-            A full-stack web application for managing campus areas and sensors. Supports CRUD operations,
-            data visualization, and a MySQL-backed backend.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Tech Stack</h3>
-            <span class="pill">Tools</span>
-          </div>
-          <div class="tags">
-            <span>Node.js</span><span>REST APIs</span><span>React</span><span>MySQL</span>
-          </div>
-          <p class="muted" style="margin-top:10px;">
-            Focused on clean separation between UI, API layer, and data model.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>What I Built</h3>
-            <span class="pill">Scope</span>
-          </div>
+  <main>
+    <section class="section">
+      <div class="container details-grid">
+        <article class="detail-card">
+          <h2>Problem / Goal</h2>
+          <p class="muted">The project simulates a smart-campus system where environmental data such as temperature and light can be monitored across campus areas, and shading behavior can be controlled manually or automatically.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Key Features</h2>
           <ul class="list">
-            <li>Implemented Node.js REST endpoints for managing entities and sensor data.</li>
-            <li>Built React UI components for viewing and managing areas and sensors.</li>
-            <li>Designed MySQL schema for structured storage and efficient queries.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Highlights</h3>
-            <span class="pill">Impact</span>
-          </div>
+              <li>React frontend for managing areas, sensors, and shading controls.</li>
+              <li>Node.js and Express backend with REST API endpoints.</li>
+              <li>MySQL database for persistent data storage.</li>
+              <li>Sensor management features for adding, editing, and deleting sensors.</li>
+              <li>Automatic shading logic based on environmental readings.</li>
+              <li>Manual override for administrators.</li>
+              <li>Responsive dark-themed interface.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>Technical Highlights</h2>
           <ul class="list">
-            <li>Modular structure for maintainability and feature growth.</li>
-            <li>Iterative development with team collaboration and clear responsibilities.</li>
-          </ul>
-        </div>
-
+              <li>Built a full-stack flow from UI to API to database.</li>
+              <li>Modeled realistic smart-campus / IoT-style business logic.</li>
+              <li>Separated frontend and backend responsibilities.</li>
+              <li>Used REST APIs to connect the React client with the backend.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>What I Learned</h2>
+          <p class="muted">This project strengthened my full-stack development skills, especially React frontend structure, Express APIs, MySQL data modeling, and connecting user actions to backend logic.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Possible Improvements</h2>
+          <ul class="list">
+              <li>Add authentication for admin users.</li>
+              <li>Add charts for sensor history.</li>
+              <li>Add an ERD diagram and API examples.</li>
+              <li>Add deployment instructions.</li>
+            </ul>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Dan Kuenkas</span>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
   </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
