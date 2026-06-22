@@ -1,3 +1,4 @@
+document.documentElement.classList.add("js");
 const yearElement = document.getElementById("year");
 const progress = document.getElementById("scrollProgress");
 const navToggle = document.getElementById("navToggle");
