@@ -1,87 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Store Network System project by Dan Kuenkas." />
   <title>Store Network System | Dan Kuenkas</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="container header" style="padding:36px 0 18px;">
-    <div class="badge">Project</div>
-    <h1 style="font-size:34px;">Store Network System</h1>
-    <p class="subtitle">Team academic Java client-server system.</p>
+  <header class="header page-header">
+    <div class="container">
+      <span class="badge">Java Client-Server</span>
+      <h1>Store Network System</h1>
+      <p class="subtitle">A Java client-server system that simulates a multi-branch clothing store network.</p>
 
-    <div class="mini">
-      <span>Type: Java</span><span class="dot">•</span>
-      <span>Focus: OOP + Client-Server</span><span class="dot">•</span>
-      <span>Year: 2025</span>
-    </div>
+      <div class="tags">
+          <span>Java</span>
+          <span>OOP</span>
+          <span>Sockets</span>
+          <span>Threads</span>
+          <span>JSON</span>
+          <span>Design Patterns</span>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary" href="../index.html">Back to Home</a>
-      <a class="btn" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noreferrer">Repo</a>
+      <div class="cta">
+        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
+        <a class="btn" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section" style="border-top:0;">
-      <div class="grid two">
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Overview</h3>
-            <span class="pill">System</span>
-          </div>
-          <p class="muted">
-            Academic project simulating a multi-branch store network, designed as a client-server system with
-            clear roles and structured flows.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Tech Stack</h3>
-            <span class="pill">Tools</span>
-          </div>
-          <div class="tags">
-            <span>Java</span><span>OOP</span><span>Client-Server</span>
-          </div>
-          <p class="muted" style="margin-top:10px;">
-            Focused on modular design and maintainable code structure.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>My Contribution</h3>
-            <span class="pill">Scope</span>
-          </div>
+  <main>
+    <section class="section">
+      <div class="container details-grid">
+        <article class="detail-card">
+          <h2>Problem / Goal</h2>
+          <p class="muted">The goal of this academic project was to model a larger business system with multiple branches, employees, customers, inventory, purchases, permissions, reports, and communication between branches.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Key Features</h2>
           <ul class="list">
-            <li>Contributed to backend structure, data flow, and debugging.</li>
-            <li>Applied OOP principles and helped shape modular components.</li>
-            <li>Worked as part of a team with shared responsibility.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>What I Learned</h3>
-            <span class="pill">Impact</span>
-          </div>
+              <li>Server that handles multiple clients using threads.</li>
+              <li>Console-based client application.</li>
+              <li>User authentication and role-based permissions.</li>
+              <li>Duplicate login prevention.</li>
+              <li>Inventory, employee, customer, and purchase management.</li>
+              <li>Reports by branch, product, and category.</li>
+              <li>Inter-branch chat / communication.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>Technical Highlights</h2>
           <ul class="list">
-            <li>How to collaborate on a larger Java codebase.</li>
-            <li>Designing responsibilities across client-server boundaries.</li>
-          </ul>
-        </div>
-
+              <li>Used Java sockets for client-server communication.</li>
+              <li>Applied OOP principles such as inheritance, polymorphism, and interfaces.</li>
+              <li>Used design patterns such as Singleton, Strategy, and Observer.</li>
+              <li>Handled a larger system structure with multiple responsibilities and entities.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>What I Learned</h2>
+          <p class="muted">This project helped me practice Java system design, object-oriented programming, sockets, multithreading, role-based flows, and organizing a larger codebase.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Possible Improvements</h2>
+          <ul class="list">
+              <li>Add screenshots of the console flow.</li>
+              <li>Add a client-server architecture diagram.</li>
+              <li>Add clearer setup instructions.</li>
+              <li>Add unit tests for core business logic.</li>
+            </ul>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Dan Kuenkas</span>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
   </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
