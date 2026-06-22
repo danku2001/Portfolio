@@ -5,32 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
   <title>Dan Kuenkas | Software Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
-  <div class="progress" id="scrollProgress"></div>
-  <div class="page-texture"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg"></div>
 
-  <header class="site-header">
-    <a class="mark" href="#top" aria-label="Go to top">
-      <span class="mark-shape"></span>
-      <span class="mark-name">Dan Kuenkas</span>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-symbol"></span>
+      <span>Dan Kuenkas</span>
     </a>
 
-    <div class="header-actions">
-      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity">Hire me</a>
-      <button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false">
+    <div class="top-actions">
+      <a class="hire-link" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20software%20development%20opportunity.%0D%0A%0D%0A">Hire me</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
         <span class="menu-dot"></span>
         <span>Menu</span>
       </button>
     </div>
   </header>
 
-  <div class="menu-screen" id="menuScreen" aria-hidden="true">
-    <div class="menu-screen-inner">
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-inner">
       <div class="menu-top">
         <span>Navigation</span>
-        <button id="menuClose" type="button">Close</button>
+        <button class="menu-close" id="menuClose" type="button">Close</button>
       </div>
 
       <nav class="menu-nav">
@@ -42,7 +42,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="menu-bottom">
+      <div class="menu-social">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -52,48 +52,50 @@
 
   <main id="top">
     <section class="hero">
-      <div class="side-label">Software portfolio</div>
-
       <div class="hero-copy reveal">
-        <p class="kicker">Computer Science Student · Software Development</p>
-        <h1>Hi, I’m <span>Dan</span>.</h1>
-        <p class="intro">
-          I build practical backend, full-stack, data, and AI-security projects with a focus on APIs, databases, technical analysis, and real-world problem solving.
+        <p class="eyebrow">Computer Science Student · Software Development</p>
+        <h1>Building practical software systems.</h1>
+        <p class="hero-text">
+          I build backend, full-stack, data, and AI-security projects with a focus on APIs,
+          databases, technical analysis, and real-world problem solving.
         </p>
 
         <div class="hero-links">
-          <a href="#projects">View work</a>
+          <a class="primary-link" href="#projects">View work</a>
           <a href="mailto:danku2001@gmail.com">Contact</a>
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1" aria-hidden="true">
-        <div class="portrait-card">
-          <div class="portrait-grid"></div>
-          <svg class="portrait-svg" viewBox="0 0 260 260" role="img" aria-label="Illustrated portrait">
-            <path d="M61 210c13-45 43-63 70-63s58 18 71 63" fill="#b8edf2" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
-            <path d="M78 104c0-43 23-72 54-72s52 29 52 72c0 39-22 70-53 70s-53-31-53-70z" fill="#e8fbfd" stroke="#2c2148" stroke-width="4"/>
-            <path d="M84 88c20-4 53-20 78-46 19 17 27 35 29 55" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
-            <path d="M98 110h33m27 0h-33" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+      <div class="portrait-wrap reveal delay-1">
+        <div class="portrait-card" aria-label="Illustrated portrait with cursor-following eyes">
+          <div class="portrait-pattern"></div>
 
-            <rect x="88" y="96" width="44" height="32" rx="10" fill="rgba(255,255,255,.24)" stroke="#8f56d9" stroke-width="4"/>
-            <rect x="144" y="96" width="44" height="32" rx="10" fill="rgba(255,255,255,.24)" stroke="#8f56d9" stroke-width="4"/>
-            <path d="M132 111h12" stroke="#8f56d9" stroke-width="4" stroke-linecap="round"/>
+          <svg class="portrait-svg" viewBox="0 0 300 300" role="img" aria-label="Illustrated developer portrait">
+            <path d="M76 245c14-54 46-77 75-77s62 23 76 77" fill="#b9eef4" stroke="#19213a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M91 118c0-49 25-82 60-82s59 33 59 82c0 45-25 80-60 80s-59-35-59-80z" fill="#fbfeff" stroke="#19213a" stroke-width="4"/>
+            <path d="M96 101c22-4 59-23 87-52 22 19 31 40 33 63" fill="none" stroke="#19213a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M113 128h37m31 0h-38" stroke="#19213a" stroke-width="4" stroke-linecap="round"/>
 
-            <g class="tracking-eyes">
-              <circle class="eye-white" cx="110" cy="112" r="9"/>
-              <circle class="eye-white" cx="166" cy="112" r="9"/>
-              <circle class="pupil" data-origin-x="110" data-origin-y="112" cx="110" cy="112" r="3.7"/>
-              <circle class="pupil" data-origin-x="166" data-origin-y="112" cx="166" cy="112" r="3.7"/>
+            <rect x="101" y="111" width="51" height="37" rx="12" fill="rgba(255,255,255,.34)" stroke="#8b4fd8" stroke-width="4"/>
+            <rect x="163" y="111" width="51" height="37" rx="12" fill="rgba(255,255,255,.34)" stroke="#8b4fd8" stroke-width="4"/>
+            <path d="M152 130h11" stroke="#8b4fd8" stroke-width="4" stroke-linecap="round"/>
+
+            <g class="eye-group">
+              <circle class="eye-white" cx="127" cy="130" r="10"/>
+              <circle class="eye-white" cx="188" cy="130" r="10"/>
+              <circle class="pupil" data-origin-x="127" data-origin-y="130" cx="127" cy="130" r="4"/>
+              <circle class="pupil" data-origin-x="188" data-origin-y="130" cx="188" cy="130" r="4"/>
             </g>
 
-            <path d="M131 128c-2 10 1 15 9 17" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
-            <path d="M115 157c11 8 26 8 38 0" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+            <path d="M152 149c-3 12 1 18 10 20" fill="none" stroke="#19213a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M133 183c12 9 30 9 43 0" fill="none" stroke="#19213a" stroke-width="4" stroke-linecap="round"/>
           </svg>
+
+          <span class="portrait-note">eyes follow cursor</span>
         </div>
       </div>
 
-      <a class="scroll-word" href="#about">Scroll</a>
+      <a class="scroll-label" href="#about">Scroll</a>
     </section>
 
     <section class="ticker" aria-label="Tech stack">
@@ -121,8 +123,8 @@
       </div>
     </section>
 
-    <section class="section about" id="about">
-      <div class="section-line"></div>
+    <section class="section" id="about">
+      <div class="section-rule"></div>
       <div class="section-grid">
         <div class="section-meta reveal">
           <span>01</span>
@@ -130,19 +132,19 @@
         </div>
 
         <div class="section-body reveal delay-1">
-          <h2>Developer profile with production awareness.</h2>
-          <p class="big-copy">
+          <h2>Developer profile with analytical thinking.</h2>
+          <p class="large-copy">
             My work combines Computer Science studies, practical software projects, and hands-on experience
-            around production systems. I enjoy building systems that connect frontend, backend, databases,
+            around technical systems. I enjoy building systems that connect frontend, backend, databases,
             APIs, data analysis, and AI workflows.
           </p>
-          <p>
+          <p class="regular-copy">
             My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards,
             incidents, and system stability. I use that perspective as an advantage in development,
             not as the role I am targeting next.
           </p>
 
-          <div class="about-cards">
+          <div class="focus-cards">
             <article>
               <span>Backend</span>
               <p>REST APIs, validation, logging, database integration, and service structure.</p>
@@ -160,8 +162,8 @@
       </div>
     </section>
 
-    <section class="section work" id="projects">
-      <div class="section-line"></div>
+    <section class="section" id="projects">
+      <div class="section-rule"></div>
       <div class="section-grid">
         <div class="section-meta reveal">
           <span>02</span>
@@ -170,7 +172,7 @@
 
         <div class="section-body reveal delay-1">
           <h2>Selected projects.</h2>
-          <p class="big-copy">
+          <p class="large-copy">
             A focused selection of software projects across backend, full-stack, AI, security,
             data analysis, and client-server systems.
           </p>
@@ -257,8 +259,8 @@
       </div>
     </section>
 
-    <section class="section experience" id="experience">
-      <div class="section-line"></div>
+    <section class="section" id="experience">
+      <div class="section-rule"></div>
       <div class="section-grid">
         <div class="section-meta reveal">
           <span>03</span>
@@ -303,7 +305,7 @@
     </section>
 
     <section class="section direction">
-      <div class="section-line"></div>
+      <div class="section-rule"></div>
       <div class="section-grid">
         <div class="section-meta reveal">
           <span>04</span>
@@ -312,8 +314,9 @@
 
         <div class="section-body reveal delay-1">
           <h2>What I am looking for.</h2>
-          <p class="big-copy">
-            Software development opportunities that fit a Computer Science student with strong project work, analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
+          <p class="large-copy">
+            Software development opportunities that fit a Computer Science student with strong project work,
+            analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
           </p>
 
           <div class="direction-tags">
@@ -328,8 +331,8 @@
       </div>
     </section>
 
-    <section class="section skills" id="skills">
-      <div class="section-line"></div>
+    <section class="section" id="skills">
+      <div class="section-rule"></div>
       <div class="section-grid">
         <div class="section-meta reveal">
           <span>05</span>
@@ -353,18 +356,21 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <p class="kicker">Contact</p>
+    <section class="contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">Contact</p>
         <h2>Let’s build something practical.</h2>
         <p>
-          I am looking for software development opportunities focused on backend systems, full-stack applications, APIs, databases, data analysis, technical analysis, and AI/security-oriented projects.
+          I am looking for software development opportunities focused on backend systems,
+          full-stack applications, APIs, databases, data analysis, technical analysis,
+          and AI/security-oriented projects.
         </p>
 
         <div class="contact-links">
-          <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
+          <a class="primary-link" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20software%20development%20opportunity.%0D%0A%0D%0A">Hire me</a>
           <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
         </div>
       </div>
     </section>
@@ -375,6 +381,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
