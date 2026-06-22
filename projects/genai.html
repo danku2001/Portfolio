@@ -5,131 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="HelmetGuard - GenAI Computer Vision project by Dan Kuenkas." />
   <title>HelmetGuard - GenAI Computer Vision | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=4" />
+  <link rel="stylesheet" href="../styles.css?v=6" />
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="site-bg">
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="orb orb-three"></div>
-    <div class="noise"></div>
+  <div class="progress-bar" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <div class="background-stage">
+    <div class="grid-layer"></div>
+    <div class="grain-layer"></div>
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    <div class="shape shape-c"></div>
   </div>
 
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html#top">
-        <span class="brand-mark">DK</span>
-        <span>Dan Kuenkas</span>
-      </a>
+  <nav class="topbar">
+    <a class="logo" href="../index.html#top">
+      <span>DK</span>
+      <strong>Dan Kuenkas</strong>
+    </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+    <div class="desktop-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
 
-      <div class="nav-links" id="navLinks">
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <span>Menu</span>
+      <i></i>
+    </button>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-panel">
+      <div class="menu-head">
+        <span>Navigation</span>
+        <button class="menu-close" id="menuClose" type="button">Close</button>
+      </div>
+      <div class="menu-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#skills">Skills</a>
         <a href="../index.html#contact">Contact</a>
       </div>
+      <div class="menu-socials">
+        <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:danku2001@gmail.com">Email</a>
+      </div>
     </div>
-  </nav>
+  </div>
 
   <header class="project-hero" id="top">
-    <div class="container">
-      <div class="eyebrow reveal">
-        <span class="pulse-dot"></span>
-        Computer Vision · GenAI · ML Experimentation
-      </div>
-      <h1 class="reveal delay-1">HelmetGuard - GenAI Computer Vision</h1>
-      <p class="hero-subtitle reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
+    <p class="small-title reveal">Computer Vision · GenAI · ML Experimentation</p>
+    <h1 class="reveal delay-1">HelmetGuard - GenAI Computer Vision</h1>
+    <p class="reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
 
-      <div class="tags reveal delay-2">
-            <span>Python</span>
-            <span>Stable Diffusion</span>
-            <span>ResNet18</span>
-            <span>ViT</span>
-            <span>Computer Vision</span>
-            <span>Google Colab</span>
-      </div>
+    <div class="work-tags reveal delay-2">
+          <span>Python</span>
+          <span>Stable Diffusion</span>
+          <span>ResNet18</span>
+          <span>ViT</span>
+          <span>Computer Vision</span>
+          <span>Google Colab</span>
+    </div>
 
-      <div class="hero-actions reveal delay-2">
-        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
-        <a class="btn primary magnetic" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
-      </div>
+    <div class="page-actions reveal delay-3">
+        <a href="../index.html#projects">Back to projects</a>
+        <a href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container case-layout">
+      <div class="case-layout">
         <aside class="case-card reveal">
           <h2>Quick facts</h2>
           <div class="fact-list">
-            <div class="fact">
-              <strong>Project type</strong>
-              <span>AI / ML academic project</span>
-            </div>
-            <div class="fact">
-              <strong>Main stack</strong>
-              <span>Python, vision models, Stable Diffusion</span>
-            </div>
-            <div class="fact">
-              <strong>Focus</strong>
-              <span>Synthetic data and safety classification</span>
-            </div>
-            <div class="fact">
-              <strong>Repository</strong>
-              <span>Public GitHub project</span>
-            </div>
+          <div class="fact">
+            <strong>Project type</strong>
+            <span>AI / ML academic project</span>
+          </div>
+          <div class="fact">
+            <strong>Main stack</strong>
+            <span>Python, vision models, Stable Diffusion</span>
+          </div>
+          <div class="fact">
+            <strong>Focus</strong>
+            <span>Synthetic data and safety classification</span>
+          </div>
+          <div class="fact">
+            <strong>Repository</strong>
+            <span>Public GitHub project</span>
+          </div>
           </div>
         </aside>
 
         <div class="case-stack">
-          <article class="case-card reveal">
-            <h2>Problem / Goal</h2>
-            <p class="muted">Construction-site safety monitoring can be time consuming and inconsistent. The goal was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring synthetic data and real-world data.</p>
-          </article>
-          <article class="case-card reveal">
-            <h2>Key Features</h2>
-            <ul class="clean-list">
-              <li>Created synthetic training data using Stable Diffusion.</li>
-              <li>Used real-world image data from public sources.</li>
-              <li>Built a safe / unsafe image classification dataset.</li>
-              <li>Fine-tuned pretrained vision models.</li>
-              <li>Compared ResNet18 and Vision Transformer approaches.</li>
-              <li>Used data augmentation to improve generalization.</li>
-              <li>Analyzed limitations, domain gap, and future improvements.</li>
-            </ul>
-          </article>
-          <article class="case-card reveal">
-            <h2>Technical Highlights</h2>
-            <ul class="clean-list">
-              <li>Combined generative AI and supervised image classification.</li>
-              <li>Compared model behavior on synthetic and real images.</li>
-              <li>Used pretrained models to improve training efficiency.</li>
-              <li>Presented results and limitations clearly instead of only reporting accuracy.</li>
-            </ul>
-          </article>
-          <article class="case-card reveal">
-            <h2>What I Learned</h2>
-            <p class="muted">This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
-          </article>
+        <article class="case-card reveal">
+          <h2>Problem / Goal</h2>
+          <p>Construction-site safety monitoring can be time consuming and inconsistent. The goal was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring synthetic data and real-world data.</p>
+        </article>
+        <article class="case-card reveal">
+          <h2>Key Features</h2>
+          <ul>
+            <li>Created synthetic training data using Stable Diffusion.</li>
+            <li>Used real-world image data from public sources.</li>
+            <li>Built a safe / unsafe image classification dataset.</li>
+            <li>Fine-tuned pretrained vision models.</li>
+            <li>Compared ResNet18 and Vision Transformer approaches.</li>
+            <li>Used data augmentation to improve generalization.</li>
+            <li>Analyzed limitations, domain gap, and future improvements.</li>
+          </ul>
+        </article>
+        <article class="case-card reveal">
+          <h2>Technical Highlights</h2>
+          <ul>
+            <li>Combined generative AI and supervised image classification.</li>
+            <li>Compared model behavior on synthetic and real images.</li>
+            <li>Used pretrained models to improve training efficiency.</li>
+            <li>Presented results and limitations clearly instead of only reporting accuracy.</li>
+          </ul>
+        </article>
+        <article class="case-card reveal">
+          <h2>What I Learned</h2>
+          <p>This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
+        </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Dan Kuenkas</span>
-      <a href="../index.html#projects">Back to projects</a>
-    </div>
+    <span>© <span id="year"></span> Dan Kuenkas</span>
+    <a href="../index.html#projects">Back to projects</a>
   </footer>
 
-  <script src="../script.js?v=4"></script>
+  <script src="../script.js?v=6"></script>
 </body>
 </html>
