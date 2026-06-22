@@ -4,56 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
-  <title>Dan Kuenkas | Software Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <title>Dan Kuenkas | Power Portfolio</title>
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
-<body>
+<body data-page="home">
+  <div class="v15-signature">V15 POWER MODE</div>
   <div class="loader" id="loader">
     <span>DK</span>
-    <p>Initializing portfolio</p>
+    <p>Powering up</p>
   </div>
 
   <div class="cursor-ring" id="cursorRing"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="stage-bg">
-    <div class="red-orb orb-one"></div>
-    <div class="red-orb orb-two"></div>
-    <div class="grid-bg"></div>
-    <div class="noise-bg"></div>
+
+  <div class="background">
+    <div class="bg-grid"></div>
+    <div class="bg-scan"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
   </div>
 
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Go to top">
-      <span class="brand-mark">DK</span>
-      <span>Dan Kuenkas</span>
+    <a class="brand" href="#top">
+      <span>DK</span>
+      <strong>Dan Kuenkas</strong>
     </a>
 
+    <nav class="quick-nav">
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="play.html">Let’s play</a>
+    </nav>
+
     <div class="top-actions">
-      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
-      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <a class="hire-btn" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
+      <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu">
         <span></span>
-        <span>Menu</span>
+        Menu
       </button>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-panel">
-      <div class="menu-head">
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-shell">
+      <div class="menu-top">
         <span>Navigation</span>
         <button id="menuClose" type="button">Close</button>
       </div>
-
-      <nav class="menu-nav">
-        <a href="#top" data-index="01">Home</a>
-        <a href="#projects" data-index="02">Work</a>
-        <a href="#about" data-index="03">About</a>
-        <a href="#experience" data-index="04">Experience</a>
-        <a href="#skills" data-index="05">Skills</a>
-        <a href="#contact" data-index="06">Contact</a>
+      <nav class="menu-list">
+        <a href="#top"><span>01</span> Home</a>
+        <a href="#projects"><span>02</span> Work</a>
+        <a href="#about"><span>03</span> About</a>
+        <a href="#experience"><span>04</span> Experience</a>
+        <a href="#skills"><span>05</span> Skills</a>
+        <a href="play.html"><span>06</span> Let’s play</a>
+        <a href="#contact"><span>07</span> Contact</a>
       </nav>
-
-      <div class="menu-socials">
+      <div class="menu-footer">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -62,217 +69,180 @@
   </div>
 
   <main id="top">
-    <section class="hero scroll-scene">
-      <div class="hero-left">
-        <p class="eyebrow reveal">Computer Science Student · Software Development</p>
-        <h1 class="hero-title reveal delay-1">
-          Building software with impact.
+    <section class="hero power-scene">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Software Development · Backend · Full-Stack · AI Security</p>
+        <h1 class="mega-title reveal delay-1">
+          Practical software. Sharp execution.
         </h1>
-        <p class="hero-subtitle reveal delay-2">
-          Backend, full-stack, data, and AI-security projects built around APIs, databases,
-          technical analysis, and real-world problem solving.
+        <p class="hero-text reveal delay-2">
+          Computer Science student building backend, full-stack, data, and AI-security projects.
+          Focused on APIs, databases, technical analysis, and real-world problem solving.
         </p>
 
         <div class="hero-actions reveal delay-3">
-          <a class="primary-action" href="#projects">Explore work</a>
-          <a class="secondary-action" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="secondary-action" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="main-cta" href="#projects">See projects</a>
+          <a class="play-cta" href="play.html">Let’s play</a>
+          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
 
-      <div class="hero-right reveal delay-2">
-        <div class="portrait-frame magnetic-card" id="portraitFrame" aria-label="Line portrait with cursor-following eyes">
-          <div class="portrait-code">
-            <span>backend</span>
-            <span>api</span>
-            <span>data</span>
-            <span>ai-security</span>
-          </div>
+      <div class="hero-art reveal delay-2">
+        <div class="portrait-panel magnetic-card">
+          <div class="portrait-label">interactive portrait</div>
 
-          <svg class="line-portrait" viewBox="0 0 420 520" role="img" aria-label="Stylized line portrait of Dan Kuenkas">
+          <svg class="line-portrait" viewBox="0 0 420 520" role="img" aria-label="Stylized line portrait">
             <defs>
-              <linearGradient id="redStroke" x1="0" x2="1" y1="0" y2="1">
+              <linearGradient id="strokeRed" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="55%" stop-color="#f8b4b4"/>
-                <stop offset="100%" stop-color="#ef4444"/>
+                <stop offset="52%" stop-color="#ff6675"/>
+                <stop offset="100%" stop-color="#e11d2e"/>
               </linearGradient>
             </defs>
 
-            <path class="portrait-line soft" d="M75 430c28-72 83-107 139-107 62 0 113 39 134 107" />
-            <path class="portrait-line" d="M118 209c-4-74 34-127 93-127 63 0 103 51 99 128-4 80-43 139-98 139-57 0-90-59-94-140z" />
-            <path class="portrait-line heavy" d="M115 171c18-64 63-94 119-91 48 3 82 25 96 64" />
-            <path class="portrait-fill-hair" d="M111 161c10-52 58-94 123-88 44 4 87 28 97 75-25-15-45-18-68-10-30 10-61 5-91 8-23 2-43 7-61 15z" />
-            <path class="portrait-line" d="M141 184c23-10 49-10 70-2" />
-            <path class="portrait-line" d="M234 183c22-9 48-8 67 4" />
+            <path class="p-line soft" d="M70 430c31-74 85-108 145-108 63 0 111 39 136 108" />
+            <path class="p-line" d="M116 211c-6-75 32-128 94-128 64 0 105 51 101 129-4 80-43 139-99 139-58 0-91-60-96-140z" />
+            <path class="hair-fill" d="M108 162c13-61 61-96 125-91 50 4 87 28 102 76-24-15-45-18-68-10-31 11-62 5-93 8-24 2-45 8-66 17z" />
+            <path class="p-line heavy" d="M112 165c22-63 65-92 123-89 49 3 83 27 99 70" />
+            <path class="p-line" d="M141 184c23-10 49-10 70-2" />
+            <path class="p-line" d="M235 183c22-9 48-8 67 4" />
 
-            <path class="portrait-line glasses" d="M133 199h74c8 0 14 6 14 14v18c0 8-6 14-14 14h-74c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
-            <path class="portrait-line glasses" d="M235 199h68c8 0 14 6 14 14v18c0 8-6 14-14 14h-68c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
-            <path class="portrait-line glasses" d="M221 221h14" />
+            <path class="p-line glasses" d="M133 199h74c8 0 14 6 14 14v18c0 8-6 14-14 14h-74c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
+            <path class="p-line glasses" d="M235 199h68c8 0 14 6 14 14v18c0 8-6 14-14 14h-68c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
+            <path class="p-line glasses" d="M221 221h14" />
 
             <circle class="eye-white" cx="171" cy="223" r="14" />
             <circle class="eye-white" cx="271" cy="223" r="14" />
-            <circle class="pupil" data-origin-x="171" data-origin-y="223" cx="171" cy="223" r="5.2" />
-            <circle class="pupil" data-origin-x="271" data-origin-y="223" cx="271" cy="223" r="5.2" />
+            <circle class="pupil" data-origin-x="171" data-origin-y="223" cx="171" cy="223" r="5.4" />
+            <circle class="pupil" data-origin-x="271" data-origin-y="223" cx="271" cy="223" r="5.4" />
 
-            <path class="portrait-line" d="M214 238c-8 27 2 43 24 47" />
-            <path class="portrait-line red" d="M176 305c28 24 67 24 96 0" />
-            <path class="portrait-line beard" d="M142 277c18 58 47 88 82 88 40 0 73-32 90-88" />
-            <path class="portrait-line beard" d="M157 316c41 31 90 30 132 0" />
-
-            <path class="portrait-line shirt" d="M122 430c30-42 61-62 93-62 38 0 76 21 105 62" />
-            <path class="portrait-line shirt" d="M182 370l32 72 35-73" />
-            <path class="portrait-line shirt" d="M134 430h160" />
-
-            <path class="portrait-line accent" d="M64 474h292" />
-            <path class="portrait-line accent" d="M84 489h250" />
+            <path class="p-line" d="M214 238c-8 27 2 43 24 47" />
+            <path class="p-line red" d="M176 305c28 24 67 24 96 0" />
+            <path class="p-line beard" d="M142 277c18 58 47 88 82 88 40 0 73-32 90-88" />
+            <path class="p-line shirt" d="M122 430c30-42 61-62 93-62 38 0 76 21 105 62" />
+            <path class="p-line accent" d="M64 474h292" />
+            <path class="p-line accent" d="M84 489h250" />
           </svg>
 
-          <span class="portrait-note">eyes follow cursor</span>
+          <div class="portrait-stats">
+            <span>APIs</span>
+            <span>Data</span>
+            <span>AI Security</span>
+          </div>
         </div>
       </div>
 
-      <a class="scroll-cue" href="#projects">
+      <a class="scroll-hint" href="#projects">
         <span></span>
         Scroll
       </a>
     </section>
 
-    <section class="marquee">
-      <div class="marquee-track">
+    <section class="ticker">
+      <div class="ticker-track">
         <span>Python</span><span>JavaScript</span><span>Node.js</span><span>React</span><span>REST APIs</span><span>MySQL</span><span>MongoDB</span><span>LLM Agents</span><span>AWS IAM</span><span>Data Analysis</span>
         <span>Python</span><span>JavaScript</span><span>Node.js</span><span>React</span><span>REST APIs</span><span>MySQL</span><span>MongoDB</span><span>LLM Agents</span><span>AWS IAM</span><span>Data Analysis</span>
       </div>
     </section>
 
-    <section class="section projects-section scroll-scene" id="projects">
-      <div class="section-head">
-        <p class="section-index reveal">01 / Selected Work</p>
-        <h2 class="reveal delay-1">Projects that show range.</h2>
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / Selected Work</p>
+        <h2>Projects built to prove range.</h2>
       </div>
 
-      <div class="project-stack">
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/iam-policy-agent.html">
-            <span class="project-number">01</span>
-            <div>
-              <h3>IAM Policy Security Review Agent</h3>
-              <p>Multi-agent AI system for reviewing AWS IAM policies and generating remediation recommendations.</p>
-            </div>
-            <span class="project-type">AI Security</span>
-          </a>
-        </article>
+      <div class="project-grid">
+        <a class="project-card featured reveal magnetic-card" href="projects/iam-policy-agent.html">
+          <span>01</span>
+          <h3>IAM Policy Security Review Agent</h3>
+          <p>Multi-agent AI system for AWS IAM policy review and remediation.</p>
+          <b>AI Security</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/genai.html">
-            <span class="project-number">02</span>
-            <div>
-              <h3>HelmetGuard</h3>
-              <p>Computer vision project for construction-site helmet safety classification.</p>
-            </div>
-            <span class="project-type">Computer Vision</span>
-          </a>
-        </article>
+        <a class="project-card featured reveal delay-1 magnetic-card" href="projects/genai.html">
+          <span>02</span>
+          <h3>HelmetGuard</h3>
+          <p>Computer vision project for construction-site helmet safety classification.</p>
+          <b>Computer Vision</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/campus.html">
-            <span class="project-number">03</span>
-            <div>
-              <h3>Campus Sensors & Shading System</h3>
-              <p>Full-stack smart-campus platform for monitoring sensors and controlling shading behavior.</p>
-            </div>
-            <span class="project-type">Full Stack</span>
-          </a>
-        </article>
+        <a class="project-card reveal delay-2 magnetic-card" href="projects/campus.html">
+          <span>03</span>
+          <h3>Campus Sensors & Shading System</h3>
+          <p>Full-stack smart-campus platform with sensors, API, and database logic.</p>
+          <b>Full Stack</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/store.html">
-            <span class="project-number">04</span>
-            <div>
-              <h3>Store Network System</h3>
-              <p>Java client-server system with sockets, threads, roles, inventory, and reports.</p>
-            </div>
-            <span class="project-type">Java</span>
-          </a>
-        </article>
+        <a class="project-card reveal magnetic-card" href="projects/store.html">
+          <span>04</span>
+          <h3>Store Network System</h3>
+          <p>Java client-server system with sockets, threads, roles, and inventory.</p>
+          <b>Java</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/cost-manager.html">
-            <span class="project-number">05</span>
-            <div>
-              <h3>Cost Manager API</h3>
-              <p>Backend expense-management API with MongoDB, validation, logging, and tests.</p>
-            </div>
-            <span class="project-type">Backend</span>
-          </a>
-        </article>
+        <a class="project-card reveal delay-1 magnetic-card" href="projects/cost-manager.html">
+          <span>05</span>
+          <h3>Cost Manager API</h3>
+          <p>Backend expense-management API with MongoDB, logging, and tests.</p>
+          <b>Backend</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/connect4.html">
-            <span class="project-number">06</span>
-            <div>
-              <h3>Connect Four Client-Server Game</h3>
-              <p>Two-player game with room creation, server state, turn handling, and win detection.</p>
-            </div>
-            <span class="project-type">Game Logic</span>
-          </a>
-        </article>
+        <a class="project-card reveal delay-2 magnetic-card" href="projects/connect4.html">
+          <span>06</span>
+          <h3>Connect Four Game</h3>
+          <p>Two-player client-server game with room flow and win detection.</p>
+          <b>Game Logic</b>
+        </a>
 
-        <article class="project-row reveal magnetic-card">
-          <a href="projects/titanic.html">
-            <span class="project-number">07</span>
-            <div>
-              <h3>Titanic ML Pipeline</h3>
-              <p>Supervised learning workflow with cleaning, feature engineering, training, and evaluation.</p>
-            </div>
-            <span class="project-type">ML</span>
-          </a>
-        </article>
+        <a class="project-card reveal magnetic-card" href="projects/titanic.html">
+          <span>07</span>
+          <h3>Titanic ML Pipeline</h3>
+          <p>Supervised learning workflow with preprocessing and evaluation.</p>
+          <b>ML</b>
+        </a>
+
+        <a class="project-card game-card reveal delay-1 magnetic-card" href="play.html">
+          <span>Bonus</span>
+          <h3>Play Tic-Tac-Toe</h3>
+          <p>Try to beat the portfolio. Win and get a glowing confetti blast.</p>
+          <b>Let’s play</b>
+        </a>
       </div>
     </section>
 
-    <section class="section about-section scroll-scene" id="about">
-      <div class="split-layout">
-        <div>
-          <p class="section-index reveal">02 / About</p>
-          <h2 class="reveal delay-1">Development profile with analytical thinking.</h2>
-        </div>
-        <div class="content-column reveal delay-2">
-          <p class="big-copy">
-            My work combines Computer Science studies, practical software projects, and hands-on experience
-            around technical systems. I enjoy building systems that connect frontend, backend, databases,
-            APIs, data analysis, and AI workflows.
-          </p>
-          <p>
-            My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards, incidents,
-            and system stability. I use that perspective as an advantage in development, not as the role I am
-            targeting next.
-          </p>
+    <section class="section split" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / About</p>
+        <h2>Analytical developer profile.</h2>
+      </div>
 
-          <div class="focus-grid">
-            <article class="focus-card magnetic-card">
-              <span>Backend</span>
-              <p>REST APIs, validation, logging, database integration, and service structure.</p>
-            </article>
-            <article class="focus-card magnetic-card">
-              <span>Full-Stack</span>
-              <p>React interfaces connected to backend services and structured data layers.</p>
-            </article>
-            <article class="focus-card magnetic-card">
-              <span>AI & Security</span>
-              <p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p>
-            </article>
-          </div>
+      <div class="content reveal delay-1">
+        <p class="big-copy">
+          My work combines Computer Science studies, practical software projects, and hands-on experience
+          around technical systems. I enjoy building systems that connect frontend, backend, databases,
+          APIs, data analysis, and AI workflows.
+        </p>
+        <p>
+          My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards,
+          incidents, and system stability. I use that perspective as an advantage in development,
+          not as the role I am targeting next.
+        </p>
+
+        <div class="focus-grid">
+          <article class="mini-card magnetic-card"><h3>Backend</h3><p>REST APIs, validation, logging, database integration, and service structure.</p></article>
+          <article class="mini-card magnetic-card"><h3>Full-Stack</h3><p>React interfaces connected to backend services and structured data layers.</p></article>
+          <article class="mini-card magnetic-card"><h3>AI & Security</h3><p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section experience-section scroll-scene" id="experience">
-      <div class="section-head">
-        <p class="section-index reveal">03 / Experience</p>
-        <h2 class="reveal delay-1">Production awareness, used for development.</h2>
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / Experience</p>
+        <h2>Production awareness, used for development.</h2>
       </div>
 
-      <div class="timeline reveal delay-2">
+      <div class="timeline reveal delay-1">
         <article>
           <span>2026 - Present</span>
           <div>
@@ -304,37 +274,36 @@
       </div>
     </section>
 
-    <section class="section direction-section scroll-scene">
-      <div class="split-layout">
-        <div>
-          <p class="section-index reveal">04 / Direction</p>
-          <h2 class="reveal delay-1">What I am looking for.</h2>
-        </div>
-        <div class="content-column reveal delay-2">
-          <p class="big-copy">
-            Software development opportunities that fit a Computer Science student with strong project work,
-            analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
-          </p>
+    <section class="section split">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / Direction</p>
+        <h2>What I am looking for.</h2>
+      </div>
 
-          <div class="tag-cloud">
-            <span>Software Development Position</span>
-            <span>Backend / API Development</span>
-            <span>Full-Stack Development</span>
-            <span>Data & Technical Analysis</span>
-            <span>System Analysis Workflows</span>
-            <span>AI / Security-Oriented Software Projects</span>
-          </div>
+      <div class="content reveal delay-1">
+        <p class="big-copy">
+          Software development opportunities that fit a Computer Science student with strong project work,
+          analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
+        </p>
+
+        <div class="tag-cloud">
+          <span>Software Development Position</span>
+          <span>Backend / API Development</span>
+          <span>Full-Stack Development</span>
+          <span>Data & Technical Analysis</span>
+          <span>System Analysis Workflows</span>
+          <span>AI / Security-Oriented Software Projects</span>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section scroll-scene" id="skills">
-      <div class="section-head">
-        <p class="section-index reveal">05 / Skills</p>
-        <h2 class="reveal delay-1">Technical toolkit.</h2>
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / Skills</p>
+        <h2>Technical toolkit.</h2>
       </div>
 
-      <div class="skills-grid reveal delay-2">
+      <div class="skills-grid reveal delay-1">
         <article><h3>Programming</h3><p>JavaScript, Python, Java, C, C++, C#</p></article>
         <article><h3>Web</h3><p>React, Node.js, Express.js, REST APIs, HTML, CSS, Vite</p></article>
         <article><h3>Databases</h3><p>MySQL, SQL, MongoDB, Mongoose</p></article>
@@ -346,9 +315,9 @@
       </div>
     </section>
 
-    <section class="contact-section scroll-scene" id="contact">
+    <section class="contact" id="contact">
       <div class="contact-card reveal magnetic-card">
-        <p class="section-index">06 / Contact</p>
+        <p class="eyebrow">06 / Contact</p>
         <h2>Let’s build something practical.</h2>
         <p>
           I am looking for software development opportunities focused on backend systems,
@@ -356,11 +325,11 @@
           and AI/security-oriented projects.
         </p>
 
-        <div class="contact-actions">
-          <a class="primary-action" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
-          <a class="secondary-action" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="secondary-action" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="secondary-action" href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
+        <div class="hero-actions">
+          <a class="main-cta" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
+          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+          <a class="ghost-cta" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="ghost-cta" href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
         </div>
       </div>
     </section>
@@ -371,6 +340,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>
