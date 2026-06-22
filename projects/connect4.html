@@ -1,87 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connect Four | Dan Kuenkas</title>
+  <meta name="description" content="Connect Four Client-Server Game project by Dan Kuenkas." />
+  <title>Connect Four Client-Server Game | Dan Kuenkas</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="container header" style="padding:36px 0 18px;">
-    <div class="badge">Project</div>
-    <h1 style="font-size:34px;">Connect Four - Client Server Game</h1>
-    <p class="subtitle">Turn-based client-server game with clean server-side logic.</p>
+  <header class="header page-header">
+    <div class="container">
+      <span class="badge">Game / Full Stack</span>
+      <h1>Connect Four Client-Server Game</h1>
+      <p class="subtitle">A two-player Connect Four game with room creation, turns, and server-side game-state handling.</p>
 
-    <div class="mini">
-      <span>Type: Client-Server</span><span class="dot">•</span>
-      <span>Focus: Game Logic</span><span class="dot">•</span>
-      <span>Year: 2025</span>
-    </div>
+      <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>MySQL</span>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary" href="../index.html">Back to Home</a>
-      <a class="btn" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noreferrer">Repo</a>
+      <div class="cta">
+        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
+        <a class="btn" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section" style="border-top:0;">
-      <div class="grid two">
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Overview</h3>
-            <span class="pill">System</span>
-          </div>
-          <p class="muted">
-            A client-server implementation of the classic Connect Four game, built to keep the codebase clean,
-            the rules consistent, and the gameplay stable.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Tech Stack</h3>
-            <span class="pill">Tools</span>
-          </div>
-          <div class="tags">
-            <span>Node.js</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
-          </div>
-          <p class="muted" style="margin-top:10px;">
-            Emphasis on clear separation of client UI and server game-state management.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>What I Built</h3>
-            <span class="pill">Scope</span>
-          </div>
+  <main>
+    <section class="section">
+      <div class="container details-grid">
+        <article class="detail-card">
+          <h2>Problem / Goal</h2>
+          <p class="muted">The project implements a two-player Connect Four game where one player creates a room and another joins using a code. The goal was to practice client-server thinking, game state, and turn-based logic.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Key Features</h2>
           <ul class="list">
-            <li>Server-side game state, turn handling, and move validation.</li>
-            <li>Win detection logic (rows, columns, diagonals) and state synchronization.</li>
-            <li>Client UI for smooth turns and consistent game flow.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Highlights</h3>
-            <span class="pill">Impact</span>
-          </div>
+              <li>Room creation with a game code.</li>
+              <li>Two-player joining flow.</li>
+              <li>Turn management.</li>
+              <li>Server-side game-state handling.</li>
+              <li>Win and draw detection.</li>
+              <li>Client, server, and database separation.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>Technical Highlights</h2>
           <ul class="list">
-            <li>Deterministic rule handling to prevent invalid states.</li>
-            <li>Readable code structure that’s easy to extend with features.</li>
-          </ul>
-        </div>
-
+              <li>Implemented core game logic in JavaScript.</li>
+              <li>Used Node.js for backend game flow.</li>
+              <li>Used MySQL for persistent game-related data.</li>
+              <li>Practiced synchronization between client actions and server state.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>What I Learned</h2>
+          <p class="muted">This project helped me understand how to structure interactive game logic, manage state, and connect a simple frontend to backend and database layers.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Possible Improvements</h2>
+          <ul class="list">
+              <li>Improve the repository structure by extracting files instead of relying on a ZIP.</li>
+              <li>Add screenshots and a short demo video.</li>
+              <li>Add live deployment if possible.</li>
+              <li>Improve UI polish and mobile support.</li>
+            </ul>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Dan Kuenkas</span>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
   </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
