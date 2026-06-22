@@ -3,56 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HelmetGuard - GenAI Computer Vision project by Dan Kuenkas." />
-  <title>HelmetGuard - GenAI Computer Vision | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=6" />
+  <meta name="description" content="HelmetGuard project by Dan Kuenkas." />
+  <title>HelmetGuard | Dan Kuenkas</title>
+  <link rel="stylesheet" href="../styles.css?v=9" />
 </head>
 <body>
-  <div class="progress-bar" id="scrollProgress"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="progress" id="scrollProgress"></div>
+  <div class="page-texture"></div>
 
-  <div class="background-stage">
-    <div class="grid-layer"></div>
-    <div class="grain-layer"></div>
-    <div class="shape shape-a"></div>
-    <div class="shape shape-b"></div>
-    <div class="shape shape-c"></div>
-  </div>
-
-  <nav class="topbar">
-    <a class="logo" href="../index.html#top">
-      <span>DK</span>
-      <strong>Dan Kuenkas</strong>
+  <header class="site-header">
+    <a class="mark" href="../index.html#top">
+      <span class="mark-shape"></span>
+      <span class="mark-name">Dan Kuenkas</span>
     </a>
 
-    <div class="desktop-links">
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#skills">Skills</a>
-      <a href="../index.html#contact">Contact</a>
-    </div>
-
-    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span class="menu-dot"></span>
       <span>Menu</span>
-      <i></i>
     </button>
-  </nav>
+  </header>
 
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-panel">
-      <div class="menu-head">
+  <div class="menu-screen" id="menuScreen" aria-hidden="true">
+    <div class="menu-screen-inner">
+      <div class="menu-top">
         <span>Navigation</span>
-        <button class="menu-close" id="menuClose" type="button">Close</button>
+        <button id="menuClose" type="button">Close</button>
       </div>
-      <div class="menu-links">
+
+      <nav class="menu-nav">
+        <a href="../index.html#top">Home</a>
+        <a href="../index.html#projects">Work</a>
         <a href="../index.html#about">About</a>
-        <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#skills">Skills</a>
         <a href="../index.html#contact">Contact</a>
-      </div>
-      <div class="menu-socials">
+      </nav>
+
+      <div class="menu-bottom">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -60,32 +47,31 @@
     </div>
   </div>
 
-  <header class="project-hero" id="top">
-    <p class="small-title reveal">Computer Vision · GenAI · ML Experimentation</p>
-    <h1 class="reveal delay-1">HelmetGuard - GenAI Computer Vision</h1>
-    <p class="reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
-
-    <div class="work-tags reveal delay-2">
-          <span>Python</span>
-          <span>Stable Diffusion</span>
-          <span>ResNet18</span>
-          <span>ViT</span>
-          <span>Computer Vision</span>
-          <span>Google Colab</span>
-    </div>
-
-    <div class="page-actions reveal delay-3">
-        <a href="../index.html#projects">Back to projects</a>
-        <a href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
-    </div>
-  </header>
-
   <main>
-    <section class="section">
-      <div class="case-layout">
-        <aside class="case-card reveal">
-          <h2>Quick facts</h2>
-          <div class="fact-list">
+    <section class="project-hero">
+      <p class="kicker reveal">Computer Vision · GenAI · ML Experimentation</p>
+      <h1 class="reveal delay-1">HelmetGuard</h1>
+      <p class="reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
+
+      <div class="tag-row reveal delay-2">
+        <span>Python</span>
+        <span>Stable Diffusion</span>
+        <span>ResNet18</span>
+        <span>ViT</span>
+        <span>Computer Vision</span>
+        <span>Google Colab</span>
+      </div>
+
+      <div class="page-actions reveal delay-2">
+        <a href="../index.html#projects">Back to work</a>
+        <a href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
+      </div>
+    </section>
+
+    <section class="case-layout">
+      <aside class="case-card reveal">
+        <h2>Quick facts</h2>
+        <div class="fact-list">
           <div class="fact">
             <strong>Project type</strong>
             <span>AI / ML academic project</span>
@@ -102,10 +88,10 @@
             <strong>Repository</strong>
             <span>Public GitHub project</span>
           </div>
-          </div>
-        </aside>
+        </div>
+      </aside>
 
-        <div class="case-stack">
+      <div class="case-stack">
         <article class="case-card reveal">
           <h2>Problem / Goal</h2>
           <p>Construction-site safety monitoring can be time consuming and inconsistent. The goal was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring synthetic data and real-world data.</p>
@@ -135,16 +121,15 @@
           <h2>What I Learned</h2>
           <p>This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
         </article>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <span>© <span id="year"></span> Dan Kuenkas</span>
-    <a href="../index.html#projects">Back to projects</a>
+    <a href="../index.html#projects">Back to work</a>
   </footer>
 
-  <script src="../script.js?v=6"></script>
+  <script src="../script.js?v=9"></script>
 </body>
 </html>
