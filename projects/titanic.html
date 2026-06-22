@@ -1,87 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Titanic ML | Dan Kuenkas</title>
+  <meta name="description" content="Titanic Machine Learning Pipeline project by Dan Kuenkas." />
+  <title>Titanic Machine Learning Pipeline | Dan Kuenkas</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="container header" style="padding:36px 0 18px;">
-    <div class="badge">Project</div>
-    <h1 style="font-size:34px;">Titanic Machine Learning Assignment</h1>
-    <p class="subtitle">End-to-end supervised learning workflow.</p>
+  <header class="header page-header">
+    <div class="container">
+      <span class="badge">Machine Learning</span>
+      <h1>Titanic Machine Learning Pipeline</h1>
+      <p class="subtitle">A supervised learning project for predicting Titanic passenger survival.</p>
 
-    <div class="mini">
-      <span>Type: ML</span><span class="dot">•</span>
-      <span>Focus: Pipeline</span><span class="dot">•</span>
-      <span>Year: 2025</span>
-    </div>
+      <div class="tags">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Scikit-learn</span>
+          <span>Random Forest</span>
+          <span>Logistic Regression</span>
+          <span>GridSearchCV</span>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary" href="../index.html">Back to Home</a>
-      <a class="btn" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noreferrer">Repo</a>
+      <div class="cta">
+        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
+        <a class="btn" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section" style="border-top:0;">
-      <div class="grid two">
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Overview</h3>
-            <span class="pill">ML</span>
-          </div>
-          <p class="muted">
-            Classic classification assignment using the Titanic dataset, covering the full workflow from preprocessing
-            to training and evaluation.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Tech Stack</h3>
-            <span class="pill">Tools</span>
-          </div>
-          <div class="tags">
-            <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
-          </div>
-          <p class="muted" style="margin-top:10px;">
-            Built around clean data handling and metric-driven evaluation.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>What I Did</h3>
-            <span class="pill">Scope</span>
-          </div>
+  <main>
+    <section class="section">
+      <div class="container details-grid">
+        <article class="detail-card">
+          <h2>Problem / Goal</h2>
+          <p class="muted">The goal of this project was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Key Features</h2>
           <ul class="list">
-            <li>Data cleaning and preprocessing in Pandas.</li>
-            <li>Feature selection and training a classification model.</li>
-            <li>Evaluation using standard metrics to validate results.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-top">
-            <h3>Learning Outcome</h3>
-            <span class="pill">Impact</span>
-          </div>
+              <li>Exploratory Data Analysis.</li>
+              <li>Missing-value handling.</li>
+              <li>Feature engineering, including FamilySize and FarePerPerson.</li>
+              <li>Random Forest and Logistic Regression models.</li>
+              <li>Hyperparameter tuning with GridSearchCV.</li>
+              <li>Evaluation using F1 Score and confusion matrix.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>Technical Highlights</h2>
           <ul class="list">
-            <li>Hands-on experience with an end-to-end ML pipeline.</li>
-            <li>Understanding how preprocessing impacts model performance.</li>
-          </ul>
-        </div>
-
+              <li>Built a full ML workflow from preprocessing to evaluation.</li>
+              <li>Compared multiple models.</li>
+              <li>Used feature engineering to improve the dataset representation.</li>
+              <li>Evaluated performance using classification metrics.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>What I Learned</h2>
+          <p class="muted">This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Possible Improvements</h2>
+          <ul class="list">
+              <li>Add a summary of final results to the README.</li>
+              <li>Add key plots to the project page or README.</li>
+              <li>Add a requirements.txt file.</li>
+              <li>Clean the notebook for presentation.</li>
+            </ul>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Dan Kuenkas</span>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
   </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
