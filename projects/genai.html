@@ -8,38 +8,94 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">AI / Computer Vision</span>
-      <h1>HelmetGuard - GenAI Computer Vision</h1>
-      <p class="subtitle">A computer vision project for classifying construction-site safety based on helmet usage.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Python</span>
-          <span>Computer Vision</span>
-          <span>Stable Diffusion</span>
-          <span>ResNet18</span>
-          <span>ViT</span>
-          <span>Google Colab</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Computer Vision · GenAI · ML Experimentation
+      </div>
+      <h1 class="reveal delay-1">HelmetGuard - GenAI Computer Vision</h1>
+      <p class="hero-subtitle reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
+
+      <div class="tags reveal delay-2">
+            <span>Python</span>
+            <span>Stable Diffusion</span>
+            <span>ResNet18</span>
+            <span>ViT</span>
+            <span>Computer Vision</span>
+            <span>Google Colab</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">Construction-site safety monitoring can be time consuming and inconsistent. The goal of this project was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring the use of synthetic data and real-world images.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>AI / ML academic project</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>Python, vision models, Stable Diffusion</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>Synthetic data and safety classification</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">Construction-site safety monitoring can be time consuming and inconsistent. The goal was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring synthetic data and real-world data.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>Created synthetic training data using Stable Diffusion.</li>
               <li>Used real-world image data from public sources.</li>
               <li>Built a safe / unsafe image classification dataset.</li>
@@ -48,36 +104,29 @@
               <li>Used data augmentation to improve generalization.</li>
               <li>Analyzed limitations, domain gap, and future improvements.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Combined generative AI and supervised image classification.</li>
               <li>Compared model behavior on synthetic and real images.</li>
               <li>Used pretrained models to improve training efficiency.</li>
               <li>Presented results and limitations clearly instead of only reporting accuracy.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add more real-world labeled images.</li>
-              <li>Create a lightweight inference script.</li>
-              <li>Add visual examples of predictions.</li>
-              <li>Add a small web demo or notebook demo.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
