@@ -104,18 +104,20 @@ document.querySelectorAll("a, button, .magnetic-card").forEach((el) => {
   });
 });
 
-document.querySelectorAll(".magnetic-card").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-    card.style.transform = `perspective(900px) rotateX(${y * -0.01}deg) rotateY(${x * 0.01}deg) translateY(-4px)`;
-  });
+if (document.body.dataset.page !== "play") {
+  document.querySelectorAll(".magnetic-card").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      card.style.transform = `perspective(900px) rotateX(${y * -0.01}deg) rotateY(${x * 0.01}deg) translateY(-4px)`;
+    });
 
-  card.addEventListener("pointerleave", () => {
-    card.style.transform = "";
+    card.addEventListener("pointerleave", () => {
+      card.style.transform = "";
+    });
   });
-});
+}
 
 function moveEyes(clientX, clientY) {
   if (!portraitSvg || !pupils.length) return;
@@ -140,7 +142,7 @@ function moveEyes(clientX, clientY) {
   });
 }
 
-/* Tic-Tac-Toe */
+
 const boardElement = document.getElementById("board");
 const cells = document.querySelectorAll(".cell");
 const gameStatus = document.getElementById("gameStatus");
@@ -268,7 +270,7 @@ function endGame(result) {
   } else if (result.winner === "O") {
     scores.bot += 1;
     gameStatus.textContent = "DanBot wins this round.";
-    gameMessage.innerHTML = "<span>לא נורא:</span> הפסדת, אבל יצאת עם סטייל. Try again?";
+    gameMessage.innerHTML = "<span>No worries:</span> DanBot won this round. Run it back?";
   } else {
     scores.draw += 1;
     gameStatus.textContent = "Draw. That was close.";
