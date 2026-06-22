@@ -1,174 +1,301 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dan Kuenkas portfolio - backend, full-stack, AI, and security-focused projects." />
   <title>Dan Kuenkas | Portfolio</title>
-  <meta name="description" content="Backend & Full-Stack Developer Portfolio" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="container header">
-    <div class="badge">Computer Science Student</div>
-    <h1>Dan Kuenkas</h1>
-    <p class="subtitle">Backend & Full-Stack Developer | NOC Analyst</p>
+  <header class="header">
+    <div class="container">
+      <span class="badge">Computer Science Student</span>
+      <h1>Dan Kuenkas</h1>
+      <p class="role">Backend & Full-Stack Developer | NOC Analyst</p>
+      <p class="subtitle">
+        I build backend, full-stack, AI, and security-focused projects with an emphasis on practical systems,
+        clean APIs, production awareness, and real-world problem solving.
+      </p>
 
-    <div class="cta">
-      <a class="btn" href="https://github.com/danku2001" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:danku2001@gmail.com">Email</a>
+      </div>
 
-    <div class="mini">
-      <span>📍 Israel</span>
-      <span class="dot">•</span>
-      <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
+      <div class="mini">
+        <span>Israel</span>
+        <span class="dot">•</span>
+        <span>danku2001@gmail.com</span>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-
-    <!-- ABOUT -->
-    <section class="section">
-      <h2>About</h2>
-      <p class="muted">
-        I build backend and full-stack systems with a focus on clean architecture and practical problem-solving.
-        Currently working as a NOC student, gaining hands-on experience with production monitoring,
-        incident handling, and system reliability.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section">
-      <div class="section-head">
-        <h2>Projects</h2>
-      </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Campus Sensors & Shading System</h3>
-          <p class="muted">
-            Full-stack web system for managing campus areas and sensors.
-          </p>
-          <div class="tags">
-            <span>Node.js</span><span>REST APIs</span><span>React</span><span>MySQL</span>
-          </div>
-          <div class="links">
-            <a href="projects/campus.html">View Project</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Generative AI for Computer Vision</h3>
-          <p class="muted">
-            Image classification with fine-tuned deep learning models.
-          </p>
-          <div class="tags">
-            <span>Python</span><span>Deep Learning</span><span>Image Classification</span>
-          </div>
-          <div class="links">
-            <a href="projects/genai.html">View Project</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Connect Four (Client-Server)</h3>
-          <p class="muted">
-            Turn-based client-server game with server-side logic.
-          </p>
-          <div class="tags">
-            <span>Node.js</span><span>JavaScript</span><span>Client-Server</span>
-          </div>
-          <div class="links">
-            <a href="projects/connect4.html">View Project</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Titanic Machine Learning</h3>
-          <p class="muted">
-            Supervised learning project covering preprocessing and evaluation.
-          </p>
-          <div class="tags">
-            <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
-          </div>
-          <div class="links">
-            <a href="projects/titanic.html">View Project</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Store Network System</h3>
-          <p class="muted">
-            Academic Java client-server system focusing on backend structure.
-          </p>
-          <div class="tags">
-            <span>Java</span><span>OOP</span><span>Client-Server</span>
-          </div>
-          <div class="links">
-            <a href="projects/store.html">View Project</a>
-          </div>
-        </article>
-
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+        </div>
+        <p class="muted">
+          I am a Computer Science student and NOC Analyst with hands-on experience in production monitoring,
+          incident handling, logs, alerts, dashboards, and system reliability. Alongside my studies, I build
+          backend, full-stack, AI, and security-focused projects that combine practical engineering with clean
+          structure and clear problem solving.
+        </p>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="section">
-      <h2>Experience</h2>
-
-      <div class="card">
-        <div class="card-top">
-          <h3>NOC Analyst</h3>
-          <span class="pill">Production</span>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p class="section-note">Strongest projects shown first.</p>
         </div>
-        <ul class="list">
-          <li>Monitor production systems and infrastructure in real time.</li>
-          <li>Identify, troubleshoot, and escalate incidents and service disruptions.</li>
-          <li>Work with logs, alerts, dashboards, and monitoring tools under time pressure.</li>
-        </ul>
+
+        <div class="grid">
+          <article class="card featured">
+            <div class="card-top">
+              <h3>IAM Policy Security Review Agent</h3>
+              <span class="pill">Featured</span>
+            </div>
+            <p class="muted">
+              A multi-agent AI system that analyzes AWS IAM policies for risky permissions, public principals,
+              dangerous actions, and privilege escalation paths.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Groq API</span>
+              <span>LLM Agents</span>
+              <span>AWS IAM</span>
+              <span>Security Automation</span>
+            </div>
+            <div class="links">
+              <a href="projects/iam-policy-agent.html">View Project</a>
+              <span class="link-text">Private Project</span>
+            </div>
+          </article>
+
+          <article class="card featured">
+            <div class="card-top">
+              <h3>HelmetGuard - GenAI Computer Vision</h3>
+              <span class="pill">Featured</span>
+            </div>
+            <p class="muted">
+              Computer vision project for classifying construction-site safety based on helmet usage, using
+              synthetic data, real images, and fine-tuned vision models.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Computer Vision</span>
+              <span>Stable Diffusion</span>
+              <span>ResNet18</span>
+              <span>ViT</span>
+            </div>
+            <div class="links">
+              <a href="projects/genai.html">View Project</a>
+              <a href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card featured">
+            <div class="card-top">
+              <h3>Campus Sensors & Shading System</h3>
+              <span class="pill">Full Stack</span>
+            </div>
+            <p class="muted">
+              A smart-campus web system for managing sensors, monitoring environmental data, and controlling
+              shading behavior through admin features and REST APIs.
+            </p>
+            <div class="tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+              <span>REST API</span>
+            </div>
+            <div class="links">
+              <a href="projects/campus.html">View Project</a>
+              <a href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card featured">
+            <div class="card-top">
+              <h3>Store Network System</h3>
+              <span class="pill">Java</span>
+            </div>
+            <p class="muted">
+              Java client-server system simulating a multi-branch clothing store network with users, roles,
+              inventory, reports, sockets, and multithreading.
+            </p>
+            <div class="tags">
+              <span>Java</span>
+              <span>OOP</span>
+              <span>Sockets</span>
+              <span>Threads</span>
+              <span>Design Patterns</span>
+            </div>
+            <div class="links">
+              <a href="projects/store.html">View Project</a>
+              <a href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-head sub-head">
+          <h2>Additional Projects</h2>
+          <p class="section-note">Backend, game logic, and machine learning practice.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-top">
+              <h3>Cost Manager API</h3>
+              <span class="pill">Backend</span>
+            </div>
+            <p class="muted">
+              Backend expense-management system with users, expenses, monthly reports, logging, validation,
+              MongoDB integration, and automated API tests.
+            </p>
+            <div class="tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>Mongoose</span>
+              <span>Jest</span>
+            </div>
+            <div class="links">
+              <a href="projects/cost-manager.html">View Project</a>
+              <a href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Connect Four Client-Server Game</h3>
+              <span class="pill">Game</span>
+            </div>
+            <p class="muted">
+              Two-player Connect Four game with room creation, turn handling, server-side game-state management,
+              and win/draw detection.
+            </p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>MySQL</span>
+              <span>Client-Server</span>
+            </div>
+            <div class="links">
+              <a href="projects/connect4.html">View Project</a>
+              <a href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Titanic Machine Learning Pipeline</h3>
+              <span class="pill">ML</span>
+            </div>
+            <p class="muted">
+              Supervised learning project covering data cleaning, feature engineering, model training,
+              hyperparameter tuning, and evaluation.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-learn</span>
+              <span>Random Forest</span>
+            </div>
+            <div class="links">
+              <a href="projects/titanic.html">View Project</a>
+              <a href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div>
-          <h4>Languages</h4>
-          <p class="muted">Java, JavaScript, Python, C, C++</p>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
         </div>
-        <div>
-          <h4>Backend & Full-Stack</h4>
-          <p class="muted">Node.js, REST APIs, Client-Server Architecture, React</p>
+
+        <article class="experience-card">
+          <div class="card-top">
+            <h3>NOC Analyst</h3>
+            <span class="pill">Production</span>
+          </div>
+          <ul class="list">
+            <li>Monitor production systems and infrastructure in real time.</li>
+            <li>Investigate alerts, logs, dashboards, and service issues under time pressure.</li>
+            <li>Escalate incidents clearly and follow operational procedures.</li>
+            <li>Gain practical understanding of system reliability, monitoring, and production environments.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
         </div>
-        <div>
-          <h4>Databases</h4>
-          <p class="muted">MySQL</p>
-        </div>
-        <div>
-          <h4>Data & AI</h4>
-          <p class="muted">Scikit-learn, Pandas, Image Classification (project experience)</p>
+
+        <div class="skills">
+          <div>
+            <h4>Languages</h4>
+            <p>Java, JavaScript, Python, C, C++</p>
+          </div>
+          <div>
+            <h4>Backend</h4>
+            <p>Node.js, Express.js, REST APIs, Client-Server Architecture, API Validation, Logging</p>
+          </div>
+          <div>
+            <h4>Frontend</h4>
+            <p>React, Vite, HTML, CSS, Responsive UI</p>
+          </div>
+          <div>
+            <h4>Databases</h4>
+            <p>MySQL, MongoDB, Mongoose</p>
+          </div>
+          <div>
+            <h4>AI & Data</h4>
+            <p>LLM Agents, Groq API, Computer Vision, Image Classification, Scikit-learn, Pandas</p>
+          </div>
+          <div>
+            <h4>Security & Cloud</h4>
+            <p>AWS IAM, IAM Policy Analysis, Security Automation, Production Monitoring</p>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Git, GitHub, Jupyter Notebook, Google Colab</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section">
-      <h2>Contact</h2>
-      <p class="muted">
-        Want to talk? Email me at
-        <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
-        or reach me on
-        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noreferrer">LinkedIn</a>.
-      </p>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+        </div>
+        <p class="muted">
+          Want to talk? Email me at <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>,
+          view my work on <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>,
+          or reach me on <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>.
+        </p>
+      </div>
     </section>
-
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Dan Kuenkas</span>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
   </footer>
 
   <script src="script.js"></script>
