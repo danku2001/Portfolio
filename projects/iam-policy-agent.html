@@ -8,38 +8,94 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">AI Security</span>
-      <h1>IAM Policy Security Review Agent</h1>
-      <p class="subtitle">A multi-agent AI system for automated AWS IAM policy security analysis and remediation.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Python</span>
-          <span>Groq API</span>
-          <span>Llama Models</span>
-          <span>LLM Agents</span>
-          <span>AWS IAM</span>
-          <span>Security Automation</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        AI Security · AWS IAM · LLM Agents
+      </div>
+      <h1 class="reveal delay-1">IAM Policy Security Review Agent</h1>
+      <p class="hero-subtitle reveal delay-2">A multi-agent AI system for automated AWS IAM policy security analysis and remediation.</p>
+
+      <div class="tags reveal delay-2">
+            <span>Python</span>
+            <span>Groq API</span>
+            <span>Llama Models</span>
+            <span>Function Calling</span>
+            <span>AWS IAM</span>
+            <span>Security Automation</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <span class="btn">Private project</span>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <span class="btn primary">Private project</span>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">AWS IAM policies can contain risky permissions such as wildcards, public principals, dangerous actions, or privilege escalation paths. The goal of this project was to build an AI-assisted review tool that detects these risks and suggests safer alternatives.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Private AI security project</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>Python, Groq API, Llama models</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>IAM risk detection and remediation</span>
+            </div>
+            <div class="fact">
+              <strong>Status</strong>
+              <span>Private project - code available upon request</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">AWS IAM policies can contain risky permissions such as wildcards, public principals, dangerous actions, or privilege escalation paths. The goal was to build an AI-assisted review tool that detects these risks and suggests safer alternatives.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>Detects wildcard permissions and overly broad access patterns.</li>
               <li>Identifies public or external principals in IAM policies.</li>
               <li>Flags dangerous IAM actions and risky permission combinations.</li>
@@ -47,32 +103,30 @@
               <li>Generates structured security reports with risk verdicts, findings, and remediation steps.</li>
               <li>Suggests safer policy fixes and clearer security recommendations.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Designed a modular multi-agent architecture for security analysis.</li>
               <li>Implemented an action-classification agent for IAM permission understanding.</li>
               <li>Built a main orchestration agent that coordinates tools and analysis workflow.</li>
               <li>Added an independent verifier agent to review outputs and improve reliability.</li>
               <li>Integrated Groq-hosted Llama models with function-calling workflows and automated tool orchestration.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project strengthened my understanding of LLM agents, function calling, cloud security, AWS IAM risk patterns, structured output design, and how to build AI systems that support practical security review workflows.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Status</h2>
-          <p class="muted">Private project - code available upon request. A sanitized public version can be uploaded later without API keys or sensitive files.</p>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project strengthened my understanding of LLM agents, function calling, cloud security, AWS IAM risk patterns, structured output design, and how to build AI systems that support practical security review workflows.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
