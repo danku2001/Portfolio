@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
   <title>Dan Kuenkas | Power Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body data-page="home">
-  <div class="v15-signature">V15 POWER MODE</div>
   <div class="loader" id="loader">
     <span>DK</span>
     <p>Powering up</p>
@@ -88,24 +87,31 @@
       </div>
 
       <div class="hero-art reveal delay-2">
-        <div class="portrait-panel magnetic-card">
-          <div class="portrait-label">interactive portrait</div>
+        <div class="portrait-panel premium-portrait" aria-label="Stylized line portrait with cursor-following eyes">
+          <div class="portrait-halo"></div>
 
           <svg class="line-portrait" viewBox="0 0 420 520" role="img" aria-label="Stylized line portrait">
             <defs>
               <linearGradient id="strokeRed" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="52%" stop-color="#ff6675"/>
+                <stop offset="46%" stop-color="#ff7583"/>
                 <stop offset="100%" stop-color="#e11d2e"/>
+              </linearGradient>
+              <linearGradient id="faceGlow" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+                <stop offset="100%" stop-color="rgba(225,29,46,0.05)"/>
               </linearGradient>
             </defs>
 
-            <path class="p-line soft" d="M70 430c31-74 85-108 145-108 63 0 111 39 136 108" />
+            <path class="p-line soft" d="M70 438c32-78 86-114 145-114 65 0 116 42 139 114" />
+            <path class="face-fill" d="M116 211c-6-75 32-128 94-128 64 0 105 51 101 129-4 80-43 139-99 139-58 0-91-60-96-140z" />
             <path class="p-line" d="M116 211c-6-75 32-128 94-128 64 0 105 51 101 129-4 80-43 139-99 139-58 0-91-60-96-140z" />
+
             <path class="hair-fill" d="M108 162c13-61 61-96 125-91 50 4 87 28 102 76-24-15-45-18-68-10-31 11-62 5-93 8-24 2-45 8-66 17z" />
             <path class="p-line heavy" d="M112 165c22-63 65-92 123-89 49 3 83 27 99 70" />
-            <path class="p-line" d="M141 184c23-10 49-10 70-2" />
-            <path class="p-line" d="M235 183c22-9 48-8 67 4" />
+
+            <path class="p-line brow" d="M140 184c24-11 50-11 72-2" />
+            <path class="p-line brow" d="M235 183c23-9 50-8 69 5" />
 
             <path class="p-line glasses" d="M133 199h74c8 0 14 6 14 14v18c0 8-6 14-14 14h-74c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
             <path class="p-line glasses" d="M235 199h68c8 0 14 6 14 14v18c0 8-6 14-14 14h-68c-8 0-14-6-14-14v-18c0-8 6-14 14-14z" />
@@ -117,20 +123,17 @@
             <circle class="pupil" data-origin-x="271" data-origin-y="223" cx="271" cy="223" r="5.4" />
 
             <path class="p-line" d="M214 238c-8 27 2 43 24 47" />
-            <path class="p-line red" d="M176 305c28 24 67 24 96 0" />
+            <path class="p-line smile" d="M176 305c28 24 67 24 96 0" />
             <path class="p-line beard" d="M142 277c18 58 47 88 82 88 40 0 73-32 90-88" />
+            <path class="p-line beard-soft" d="M156 319c38 28 92 28 134-2" />
+
             <path class="p-line shirt" d="M122 430c30-42 61-62 93-62 38 0 76 21 105 62" />
+            <path class="p-line shirt" d="M180 370l35 74 38-74" />
             <path class="p-line accent" d="M64 474h292" />
             <path class="p-line accent" d="M84 489h250" />
           </svg>
-
-          <div class="portrait-stats">
-            <span>APIs</span>
-            <span>Data</span>
-            <span>AI Security</span>
-          </div>
         </div>
-      </div>
+      </div></div>
 
       <a class="scroll-hint" href="#projects">
         <span></span>
@@ -340,6 +343,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=15"></script>
+  <script src="script.js?v=16"></script>
 </body>
 </html>
