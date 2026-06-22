@@ -5,64 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Connect Four Client-Server Game project by Dan Kuenkas." />
   <title>Connect Four Client-Server Game | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=14" />
+  <link rel="stylesheet" href="../styles.css?v=15" />
 </head>
 <body>
-  <div class="loader" id="loader">
-    <span>DK</span>
-    <p>Loading project</p>
-  </div>
-
   <div class="cursor-ring" id="cursorRing"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="stage-bg">
-    <div class="red-orb orb-one"></div>
-    <div class="red-orb orb-two"></div>
-    <div class="grid-bg"></div>
-    <div class="noise-bg"></div>
+
+  <div class="background">
+    <div class="bg-grid"></div>
+    <div class="bg-scan"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
   </div>
 
   <header class="topbar">
     <a class="brand" href="../index.html#top">
       <span class="brand-mark">DK</span>
-      <span>Dan Kuenkas</span>
+      <strong>Dan Kuenkas</strong>
     </a>
 
     <div class="top-actions">
       <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
-      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span>Menu</span>
-      </button>
+      <a class="hire-button small-dark" href="../index.html#projects">Back</a>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-panel">
-      <div class="menu-head">
-        <span>Navigation</span>
-        <button id="menuClose" type="button">Close</button>
-      </div>
-
-      <nav class="menu-nav">
-        <a href="../index.html#top" data-index="01">Home</a>
-        <a href="../index.html#projects" data-index="02">Work</a>
-        <a href="../index.html#about" data-index="03">About</a>
-        <a href="../index.html#experience" data-index="04">Experience</a>
-        <a href="../index.html#skills" data-index="05">Skills</a>
-        <a href="../index.html#contact" data-index="06">Contact</a>
-      </nav>
-
-      <div class="menu-socials">
-        <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:danku2001@gmail.com">Email</a>
-      </div>
-    </div>
-  </div>
-
   <main>
-    <section class="project-hero scroll-scene">
+    <section class="project-hero">
       <p class="eyebrow reveal">Game Logic · Node.js · MySQL</p>
       <h1 class="reveal delay-1">Connect Four Client-Server Game</h1>
       <p class="reveal delay-2">A two-player Connect Four game with room creation, turns, and server-side game-state handling.</p>
@@ -142,6 +111,6 @@
     <a href="../index.html#projects">Back to work</a>
   </footer>
 
-  <script src="../script.js?v=14"></script>
+  <script src="../script.js?v=15"></script>
 </body>
 </html>
