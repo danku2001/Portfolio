@@ -3,215 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dan Kuenkas portfolio - backend, full-stack, AI, and security-focused projects." />
-  <title>Dan Kuenkas | Portfolio</title>
+  <meta name="description" content="Dan Kuenkas portfolio - software, backend, full-stack, AI security, and technical analysis projects." />
+  <title>Dan Kuenkas | Software Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <span class="badge">Computer Science Student</span>
-      <h1>Dan Kuenkas</h1>
-      <p class="role">Backend & Full-Stack Developer | NOC Analyst</p>
-      <p class="subtitle">
-        I build backend, full-stack, AI, and security-focused projects with an emphasis on practical systems,
-        clean APIs, production awareness, and real-world problem solving.
-      </p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="cta">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="mailto:danku2001@gmail.com">Email</a>
-      </div>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
 
-      <div class="mini">
-        <span>Israel</span>
-        <span class="dot">•</span>
-        <span>danku2001@gmail.com</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <section class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="pulse-dot"></span>
+          Computer Science Student · NOC Analyst · Software Projects
+        </div>
+
+        <h1>Building practical software systems with backend, full-stack, AI, and security focus.</h1>
+
+        <p class="hero-subtitle">
+          I am a Computer Science student and NOC Analyst with hands-on experience in production monitoring,
+          technical troubleshooting, full-stack projects, backend services, data workflows, and AI-based security analysis.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#projects">Explore Projects</a>
+          <a class="btn magnetic" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn magnetic" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost magnetic" href="mailto:danku2001@gmail.com">Email Me</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Israel</span>
+          <span>Software · Data · Technical Analysis</span>
+          <span>Open to junior opportunities</span>
+        </div>
+      </section>
+
+      <aside class="hero-panel reveal delay-1" aria-label="Portfolio highlights">
+        <div class="panel-glow"></div>
+        <div class="terminal-card">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-line"><span class="muted-code">focus</span> backend + full-stack</div>
+          <div class="terminal-line"><span class="muted-code">ai</span> LLM agents + security review</div>
+          <div class="terminal-line"><span class="muted-code">ops</span> production monitoring</div>
+          <div class="terminal-line"><span class="muted-code">data</span> analysis + ML workflows</div>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <strong>7</strong>
+            <span>Projects</span>
+          </div>
+          <div class="metric-card">
+            <strong>AI</strong>
+            <span>Security + CV</span>
+          </div>
+          <div class="metric-card">
+            <strong>API</strong>
+            <span>Backend Systems</span>
+          </div>
+          <div class="metric-card">
+            <strong>NOC</strong>
+            <span>Production Awareness</span>
+          </div>
+        </div>
+      </aside>
     </div>
   </header>
 
   <main>
     <section class="section" id="about">
-      <div class="container">
-        <div class="section-head">
-          <h2>About</h2>
+      <div class="container split">
+        <div class="section-label reveal">About</div>
+        <div class="section-content reveal delay-1">
+          <h2>Junior developer profile with real production awareness.</h2>
+          <p class="lead">
+            My background combines Computer Science studies, hands-on NOC work, and project-based software development.
+            I build systems that connect frontend, backend, databases, APIs, data analysis, and AI workflows.
+          </p>
+          <p class="muted">
+            Through my NOC role, I work around production environments, alerts, logs, dashboards, technical escalation,
+            and operational troubleshooting. That experience helps me think beyond code and understand how systems behave
+            when they are monitored, used, and supported in real environments.
+          </p>
+
+          <div class="focus-grid">
+            <article class="focus-card">
+              <span>01</span>
+              <h3>Backend & APIs</h3>
+              <p>Node.js, Express, REST APIs, validation, logging, databases, and service separation.</p>
+            </article>
+            <article class="focus-card">
+              <span>02</span>
+              <h3>Full-Stack Systems</h3>
+              <p>React interfaces connected to backend services and structured data storage.</p>
+            </article>
+            <article class="focus-card">
+              <span>03</span>
+              <h3>AI & Security</h3>
+              <p>LLM agents, AWS IAM policy analysis, automated review flows, and structured reports.</p>
+            </article>
+            <article class="focus-card">
+              <span>04</span>
+              <h3>Data & Analysis</h3>
+              <p>Python, Pandas, Scikit-learn, ML pipelines, and technical analysis workflows.</p>
+            </article>
+          </div>
         </div>
-        <p class="muted">
-          I am a Computer Science student and NOC Analyst with hands-on experience in production monitoring,
-          incident handling, logs, alerts, dashboards, and system reliability. Alongside my studies, I build
-          backend, full-stack, AI, and security-focused projects that combine practical engineering with clean
-          structure and clear problem solving.
-        </p>
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section projects-section" id="projects">
       <div class="container">
-        <div class="section-head">
-          <h2>Featured Projects</h2>
-          <p class="section-note">Strongest projects shown first.</p>
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">Projects</div>
+            <h2>Selected work</h2>
+          </div>
+          <p class="section-note">Strongest projects are placed first for recruiter scanning.</p>
         </div>
 
-        <div class="grid">
-          <article class="card featured">
+        <div class="projects-grid">
+          <article class="project-card featured-card reveal">
+            <div class="card-shine"></div>
             <div class="card-top">
-              <h3>IAM Policy Security Review Agent</h3>
-              <span class="pill">Featured</span>
+              <span class="project-type">AI Security</span>
+              <span class="pill hot">Featured</span>
             </div>
-            <p class="muted">
-              A multi-agent AI system that analyzes AWS IAM policies for risky permissions, public principals,
-              dangerous actions, and privilege escalation paths.
+            <h3>IAM Policy Security Review Agent</h3>
+            <p>
+              Multi-agent AI system for analyzing AWS IAM policies, detecting risky permissions, and generating
+              structured remediation recommendations.
             </p>
             <div class="tags">
-              <span>Python</span>
-              <span>Groq API</span>
-              <span>LLM Agents</span>
-              <span>AWS IAM</span>
-              <span>Security Automation</span>
+              <span>Python</span><span>Groq API</span><span>LLM Agents</span><span>AWS IAM</span>
             </div>
-            <div class="links">
-              <a href="projects/iam-policy-agent.html">View Project</a>
-              <span class="link-text">Private Project</span>
+            <div class="card-actions">
+              <a class="card-link" href="projects/iam-policy-agent.html">View Case Study</a>
+              <span class="private-label">Private project</span>
             </div>
           </article>
 
-          <article class="card featured">
+          <article class="project-card featured-card reveal delay-1">
+            <div class="card-shine"></div>
             <div class="card-top">
-              <h3>HelmetGuard - GenAI Computer Vision</h3>
-              <span class="pill">Featured</span>
+              <span class="project-type">Computer Vision</span>
+              <span class="pill hot">Featured</span>
             </div>
-            <p class="muted">
-              Computer vision project for classifying construction-site safety based on helmet usage, using
-              synthetic data, real images, and fine-tuned vision models.
+            <h3>HelmetGuard</h3>
+            <p>
+              Construction-site helmet classification project combining synthetic images, real data, fine-tuning,
+              and comparison of ResNet18 and Vision Transformer models.
             </p>
             <div class="tags">
-              <span>Python</span>
-              <span>Computer Vision</span>
-              <span>Stable Diffusion</span>
-              <span>ResNet18</span>
-              <span>ViT</span>
+              <span>Python</span><span>Stable Diffusion</span><span>ResNet18</span><span>ViT</span>
             </div>
-            <div class="links">
-              <a href="projects/genai.html">View Project</a>
-              <a href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/genai.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
 
-          <article class="card featured">
+          <article class="project-card reveal delay-2">
             <div class="card-top">
-              <h3>Campus Sensors & Shading System</h3>
-              <span class="pill">Full Stack</span>
+              <span class="project-type">Full Stack</span>
+              <span class="pill">React + API</span>
             </div>
-            <p class="muted">
-              A smart-campus web system for managing sensors, monitoring environmental data, and controlling
-              shading behavior through admin features and REST APIs.
+            <h3>Campus Sensors & Shading System</h3>
+            <p>
+              Smart-campus platform for monitoring sensors, managing infrastructure components, and controlling
+              shading behavior through frontend, backend, and database layers.
             </p>
             <div class="tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>MySQL</span>
-              <span>REST API</span>
+              <span>React</span><span>Node.js</span><span>Express</span><span>MySQL</span>
             </div>
-            <div class="links">
-              <a href="projects/campus.html">View Project</a>
-              <a href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/campus.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
 
-          <article class="card featured">
+          <article class="project-card reveal">
             <div class="card-top">
-              <h3>Store Network System</h3>
-              <span class="pill">Java</span>
+              <span class="project-type">Java System</span>
+              <span class="pill">Client-Server</span>
             </div>
-            <p class="muted">
-              Java client-server system simulating a multi-branch clothing store network with users, roles,
-              inventory, reports, sockets, and multithreading.
+            <h3>Store Network System</h3>
+            <p>
+              Java client-server system simulating a multi-branch clothing store network with roles, inventory,
+              reports, sockets, threads, and design patterns.
             </p>
             <div class="tags">
-              <span>Java</span>
-              <span>OOP</span>
-              <span>Sockets</span>
-              <span>Threads</span>
-              <span>Design Patterns</span>
+              <span>Java</span><span>OOP</span><span>Sockets</span><span>Threads</span>
             </div>
-            <div class="links">
-              <a href="projects/store.html">View Project</a>
-              <a href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/store.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
-        </div>
 
-        <div class="section-head sub-head">
-          <h2>Additional Projects</h2>
-          <p class="section-note">Backend, game logic, and machine learning practice.</p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
+          <article class="project-card reveal delay-1">
             <div class="card-top">
-              <h3>Cost Manager API</h3>
-              <span class="pill">Backend</span>
+              <span class="project-type">Backend API</span>
+              <span class="pill">Testing</span>
             </div>
-            <p class="muted">
+            <h3>Cost Manager API</h3>
+            <p>
               Backend expense-management system with users, expenses, monthly reports, logging, validation,
               MongoDB integration, and automated API tests.
             </p>
             <div class="tags">
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>MongoDB</span>
-              <span>Mongoose</span>
-              <span>Jest</span>
+              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Jest</span>
             </div>
-            <div class="links">
-              <a href="projects/cost-manager.html">View Project</a>
-              <a href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/cost-manager.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
 
-          <article class="card">
+          <article class="project-card reveal delay-2">
             <div class="card-top">
-              <h3>Connect Four Client-Server Game</h3>
-              <span class="pill">Game</span>
+              <span class="project-type">Game Logic</span>
+              <span class="pill">Client-Server</span>
             </div>
-            <p class="muted">
+            <h3>Connect Four Client-Server Game</h3>
+            <p>
               Two-player Connect Four game with room creation, turn handling, server-side game-state management,
               and win/draw detection.
             </p>
             <div class="tags">
-              <span>JavaScript</span>
-              <span>Node.js</span>
-              <span>MySQL</span>
-              <span>Client-Server</span>
+              <span>JavaScript</span><span>Node.js</span><span>MySQL</span>
             </div>
-            <div class="links">
-              <a href="projects/connect4.html">View Project</a>
-              <a href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/connect4.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
 
-          <article class="card">
+          <article class="project-card reveal">
             <div class="card-top">
-              <h3>Titanic Machine Learning Pipeline</h3>
-              <span class="pill">ML</span>
+              <span class="project-type">Machine Learning</span>
+              <span class="pill">Data</span>
             </div>
-            <p class="muted">
-              Supervised learning project covering data cleaning, feature engineering, model training,
+            <h3>Titanic ML Pipeline</h3>
+            <p>
+              Supervised learning workflow covering data cleaning, feature engineering, model training,
               hyperparameter tuning, and evaluation.
             </p>
             <div class="tags">
-              <span>Python</span>
-              <span>Pandas</span>
-              <span>Scikit-learn</span>
-              <span>Random Forest</span>
+              <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
             </div>
-            <div class="links">
-              <a href="projects/titanic.html">View Project</a>
-              <a href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
+            <div class="card-actions">
+              <a class="card-link" href="projects/titanic.html">View Case Study</a>
+              <a class="card-link subtle" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
         </div>
@@ -219,82 +293,142 @@
     </section>
 
     <section class="section" id="experience">
-      <div class="container">
-        <div class="section-head">
-          <h2>Experience</h2>
-        </div>
+      <div class="container split">
+        <div class="section-label reveal">Experience</div>
+        <div class="section-content reveal delay-1">
+          <h2>Production monitoring and technical analysis.</h2>
+          <article class="timeline-card">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-top">
+                <h3>NOC Analyst · Swiftness</h3>
+                <span>Jan 2026 - Present</span>
+              </div>
+              <ul class="clean-list">
+                <li>Monitor production systems and operational environments in real time.</li>
+                <li>Investigate incidents, alerts, logs, dashboards, and service issues.</li>
+                <li>Escalate technical issues to relevant teams with clear operational context.</li>
+                <li>Analyze recurring operational patterns and support system stability.</li>
+              </ul>
+            </div>
+          </article>
 
-        <article class="experience-card">
-          <div class="card-top">
-            <h3>NOC Analyst</h3>
-            <span class="pill">Production</span>
+          <article class="timeline-card education-card">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-top">
+                <h3>B.Sc. Computer Science · HIT</h3>
+                <span>2024 - Present</span>
+              </div>
+              <p class="muted">
+                Academic foundation in algorithms, data structures, databases, machine learning, OOP,
+                and client-server architecture.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card education-card">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-top">
+                <h3>Full-Stack Development · INT & HIT</h3>
+                <span>2025</span>
+              </div>
+              <p class="muted">
+                Full-stack development with Node.js and JavaScript.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="direction">
+      <div class="container split">
+        <div class="section-label reveal">Direction</div>
+        <div class="section-content reveal delay-1">
+          <h2>Roles I am targeting</h2>
+          <div class="role-grid">
+            <div class="role-card">Junior Software Developer</div>
+            <div class="role-card">Junior Backend Developer</div>
+            <div class="role-card">Junior Full-Stack Developer</div>
+            <div class="role-card">Data / Technical Analyst</div>
+            <div class="role-card">NOC / SRE-oriented Junior Engineer</div>
+            <div class="role-card">AI / Security Project Roles</div>
           </div>
-          <ul class="list">
-            <li>Monitor production systems and infrastructure in real time.</li>
-            <li>Investigate alerts, logs, dashboards, and service issues under time pressure.</li>
-            <li>Escalate incidents clearly and follow operational procedures.</li>
-            <li>Gain practical understanding of system reliability, monitoring, and production environments.</li>
-          </ul>
-        </article>
+        </div>
       </div>
     </section>
 
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-head">
-          <h2>Skills</h2>
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">Skills</div>
+            <h2>Technical toolkit</h2>
+          </div>
         </div>
 
-        <div class="skills">
-          <div>
-            <h4>Languages</h4>
-            <p>Java, JavaScript, Python, C, C++</p>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Programming</h3>
+            <p>JavaScript, Python, Java, C, C++, C#</p>
           </div>
-          <div>
-            <h4>Backend</h4>
-            <p>Node.js, Express.js, REST APIs, Client-Server Architecture, API Validation, Logging</p>
+          <div class="skill-card reveal delay-1">
+            <h3>Web Development</h3>
+            <p>React, Node.js, Express.js, REST APIs, HTML, CSS, Vite</p>
           </div>
-          <div>
-            <h4>Frontend</h4>
-            <p>React, Vite, HTML, CSS, Responsive UI</p>
+          <div class="skill-card reveal delay-2">
+            <h3>Databases</h3>
+            <p>MySQL, SQL, MongoDB, Mongoose</p>
           </div>
-          <div>
-            <h4>Databases</h4>
-            <p>MySQL, MongoDB, Mongoose</p>
+          <div class="skill-card reveal">
+            <h3>Data & ML</h3>
+            <p>Pandas, Scikit-learn, Matplotlib, Data Processing, Image Classification</p>
           </div>
-          <div>
-            <h4>AI & Data</h4>
-            <p>LLM Agents, Groq API, Computer Vision, Image Classification, Scikit-learn, Pandas</p>
+          <div class="skill-card reveal delay-1">
+            <h3>Systems & Concepts</h3>
+            <p>OOP, Algorithms, Data Structures, Client-Server Architecture, Threads</p>
           </div>
-          <div>
-            <h4>Security & Cloud</h4>
-            <p>AWS IAM, IAM Policy Analysis, Security Automation, Production Monitoring</p>
+          <div class="skill-card reveal delay-2">
+            <h3>Security & AI</h3>
+            <p>AWS IAM, IAM Policy Analysis, LLM Agents, Groq API, Security Automation</p>
           </div>
-          <div>
-            <h4>Tools</h4>
-            <p>Git, GitHub, Jupyter Notebook, Google Colab</p>
+          <div class="skill-card reveal">
+            <h3>Tools</h3>
+            <p>Git, GitHub, Jupyter Notebook, Google Colab, Monitoring Dashboards</p>
+          </div>
+          <div class="skill-card reveal delay-1">
+            <h3>Languages</h3>
+            <p>Hebrew - Native, English - High level, Arabic - Advanced</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact</h2>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card reveal">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2>Let’s build something practical.</h2>
+          <p class="muted">
+            I am open to junior software, backend, full-stack, data-analysis, and technical roles.
+            Feel free to reach out by email or view my projects on GitHub.
+          </p>
         </div>
-        <p class="muted">
-          Want to talk? Email me at <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>,
-          view my work on <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>,
-          or reach me on <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>.
-        </p>
+        <div class="contact-actions">
+          <a class="btn primary magnetic" href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
+          <a class="btn magnetic" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn magnetic" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
