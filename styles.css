@@ -1288,3 +1288,37 @@ body[data-page="play"] .magnetic-card {
   transform: none !important;
 }
 
+.pupil {
+  fill: var(--red);
+  filter: drop-shadow(0 0 10px rgba(225, 29, 46, 0.75));
+  transition: none !important;
+}
+
+.game-panel {
+  transform: none !important;
+  transition: border-color .22s ease, background .22s ease, box-shadow .22s ease !important;
+}
+
+.game-panel:hover {
+  transform: none !important;
+}
+
+.board,
+.cell,
+.game-status,
+.game-message,
+.scoreboard {
+  transform: none !important;
+}
+
+.cell:hover:not(:disabled) {
+  transform: scale(1.015) !important;
+}
+
+body[data-page="play"] .cursor-ring {
+  display: none !important;
+}
+
+body[data-page="play"] .magnetic-card {
+  transform: none !important;
+}
