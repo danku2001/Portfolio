@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Play tic-tac-toe against DanBot." />
+  <title>Let’s Play | Dan Kuenkas</title>
+  <link rel="stylesheet" href="styles.css?v=15" />
+</head>
+<body data-page="play">
+  <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="background">
+    <div class="bg-grid"></div>
+    <div class="bg-scan"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html#top">
+      <span class="brand-mark">DK</span>
+      <strong>Dan Kuenkas</strong>
+    </a>
+
+    <div class="top-actions">
+      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
+      <a class="hire-button small-dark" href="index.html#projects">Back</a>
+    </div>
+  </header>
+
+  <main class="game-page">
+    <section class="game-hero">
+      <p class="eyebrow reveal">Bonus / Interactive portfolio</p>
+      <h1 class="mega-title reveal delay-1">Beat me at tic-tac-toe.</h1>
+      <p class="hero-text reveal delay-2">
+        You are X. DanBot is O. Win and you get a glowing confetti blast.
+      </p>
+    </section>
+
+    <section class="game-shell reveal delay-2">
+      <div class="game-panel magnetic-card">
+        <div class="game-top">
+          <div>
+            <p class="eyebrow">Tic-Tac-Toe</p>
+            <h2>Let’s play.</h2>
+          </div>
+          <button class="main-cta" id="resetGame" type="button">Reset</button>
+        </div>
+
+        <div class="scoreboard">
+          <div><span>You</span><strong id="playerScore">0</strong></div>
+          <div><span>DanBot</span><strong id="botScore">0</strong></div>
+          <div><span>Draws</span><strong id="drawScore">0</strong></div>
+        </div>
+
+        <div class="game-status" id="gameStatus">Your move. Make it count.</div>
+
+        <div class="board" id="board" aria-label="Tic-tac-toe board">
+          <button class="cell" data-cell="0" type="button"></button>
+          <button class="cell" data-cell="1" type="button"></button>
+          <button class="cell" data-cell="2" type="button"></button>
+          <button class="cell" data-cell="3" type="button"></button>
+          <button class="cell" data-cell="4" type="button"></button>
+          <button class="cell" data-cell="5" type="button"></button>
+          <button class="cell" data-cell="6" type="button"></button>
+          <button class="cell" data-cell="7" type="button"></button>
+          <button class="cell" data-cell="8" type="button"></button>
+        </div>
+
+        <div class="game-message" id="gameMessage">
+          <span>Tip:</span> corners are powerful.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js?v=15"></script>
+</body>
+</html>
