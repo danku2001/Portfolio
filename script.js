@@ -1,56 +1,42 @@
 document.documentElement.classList.add("js");
 
-const yearElement = document.getElementById("year");
+const year = document.getElementById("year");
 const progress = document.getElementById("scrollProgress");
-const cursorGlow = document.getElementById("cursorGlow");
-const menuButton = document.getElementById("menuButton");
+const menuTrigger = document.getElementById("menuTrigger");
 const menuClose = document.getElementById("menuClose");
-const menuOverlay = document.getElementById("menuOverlay");
-const navLinks = document.querySelectorAll(".desktop-links a");
+const menuScreen = document.getElementById("menuScreen");
 
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
-function updateScrollProgress() {
+function updateProgress() {
   if (!progress) return;
 
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
-  progress.style.width = `${percent}%`;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const value = max > 0 ? (window.scrollY / max) * 100 : 0;
+  progress.style.width = `${value}%`;
 }
 
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-updateScrollProgress();
-
-if (cursorGlow) {
-  window.addEventListener("pointermove", (event) => {
-    cursorGlow.style.opacity = "1";
-    cursorGlow.style.left = `${event.clientX}px`;
-    cursorGlow.style.top = `${event.clientY}px`;
-  });
-
-  window.addEventListener("pointerleave", () => {
-    cursorGlow.style.opacity = "0";
-  });
-}
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
 
 function openMenu() {
   document.body.classList.add("menu-open");
-  if (menuButton) menuButton.setAttribute("aria-expanded", "true");
-  if (menuOverlay) menuOverlay.setAttribute("aria-hidden", "false");
+  menuTrigger?.setAttribute("aria-expanded", "true");
+  menuScreen?.setAttribute("aria-hidden", "false");
 }
 
 function closeMenu() {
   document.body.classList.remove("menu-open");
-  if (menuButton) menuButton.setAttribute("aria-expanded", "false");
-  if (menuOverlay) menuOverlay.setAttribute("aria-hidden", "true");
+  menuTrigger?.setAttribute("aria-expanded", "false");
+  menuScreen?.setAttribute("aria-hidden", "true");
 }
 
-if (menuButton) menuButton.addEventListener("click", openMenu);
-if (menuClose) menuClose.addEventListener("click", closeMenu);
+menuTrigger?.addEventListener("click", openMenu);
+menuClose?.addEventListener("click", closeMenu);
 
-document.querySelectorAll(".menu-links a, .menu-socials a").forEach((link) => {
+document.querySelectorAll(".menu-nav a, .menu-bottom a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
@@ -69,48 +55,48 @@ const revealObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.12,
-    rootMargin: "0px 0px -50px 0px",
+    threshold: 0.15,
+    rootMargin: "0px 0px -55px 0px",
   }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-const sections = document.querySelectorAll("section[id], header[id]");
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
 
-      const id = entry.target.getAttribute("id");
-      navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-      });
-    });
-  },
-  {
-    threshold: 0.35,
-  }
-);
+// V8: portrait eyes follow the cursor
+const pupils = document.querySelectorAll(".pupil");
+const portraitSvg = document.querySelector(".portrait-svg");
 
-sections.forEach((section) => sectionObserver.observe(section));
+function moveEyes(clientX, clientY) {
+  if (!portraitSvg || !pupils.length) return;
 
-document.querySelectorAll(".tilt-card, .work-card, .case-card").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
+  const rect = portraitSvg.getBoundingClientRect();
+  const svgX = ((clientX - rect.left) / rect.width) * 260;
+  const svgY = ((clientY - rect.top) / rect.height) * 260;
 
-    card.style.setProperty("--x", `${x}%`);
-    card.style.setProperty("--y", `${y}%`);
+  pupils.forEach((pupil) => {
+    const originX = Number(pupil.dataset.originX);
+    const originY = Number(pupil.dataset.originY);
+    const dx = svgX - originX;
+    const dy = svgY - originY;
+    const distance = Math.hypot(dx, dy) || 1;
+    const maxMove = 4.4;
 
-    const rotateX = (y - 50) * -0.035;
-    const rotateY = (x - 50) * 0.035;
+    const moveX = (dx / distance) * Math.min(maxMove, distance);
+    const moveY = (dy / distance) * Math.min(maxMove, distance);
 
-    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    pupil.setAttribute("cx", (originX + moveX).toFixed(2));
+    pupil.setAttribute("cy", (originY + moveY).toFixed(2));
   });
+}
 
-  card.addEventListener("pointerleave", () => {
-    card.style.transform = "";
+window.addEventListener("pointermove", (event) => {
+  moveEyes(event.clientX, event.clientY);
+});
+
+window.addEventListener("pointerleave", () => {
+  pupils.forEach((pupil) => {
+    pupil.setAttribute("cx", pupil.dataset.originX);
+    pupil.setAttribute("cy", pupil.dataset.originY);
   });
 });
