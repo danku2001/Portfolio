@@ -97,3 +97,50 @@ window.addEventListener("pointerleave", () => {
     pupil.setAttribute("cy", pupil.dataset.originY);
   });
 });
+
+
+// V12: real portrait eye tracking overlay
+const photoEyes = document.querySelectorAll(".photo-eye");
+const realPortraitCard = document.querySelector(".real-portrait-card");
+
+const eyeOrigins = {
+  "photo-eye-left": { left: 48.7, top: 32.4 },
+  "photo-eye-right": { left: 59.8, top: 32.0 },
+};
+
+function movePhotoEyes(clientX, clientY) {
+  if (!realPortraitCard || !photoEyes.length) return;
+
+  const rect = realPortraitCard.getBoundingClientRect();
+  const xPercent = ((clientX - rect.left) / rect.width) * 100;
+  const yPercent = ((clientY - rect.top) / rect.height) * 100;
+
+  photoEyes.forEach((eye) => {
+    const isLeft = eye.classList.contains("photo-eye-left");
+    const origin = isLeft ? eyeOrigins["photo-eye-left"] : eyeOrigins["photo-eye-right"];
+
+    const dx = xPercent - origin.left;
+    const dy = yPercent - origin.top;
+    const distance = Math.hypot(dx, dy) || 1;
+    const maxMove = 0.95;
+
+    const moveX = (dx / distance) * Math.min(maxMove, distance);
+    const moveY = (dy / distance) * Math.min(maxMove, distance);
+
+    eye.style.left = `${origin.left + moveX}%`;
+    eye.style.top = `${origin.top + moveY}%`;
+  });
+}
+
+window.addEventListener("pointermove", (event) => {
+  movePhotoEyes(event.clientX, event.clientY);
+});
+
+window.addEventListener("pointerleave", () => {
+  photoEyes.forEach((eye) => {
+    const isLeft = eye.classList.contains("photo-eye-left");
+    const origin = isLeft ? eyeOrigins["photo-eye-left"] : eyeOrigins["photo-eye-right"];
+    eye.style.left = `${origin.left}%`;
+    eye.style.top = `${origin.top}%`;
+  });
+});
