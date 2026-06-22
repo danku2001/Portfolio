@@ -1,71 +1,89 @@
 document.documentElement.classList.add("js");
+
 const yearElement = document.getElementById("year");
 const progress = document.getElementById("scrollProgress");
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-const nav = document.getElementById("nav");
+const cursorGlow = document.getElementById("cursorGlow");
+const menuButton = document.getElementById("menuButton");
+const menuClose = document.getElementById("menuClose");
+const menuOverlay = document.getElementById("menuOverlay");
+const navLinks = document.querySelectorAll(".desktop-links a");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-function updateProgress() {
+function updateScrollProgress() {
   if (!progress) return;
 
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
   progress.style.width = `${percent}%`;
 }
 
-window.addEventListener("scroll", updateProgress, { passive: true });
-updateProgress();
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+updateScrollProgress();
 
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = document.body.classList.toggle("nav-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+if (cursorGlow) {
+  window.addEventListener("pointermove", (event) => {
+    cursorGlow.style.opacity = "1";
+    cursorGlow.style.left = `${event.clientX}px`;
+    cursorGlow.style.top = `${event.clientY}px`;
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+  window.addEventListener("pointerleave", () => {
+    cursorGlow.style.opacity = "0";
   });
 }
 
-const revealElements = document.querySelectorAll(".reveal");
+function openMenu() {
+  document.body.classList.add("menu-open");
+  if (menuButton) menuButton.setAttribute("aria-expanded", "true");
+  if (menuOverlay) menuOverlay.setAttribute("aria-hidden", "false");
+}
+
+function closeMenu() {
+  document.body.classList.remove("menu-open");
+  if (menuButton) menuButton.setAttribute("aria-expanded", "false");
+  if (menuOverlay) menuOverlay.setAttribute("aria-hidden", "true");
+}
+
+if (menuButton) menuButton.addEventListener("click", openMenu);
+if (menuClose) menuClose.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".menu-links a, .menu-socials a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+
+const revealItems = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
     });
   },
   {
-    threshold: 0.14,
-    rootMargin: "0px 0px -40px 0px",
+    threshold: 0.12,
+    rootMargin: "0px 0px -50px 0px",
   }
 );
 
-revealElements.forEach((element) => revealObserver.observe(element));
+revealItems.forEach((item) => revealObserver.observe(item));
 
 const sections = document.querySelectorAll("section[id], header[id]");
-const navItems = document.querySelectorAll(".nav-links a");
-
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
       const id = entry.target.getAttribute("id");
-
-      navItems.forEach((link) => {
+      navLinks.forEach((link) => {
         link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
       });
     });
@@ -77,7 +95,7 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-document.querySelectorAll(".project-card").forEach((card) => {
+document.querySelectorAll(".tilt-card, .work-card, .case-card").forEach((card) => {
   card.addEventListener("pointermove", (event) => {
     const rect = card.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width) * 100;
@@ -85,19 +103,14 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
     card.style.setProperty("--x", `${x}%`);
     card.style.setProperty("--y", `${y}%`);
-  });
-});
 
-document.querySelectorAll(".magnetic").forEach((button) => {
-  button.addEventListener("pointermove", (event) => {
-    const rect = button.getBoundingClientRect();
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
+    const rotateX = (y - 50) * -0.035;
+    const rotateY = (x - 50) * 0.035;
 
-    button.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   });
 
-  button.addEventListener("pointerleave", () => {
-    button.style.transform = "";
+  card.addEventListener("pointerleave", () => {
+    card.style.transform = "";
   });
 });
