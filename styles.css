@@ -1,14 +1,14 @@
  :root {
-  --paper: #f5fbfd;
-  --paper-2: #e9f8fb;
-  --cyan: #b9eef4;
-  --cyan-2: #83dce7;
-  --ink: #18213a;
-  --ink-soft: #47516c;
-  --muted: #707b93;
-  --purple: #8b4fd8;
-  --line: rgba(24, 33, 58, 0.14);
-  --line-strong: rgba(24, 33, 58, 0.28);
+  --paper: #fff7f7;
+  --paper-2: #ffe7e7;
+  --cyan: #ffd7d7;
+  --cyan-2: #ef4444;
+  --ink: #220b0b;
+  --ink-soft: #6b2b2b;
+  --muted: #8a5252;
+  --purple: #dc2626;
+  --line: rgba(127, 29, 29, 0.16);
+  --line-strong: rgba(127, 29, 29, 0.32);
   --card: rgba(255, 255, 255, 0.7);
   --max: 1180px;
   --serif: Georgia, "Times New Roman", serif;
@@ -61,10 +61,10 @@ button {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 15% 16%, rgba(185, 238, 244, 0.95), transparent 30%),
-    radial-gradient(circle at 86% 18%, rgba(139, 79, 216, 0.08), transparent 24%),
-    linear-gradient(rgba(24, 33, 58, 0.033) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(24, 33, 58, 0.033) 1px, transparent 1px);
+    radial-gradient(circle at 15% 16%, rgba(255, 215, 215, 0.95), transparent 30%),
+    radial-gradient(circle at 86% 18%, rgba(220, 38, 38, 0.08), transparent 24%),
+    linear-gradient(rgba(127, 29, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 29, 29, 0.035) 1px, transparent 1px);
   background-size: auto, auto, 36px 36px, 36px 36px;
 }
 
@@ -102,7 +102,7 @@ button {
   inset: 6px 4px 4px;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   border: 2px solid var(--purple);
-  background: linear-gradient(135deg, transparent 45%, rgba(126, 215, 226, 0.58));
+  background: linear-gradient(135deg, transparent 45%, rgba(239, 68, 68, 0.32));
 }
 
 .top-actions {
@@ -131,7 +131,7 @@ button {
 .hire-link:hover {
   transform: translateY(-3px);
   background: var(--purple);
-  box-shadow: 0 18px 34px rgba(139, 79, 216, 0.18);
+  box-shadow: 0 18px 34px rgba(220, 38, 38, 0.18);
 }
 
 .menu-button,
@@ -330,7 +330,7 @@ button {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: linear-gradient(120deg, rgba(185, 238, 244, 0.92), rgba(255, 255, 255, 0.68));
+  background: linear-gradient(120deg, rgba(255, 230, 230, 0.96), rgba(255, 255, 255, 0.68));
   box-shadow: 0 26px 70px rgba(24, 33, 58, 0.14);
   transform: rotate(1deg);
   cursor: crosshair;
@@ -528,7 +528,7 @@ h2 {
 
 .work-item a:hover {
   padding-left: 16px;
-  background: linear-gradient(90deg, rgba(185, 238, 244, 0.55), transparent 65%);
+  background: linear-gradient(90deg, rgba(255, 215, 215, 0.72), transparent 65%);
 }
 
 .work-number,
@@ -629,7 +629,7 @@ h2 {
   border-radius: 34px;
   padding: clamp(28px, 5vw, 58px);
   background:
-    radial-gradient(circle at 0 0, rgba(185, 238, 244, 0.95), transparent 46%),
+    radial-gradient(circle at 0 0, rgba(255, 215, 215, 0.95), transparent 46%),
     rgba(255, 255, 255, 0.58);
 }
 
@@ -904,5 +904,144 @@ h2 {
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+
+/* ===== V11 red-white polish ===== */
+
+.hire-link,
+.primary-link,
+.hero-links .primary-link,
+.contact-links .primary-link,
+.page-actions .primary-link {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+  border-color: rgba(185, 28, 28, 0.72);
+  color: #fff;
+}
+
+.hire-link:hover,
+.primary-link:hover {
+  background: linear-gradient(135deg, #991b1b, #dc2626);
+}
+
+.portrait-card {
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.88), transparent 34%),
+    linear-gradient(135deg, #fff, #ffe1e1 62%, #fecaca);
+}
+
+.portrait-card::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(220, 38, 38, 0.16);
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+.work-item a:hover {
+  background: linear-gradient(90deg, rgba(254, 202, 202, 0.72), transparent 68%);
+}
+
+.menu-overlay {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.8), transparent 28%),
+    linear-gradient(135deg, #fff5f5, #fecaca);
+}
+
+.ticker {
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.direction-tags span,
+.focus-cards article,
+.skill-grid article,
+.case-card,
+.fact,
+.contact-card {
+  background: rgba(255, 255, 255, 0.74);
+}
+
+
+
+/* ===== V12 real portrait integration ===== */
+
+.real-portrait-card {
+  padding: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.75), transparent 30%),
+    linear-gradient(135deg, #fff, #fee2e2);
+}
+
+.real-portrait-card::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  border: 1px solid rgba(220, 38, 38, 0.22);
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+.profile-portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(0.98) contrast(1.02);
+}
+
+.real-portrait-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(127, 29, 29, 0.1)),
+    radial-gradient(circle at 70% 15%, rgba(255, 255, 255, 0.22), transparent 25%);
+  mix-blend-mode: soft-light;
+}
+
+.photo-eye {
+  position: absolute;
+  z-index: 3;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(12, 10, 10, 0.86);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+  transform: translate(-50%, -50%);
+  transition: left 0.06s linear, top 0.06s linear;
+  pointer-events: none;
+}
+
+/* These positions are tuned for the uploaded portrait image. */
+.photo-eye-left {
+  left: 48.7%;
+  top: 32.4%;
+}
+
+.photo-eye-right {
+  left: 59.8%;
+  top: 32.0%;
+}
+
+.real-portrait-card .portrait-note {
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(127, 29, 29, 0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 680px) {
+  .photo-eye {
+    width: 7px;
+    height: 7px;
   }
 }
