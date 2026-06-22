@@ -8,76 +8,125 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">Java Client-Server</span>
-      <h1>Store Network System</h1>
-      <p class="subtitle">A Java client-server system that simulates a multi-branch clothing store network.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Java</span>
-          <span>OOP</span>
-          <span>Sockets</span>
-          <span>Threads</span>
-          <span>JSON</span>
-          <span>Design Patterns</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Java · Sockets · OOP · Threads
+      </div>
+      <h1 class="reveal delay-1">Store Network System</h1>
+      <p class="hero-subtitle reveal delay-2">A Java client-server system that simulates a multi-branch clothing store network.</p>
+
+      <div class="tags reveal delay-2">
+            <span>Java</span>
+            <span>OOP</span>
+            <span>Sockets</span>
+            <span>Threads</span>
+            <span>JSON</span>
+            <span>Design Patterns</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">The goal of this academic project was to model a larger business system with multiple branches, employees, customers, inventory, purchases, permissions, reports, and communication between branches.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Java system project</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>Java, sockets, threads, JSON</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>Client-server architecture</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">The goal was to model a larger business system with multiple branches, employees, customers, inventory, purchases, permissions, reports, and communication between branches.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>Server that handles multiple clients using threads.</li>
               <li>Console-based client application.</li>
               <li>User authentication and role-based permissions.</li>
               <li>Duplicate login prevention.</li>
               <li>Inventory, employee, customer, and purchase management.</li>
               <li>Reports by branch, product, and category.</li>
-              <li>Inter-branch chat / communication.</li>
+              <li>Inter-branch chat and communication.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Used Java sockets for client-server communication.</li>
               <li>Applied OOP principles such as inheritance, polymorphism, and interfaces.</li>
               <li>Used design patterns such as Singleton, Strategy, and Observer.</li>
               <li>Handled a larger system structure with multiple responsibilities and entities.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project helped me practice Java system design, object-oriented programming, sockets, multithreading, role-based flows, and organizing a larger codebase.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add screenshots of the console flow.</li>
-              <li>Add a client-server architecture diagram.</li>
-              <li>Add clearer setup instructions.</li>
-              <li>Add unit tests for core business logic.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project helped me practice Java system design, object-oriented programming, sockets, multithreading, role-based flows, and organizing a larger codebase.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
