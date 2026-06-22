@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HelmetGuard project by Dan Kuenkas." />
-  <title>HelmetGuard | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=17" />
+  <meta name="description" content="Cost Manager API project by Dan Kuenkas." />
+  <meta property="og:title" content="Cost Manager API | Dan Kuenkas" />
+  <meta property="og:description" content="Cost Manager API project by Dan Kuenkas." />
+  <meta property="og:image" content="https://danku2001.github.io/Portfolio/og-preview.png" />
+  <title>Cost Manager API | Dan Kuenkas</title>
+  <link rel="stylesheet" href="../styles.css?v=22" />
 </head>
 <body>
   <div class="cursor-ring" id="cursorRing"></div>
@@ -25,29 +28,29 @@
     </a>
 
     <div class="top-actions">
-      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
+      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.">Hire me</a>
       <a class="hire-button small-dark" href="../index.html#projects">Back</a>
     </div>
   </header>
 
   <main>
     <section class="project-hero">
-      <p class="eyebrow reveal">Computer Vision · GenAI · ML Experimentation</p>
-      <h1 class="reveal delay-1">HelmetGuard</h1>
-      <p class="reveal delay-2">A computer vision project that classifies construction-site images as safe or unsafe based on helmet usage.</p>
+      <p class="eyebrow reveal">Backend · Node.js · MongoDB · Testing</p>
+      <h1 class="reveal delay-1">Cost Manager API</h1>
+      <p class="reveal delay-2">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
 
       <div class="tag-row reveal delay-3">
-        <span>Python</span>
-        <span>Stable Diffusion</span>
-        <span>ResNet18</span>
-        <span>ViT</span>
-        <span>Computer Vision</span>
-        <span>Google Colab</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>MongoDB</span>
+        <span>Mongoose</span>
+        <span>REST API</span>
+        <span>Jest</span>
       </div>
 
       <div class="page-actions reveal delay-3">
         <a class="primary-action" href="../index.html#projects">Back to work</a>
-        <a class="secondary-action" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">Open GitHub</a>
+        <a class="secondary-action" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener noreferrer">Open GitHub</a>
       </div>
     </section>
 
@@ -57,15 +60,15 @@
         <div class="fact-list">
           <div class="fact">
             <strong>Project type</strong>
-            <span>AI / ML academic project</span>
+            <span>Backend API project</span>
           </div>
           <div class="fact">
             <strong>Main stack</strong>
-            <span>Python, vision models, Stable Diffusion</span>
+            <span>Node.js, Express, MongoDB</span>
           </div>
           <div class="fact">
             <strong>Focus</strong>
-            <span>Synthetic data and safety classification</span>
+            <span>REST APIs, validation, logging, tests</span>
           </div>
           <div class="fact">
             <strong>Repository</strong>
@@ -77,32 +80,33 @@
       <div class="case-stack">
         <article class="case-card reveal magnetic-card">
           <h2>Problem / Goal</h2>
-          <p>Construction-site safety monitoring can be time consuming and inconsistent. The goal was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring synthetic data and real-world data.</p>
+          <p>The goal was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
         </article>
         <article class="case-card reveal magnetic-card">
           <h2>Key Features</h2>
           <ul>
-            <li>Created synthetic training data using Stable Diffusion.</li>
-            <li>Used real-world image data from public sources.</li>
-            <li>Built a safe / unsafe image classification dataset.</li>
-            <li>Fine-tuned pretrained vision models.</li>
-            <li>Compared ResNet18 and Vision Transformer approaches.</li>
-            <li>Used data augmentation to improve generalization.</li>
-            <li>Analyzed limitations, domain gap, and future improvements.</li>
+            <li>User management through a dedicated users service.</li>
+            <li>Expense creation and categorization through a costs service.</li>
+            <li>Monthly reports by user, year, and month.</li>
+            <li>Request validation for user IDs, amounts, categories, and dates.</li>
+            <li>Logging system for service requests.</li>
+            <li>Separate services for users, costs, logs, and about/team information.</li>
+            <li>Automated API tests using Jest and Supertest.</li>
           </ul>
         </article>
         <article class="case-card reveal magnetic-card">
           <h2>Technical Highlights</h2>
           <ul>
-            <li>Combined generative AI and supervised image classification.</li>
-            <li>Compared model behavior on synthetic and real images.</li>
-            <li>Used pretrained models to improve training efficiency.</li>
-            <li>Presented results and limitations clearly instead of only reporting accuracy.</li>
+            <li>Built REST API routes with Express.js.</li>
+            <li>Connected the backend to MongoDB using Mongoose.</li>
+            <li>Separated responsibilities across multiple services.</li>
+            <li>Used validation and logging to make the API easier to debug and maintain.</li>
+            <li>Tested endpoints with automated API tests.</li>
           </ul>
         </article>
         <article class="case-card reveal magnetic-card">
           <h2>What I Learned</h2>
-          <p>This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
+          <p>This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
         </article>
       </div>
     </section>
@@ -113,6 +117,6 @@
     <a href="../index.html#projects">Back to work</a>
   </footer>
 
-  <script src="../script.js?v=17"></script>
+  <script src="../script.js?v=22"></script>
 </body>
 </html>
