@@ -18,8 +18,10 @@ if (year) year.textContent = new Date().getFullYear();
 
 function updateProgress() {
   if (!progress) return;
+
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const value = max > 0 ? (window.scrollY / max) * 100 : 0;
+
   progress.style.width = `${value}%`;
 }
 
@@ -29,6 +31,7 @@ function updatePowerScenes() {
     const center = rect.top + rect.height / 2;
     const distance = (center - window.innerHeight / 2) / window.innerHeight;
     const move = Math.max(-28, Math.min(28, distance * -26));
+
     scene.style.setProperty("--scene-y", `${move}px`);
   });
 }
@@ -68,7 +71,10 @@ const revealObserver = new IntersectionObserver(
       entry.target.classList.toggle("is-visible", entry.isIntersecting);
     });
   },
-  { threshold: 0.16, rootMargin: "0px 0px -60px 0px" }
+  {
+    threshold: 0.16,
+    rootMargin: "0px 0px -60px 0px"
+  }
 );
 
 document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
@@ -79,11 +85,13 @@ window.addEventListener("pointermove", (event) => {
     cursorRing.style.left = `${event.clientX}px`;
     cursorRing.style.top = `${event.clientY}px`;
   }
+
   moveEyes(event.clientX, event.clientY);
 });
 
 window.addEventListener("pointerleave", () => {
   if (cursorRing) cursorRing.style.opacity = "0";
+
   pupils.forEach((pupil) => {
     pupil.setAttribute("cx", pupil.dataset.originX);
     pupil.setAttribute("cy", pupil.dataset.originY);
@@ -93,12 +101,14 @@ window.addEventListener("pointerleave", () => {
 document.querySelectorAll("a, button, .magnetic-card").forEach((el) => {
   el.addEventListener("pointerenter", () => {
     if (!cursorRing) return;
+
     cursorRing.style.width = "54px";
     cursorRing.style.height = "54px";
   });
 
   el.addEventListener("pointerleave", () => {
     if (!cursorRing) return;
+
     cursorRing.style.width = "26px";
     cursorRing.style.height = "26px";
   });
@@ -110,6 +120,7 @@ if (document.body.dataset.page !== "play") {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left - rect.width / 2;
       const y = event.clientY - rect.top - rect.height / 2;
+
       card.style.transform = `perspective(900px) rotateX(${y * -0.01}deg) rotateY(${x * 0.01}deg) translateY(-4px)`;
     });
 
@@ -129,10 +140,12 @@ function moveEyes(clientX, clientY) {
   pupils.forEach((pupil) => {
     const originX = Number(pupil.dataset.originX);
     const originY = Number(pupil.dataset.originY);
+
     const dx = svgX - originX;
     const dy = svgY - originY;
     const distance = Math.hypot(dx, dy) || 1;
-    const maxMove = 6;
+
+    const maxMove = 11;
 
     const moveX = (dx / distance) * Math.min(maxMove, distance);
     const moveY = (dy / distance) * Math.min(maxMove, distance);
@@ -141,7 +154,6 @@ function moveEyes(clientX, clientY) {
     pupil.setAttribute("cy", (originY + moveY).toFixed(2));
   });
 }
-
 
 const boardElement = document.getElementById("board");
 const cells = document.querySelectorAll(".cell");
@@ -155,12 +167,21 @@ const confettiCanvas = document.getElementById("confettiCanvas");
 
 let board = Array(9).fill("");
 let gameOver = false;
-let scores = { player: 0, bot: 0, draw: 0 };
+let scores = {
+  player: 0,
+  bot: 0,
+  draw: 0
+};
 
 const wins = [
-  [0,1,2], [3,4,5], [6,7,8],
-  [0,3,6], [1,4,7], [2,5,8],
-  [0,4,8], [2,4,6]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
 ];
 
 if (boardElement) {
@@ -175,6 +196,7 @@ function handlePlayerMove(index) {
   if (gameOver || board[index]) return;
 
   placeMove(index, "X");
+
   const result = checkGame();
 
   if (result) {
@@ -183,6 +205,7 @@ function handlePlayerMove(index) {
   }
 
   gameStatus.textContent = "DanBot is thinking...";
+
   setTimeout(botMove, 420);
 }
 
@@ -190,9 +213,11 @@ function botMove() {
   if (gameOver) return;
 
   const index = chooseBotMove();
+
   placeMove(index, "O");
 
   const result = checkGame();
+
   if (result) {
     endGame(result);
     return;
@@ -204,25 +229,34 @@ function botMove() {
 
 function placeMove(index, mark) {
   board[index] = mark;
+
   const cell = cells[index];
+
   cell.textContent = mark;
   cell.classList.add(mark.toLowerCase());
   cell.disabled = true;
 }
 
 function chooseBotMove() {
-  const empty = board.map((value, index) => value ? null : index).filter((v) => v !== null);
+  const empty = board
+    .map((value, index) => value ? null : index)
+    .filter((value) => value !== null);
 
   const winMove = findBestMove("O");
+
   if (winMove !== null) return winMove;
 
   const blockMove = findBestMove("X");
+
   if (blockMove !== null) return blockMove;
 
   if (board[4] === "") return 4;
 
-  const corners = [0, 2, 6, 8].filter((i) => board[i] === "");
-  if (corners.length) return corners[Math.floor(Math.random() * corners.length)];
+  const corners = [0, 2, 6, 8].filter((index) => board[index] === "");
+
+  if (corners.length) {
+    return corners[Math.floor(Math.random() * corners.length)];
+  }
 
   return empty[Math.floor(Math.random() * empty.length)];
 }
@@ -244,13 +278,20 @@ function findBestMove(mark) {
 function checkGame() {
   for (const combo of wins) {
     const [a, b, c] = combo;
+
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-      return { winner: board[a], combo };
+      return {
+        winner: board[a],
+        combo
+      };
     }
   }
 
   if (board.every(Boolean)) {
-    return { winner: "draw", combo: [] };
+    return {
+      winner: "draw",
+      combo: []
+    };
   }
 
   return null;
@@ -258,9 +299,14 @@ function checkGame() {
 
 function endGame(result) {
   gameOver = true;
-  cells.forEach((cell) => cell.disabled = true);
 
-  result.combo.forEach((index) => cells[index].classList.add("winning"));
+  cells.forEach((cell) => {
+    cell.disabled = true;
+  });
+
+  result.combo.forEach((index) => {
+    cells[index].classList.add("winning");
+  });
 
   if (result.winner === "X") {
     scores.player += 1;
@@ -289,6 +335,7 @@ function updateScore() {
 function resetBoard() {
   board = Array(9).fill("");
   gameOver = false;
+
   cells.forEach((cell) => {
     cell.textContent = "";
     cell.disabled = false;
@@ -325,24 +372,24 @@ function fireConfetti() {
   function draw() {
     ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
 
-    particles.forEach((p) => {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += 0.18;
-      p.rotation += 0.18;
-      p.life -= 1;
+    particles.forEach((particle) => {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+      particle.vy += 0.18;
+      particle.rotation += 0.18;
+      particle.life -= 1;
 
       ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rotation);
-      ctx.fillStyle = p.color;
-      ctx.shadowColor = p.color;
+      ctx.translate(particle.x, particle.y);
+      ctx.rotate(particle.rotation);
+      ctx.fillStyle = particle.color;
+      ctx.shadowColor = particle.color;
       ctx.shadowBlur = 18;
-      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.55);
+      ctx.fillRect(-particle.size / 2, -particle.size / 2, particle.size, particle.size * 0.55);
       ctx.restore();
     });
 
-    if (particles.some((p) => p.life > 0)) {
+    if (particles.some((particle) => particle.life > 0)) {
       requestAnimationFrame(draw);
     } else {
       ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
