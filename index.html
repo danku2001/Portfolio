@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
+  <meta property="og:title" content="Dan Kuenkas | Software Portfolio" />
+  <meta property="og:description" content="CS student building backend systems, AI agents, and full-stack applications." />
+  <meta property="og:url" content="https://danku2001.github.io/Portfolio/" />
+  <meta property="og:image" content="https://danku2001.github.io/Portfolio/og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Dan Kuenkas | Software Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
 </head>
 <body data-page="home">
   <div class="loader" id="loader">
     <span>DK</span>
-    <p>Loading portfolio</p>
+    <p>Powering up</p>
   </div>
 
   <div class="cursor-ring" id="cursorRing"></div>
@@ -24,45 +29,44 @@
   </div>
 
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Go to top">
-      <span class="brand-mark">DK</span>
+    <a class="brand" href="#top">
+      <span>DK</span>
       <strong>Dan Kuenkas</strong>
     </a>
 
-    <nav class="quick-nav" aria-label="Main navigation">
+    <nav class="quick-nav">
       <a href="#projects">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="top-actions">
-      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
-      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <a class="hire-btn" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.'d%20like%20to%20hire%20you">Hire me</a>
+      <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu">
         <span></span>
         Menu
       </button>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-overlay" id="menuOverlay">
     <div class="menu-shell">
       <div class="menu-top">
         <span>Navigation</span>
         <button id="menuClose" type="button">Close</button>
       </div>
-
-      <nav class="menu-list" aria-label="Overlay navigation">
+      <nav class="menu-list">
         <a href="#top"><span>01</span> Home</a>
         <a href="#projects"><span>02</span> Work</a>
         <a href="#about"><span>03</span> About</a>
         <a href="#experience"><span>04</span> Experience</a>
         <a href="#skills"><span>05</span> Skills</a>
+        
         <a href="#contact"><span>06</span> Contact</a>
       </nav>
-
       <div class="menu-footer">
-        <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/danku2001" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
       </div>
     </div>
@@ -71,22 +75,30 @@
   <main id="top">
     <section class="hero power-scene">
       <div class="hero-copy">
-        <p class="eyebrow reveal">Software Development · Backend · Full-Stack · AI Security</p>
-        <h1 class="mega-title reveal delay-1">Building software that solves real problems.</h1>
+        <p class="eyebrow reveal">CS Student · Backend · Full-Stack · AI Security</p>
+        <h1 class="mega-title reveal delay-1">I build backend systems, AI agents, and full-stack applications.</h1>
         <p class="hero-text reveal delay-2">
-          Computer Science student focused on backend, full-stack, data, and AI-security projects.
-          I build practical systems around APIs, databases, technical analysis, and real product problems.
+          Computer Science student at HIT with 7 software projects across APIs, databases, computer vision,
+          machine learning, and AI-security workflows. My production-monitoring background helps me think
+          about logs, alerts, failure modes, and system behavior from day one.
         </p>
+
+        <div class="hero-proof reveal delay-3">
+          <span>7 projects</span>
+          <span>Python + JavaScript</span>
+          <span>APIs + Databases</span>
+          <span>AI Security</span>
+        </div>
 
         <div class="hero-actions reveal delay-3">
           <a class="main-cta" href="#projects">See projects</a>
-          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="ghost-cta" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          
+          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
       <div class="hero-art reveal delay-2">
-        <div class="portrait-panel premium-portrait magnetic-card" aria-label="Stylized line portrait with cursor-following eyes">
+        <div class="portrait-panel premium-portrait" aria-label="Stylized line portrait with cursor-following eyes">
           <div class="portrait-halo"></div>
 
           <svg class="line-portrait" viewBox="0 0 420 520" role="img" aria-label="Stylized line portrait">
@@ -94,7 +106,11 @@
               <linearGradient id="strokeRed" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stop-color="#ffffff"/>
                 <stop offset="46%" stop-color="#ff7583"/>
-                <stop offset="100%" stop-color="#d9162a"/>
+                <stop offset="100%" stop-color="#e11d2e"/>
+              </linearGradient>
+              <linearGradient id="faceGlow" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+                <stop offset="100%" stop-color="rgba(225,29,46,0.05)"/>
               </linearGradient>
             </defs>
 
@@ -128,7 +144,7 @@
             <path class="p-line accent" d="M84 489h250" />
           </svg>
         </div>
-      </div>
+      </div></div>
 
       <a class="scroll-hint" href="#projects">
         <span></span>
@@ -150,14 +166,14 @@
       </div>
 
       <div class="project-grid">
-        <a class="project-card reveal magnetic-card" href="projects/iam-policy-agent.html">
+        <a class="project-card featured reveal magnetic-card" href="projects/iam-policy-agent.html">
           <span>01</span>
           <h3>IAM Policy Security Review Agent</h3>
           <p>Multi-agent AI system for AWS IAM policy review and remediation.</p>
           <b>AI Security</b>
         </a>
 
-        <a class="project-card reveal delay-1 magnetic-card" href="projects/genai.html">
+        <a class="project-card featured reveal delay-1 magnetic-card" href="projects/genai.html">
           <span>02</span>
           <h3>HelmetGuard</h3>
           <p>Computer vision project for construction-site helmet safety classification.</p>
@@ -196,44 +212,31 @@
           <span>07</span>
           <h3>Titanic ML Pipeline</h3>
           <p>Supervised learning workflow with preprocessing and evaluation.</p>
-          <b>Machine Learning</b>
+          <b>ML</b>
         </a>
-      </div>
+</div>
     </section>
 
     <section class="section split" id="about">
       <div class="section-heading reveal">
         <p class="eyebrow">02 / About</p>
-        <h2>Analytical developer profile.</h2>
+        <h2>Systems mindset from code to production.</h2>
       </div>
 
       <div class="content reveal delay-1">
         <p class="big-copy">
-          My work combines Computer Science studies, practical software projects, and hands-on experience
-          around technical systems. I enjoy building systems that connect frontend, backend, databases,
-          APIs, data analysis, and AI workflows.
+          I am a CS student at HIT building real systems: multi-agent AI tools, REST APIs,
+          computer vision classifiers, machine-learning workflows, and full-stack applications.
         </p>
         <p>
-          My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards,
-          incidents, and system stability. I use that perspective as an advantage in development,
-          not as the role I am targeting next.
+          My NOC background means I think about logs, alerts, failure modes, dashboards,
+          and system behavior from day one - not as an afterthought.
         </p>
 
         <div class="focus-grid">
-          <article class="mini-card magnetic-card">
-            <h3>Backend</h3>
-            <p>REST APIs, validation, logging, database integration, and service structure.</p>
-          </article>
-
-          <article class="mini-card magnetic-card">
-            <h3>Full-Stack</h3>
-            <p>React interfaces connected to backend services and structured data layers.</p>
-          </article>
-
-          <article class="mini-card magnetic-card">
-            <h3>AI & Security</h3>
-            <p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p>
-          </article>
+          <article class="mini-card magnetic-card"><h3>Backend</h3><p>REST APIs, validation, logging, database integration, and service structure.</p></article>
+          <article class="mini-card magnetic-card"><h3>Full-Stack</h3><p>React interfaces connected to backend services and structured data layers.</p></article>
+          <article class="mini-card magnetic-card"><h3>AI & Security</h3><p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p></article>
         </div>
       </div>
     </section>
@@ -276,32 +279,9 @@
       </div>
     </section>
 
-    <section class="section split">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / Direction</p>
-        <h2>What I am looking for.</h2>
-      </div>
-
-      <div class="content reveal delay-1">
-        <p class="big-copy">
-          Software development opportunities that fit a Computer Science student with strong project work,
-          analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
-        </p>
-
-        <div class="tag-cloud">
-          <span>Software Development Position</span>
-          <span>Backend / API Development</span>
-          <span>Full-Stack Development</span>
-          <span>Data & Technical Analysis</span>
-          <span>System Analysis Workflows</span>
-          <span>AI / Security-Oriented Software Projects</span>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="skills">
       <div class="section-heading reveal">
-        <p class="eyebrow">05 / Skills</p>
+        <p class="eyebrow">04 / Skills</p>
         <h2>Technical toolkit.</h2>
       </div>
 
@@ -319,18 +299,18 @@
 
     <section class="contact" id="contact">
       <div class="contact-card reveal magnetic-card">
-        <p class="eyebrow">06 / Contact</p>
+        <p class="eyebrow">05 / Contact</p>
         <h2>Let’s build something practical.</h2>
         <p>
-          I am looking for software development opportunities focused on backend systems,
-          full-stack applications, APIs, databases, data analysis, technical analysis,
-          and AI/security-oriented projects.
+          I am looking for software development opportunities in backend/API development,
+          full-stack applications, data and technical analysis, and AI/security-oriented software projects.
+          Based in Israel and open to remote-friendly opportunities.
         </p>
 
         <div class="hero-actions">
-          <a class="main-cta" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
-          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-          <a class="ghost-cta" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="main-cta" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.'d%20like%20to%20hire%20you">Hire me</a>
+          <a class="ghost-cta" href="https://github.com/danku2001" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="ghost-cta" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="ghost-cta" href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
         </div>
       </div>
@@ -360,53 +340,6 @@
     </div>
   </div>
 
-  <script>
-    const inlineEggTrigger = document.getElementById("eggTrigger");
-    const inlineEggPanel = document.getElementById("eggPanel");
-    const inlineEggClose = document.getElementById("eggClose");
-    let inlineLogoTapCount = 0;
-    let inlineLogoTapTimer = null;
-
-    function openInlineEgg() {
-      if (!inlineEggPanel) return;
-      inlineEggPanel.classList.add("is-open");
-      inlineEggPanel.setAttribute("aria-hidden", "false");
-    }
-
-    function closeInlineEgg() {
-      if (!inlineEggPanel) return;
-      inlineEggPanel.classList.remove("is-open");
-      inlineEggPanel.setAttribute("aria-hidden", "true");
-    }
-
-    inlineEggTrigger?.addEventListener("click", openInlineEgg);
-    inlineEggClose?.addEventListener("click", closeInlineEgg);
-
-    inlineEggPanel?.addEventListener("click", (event) => {
-      if (event.target === inlineEggPanel) closeInlineEgg();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key.toLowerCase() === "p") openInlineEgg();
-      if (event.key === "Escape") closeInlineEgg();
-    });
-
-    document.querySelector(".brand")?.addEventListener("click", (event) => {
-      inlineLogoTapCount += 1;
-      clearTimeout(inlineLogoTapTimer);
-
-      inlineLogoTapTimer = setTimeout(() => {
-        inlineLogoTapCount = 0;
-      }, 900);
-
-      if (inlineLogoTapCount >= 3) {
-        event.preventDefault();
-        inlineLogoTapCount = 0;
-        openInlineEgg();
-      }
-    });
-  </script>
-
-  <script src="script.js?v=21"></script>
+  <script src="script.js?v=22"></script>
 </body>
 </html>
