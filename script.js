@@ -11,27 +11,20 @@ const pupils = document.querySelectorAll(".pupil");
 const portraitSvg = document.querySelector(".line-portrait");
 
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.body.classList.add("loaded");
-  }, 350);
+  setTimeout(() => document.body.classList.add("loaded"), 350);
 });
 
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+if (year) year.textContent = new Date().getFullYear();
 
 function updateProgress() {
   if (!progress) return;
-
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const value = max > 0 ? (window.scrollY / max) * 100 : 0;
   progress.style.width = `${value}%`;
 }
 
-function updateScrollScenes() {
-  const scenes = document.querySelectorAll(".scroll-scene");
-
-  scenes.forEach((scene) => {
+function updatePowerScenes() {
+  document.querySelectorAll(".power-scene").forEach((scene) => {
     const rect = scene.getBoundingClientRect();
     const center = rect.top + rect.height / 2;
     const distance = (center - window.innerHeight / 2) / window.innerHeight;
@@ -42,28 +35,26 @@ function updateScrollScenes() {
 
 window.addEventListener("scroll", () => {
   updateProgress();
-  updateScrollScenes();
+  updatePowerScenes();
 }, { passive: true });
 
 updateProgress();
-updateScrollScenes();
+updatePowerScenes();
 
 function openMenu() {
   document.body.classList.add("menu-open");
   menuButton?.setAttribute("aria-expanded", "true");
-  menuOverlay?.setAttribute("aria-hidden", "false");
 }
 
 function closeMenu() {
   document.body.classList.remove("menu-open");
   menuButton?.setAttribute("aria-expanded", "false");
-  menuOverlay?.setAttribute("aria-hidden", "true");
 }
 
 menuButton?.addEventListener("click", openMenu);
 menuClose?.addEventListener("click", closeMenu);
 
-document.querySelectorAll(".menu-nav a, .menu-socials a").forEach((link) => {
+document.querySelectorAll(".menu-list a, .menu-nav a, .menu-footer a, .menu-socials a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
@@ -71,21 +62,16 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
 });
 
-const revealItems = document.querySelectorAll(".reveal");
-
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle("is-visible", entry.isIntersecting);
     });
   },
-  {
-    threshold: 0.16,
-    rootMargin: "0px 0px -60px 0px",
-  }
+  { threshold: 0.16, rootMargin: "0px 0px -60px 0px" }
 );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
 
 window.addEventListener("pointermove", (event) => {
   if (cursorRing) {
@@ -93,15 +79,11 @@ window.addEventListener("pointermove", (event) => {
     cursorRing.style.left = `${event.clientX}px`;
     cursorRing.style.top = `${event.clientY}px`;
   }
-
   moveEyes(event.clientX, event.clientY);
 });
 
 window.addEventListener("pointerleave", () => {
-  if (cursorRing) {
-    cursorRing.style.opacity = "0";
-  }
-
+  if (cursorRing) cursorRing.style.opacity = "0";
   pupils.forEach((pupil) => {
     pupil.setAttribute("cx", pupil.dataset.originX);
     pupil.setAttribute("cy", pupil.dataset.originY);
@@ -111,8 +93,8 @@ window.addEventListener("pointerleave", () => {
 document.querySelectorAll("a, button, .magnetic-card").forEach((el) => {
   el.addEventListener("pointerenter", () => {
     if (!cursorRing) return;
-    cursorRing.style.width = "52px";
-    cursorRing.style.height = "52px";
+    cursorRing.style.width = "54px";
+    cursorRing.style.height = "54px";
   });
 
   el.addEventListener("pointerleave", () => {
@@ -127,8 +109,7 @@ document.querySelectorAll(".magnetic-card").forEach((card) => {
     const rect = card.getBoundingClientRect();
     const x = event.clientX - rect.left - rect.width / 2;
     const y = event.clientY - rect.top - rect.height / 2;
-
-    card.style.transform = `perspective(900px) rotateX(${y * -0.012}deg) rotateY(${x * 0.012}deg) translateY(-4px)`;
+    card.style.transform = `perspective(900px) rotateX(${y * -0.01}deg) rotateY(${x * 0.01}deg) translateY(-4px)`;
   });
 
   card.addEventListener("pointerleave", () => {
@@ -157,4 +138,214 @@ function moveEyes(clientX, clientY) {
     pupil.setAttribute("cx", (originX + moveX).toFixed(2));
     pupil.setAttribute("cy", (originY + moveY).toFixed(2));
   });
+}
+
+/* Tic-Tac-Toe */
+const boardElement = document.getElementById("board");
+const cells = document.querySelectorAll(".cell");
+const gameStatus = document.getElementById("gameStatus");
+const gameMessage = document.getElementById("gameMessage");
+const resetGame = document.getElementById("resetGame");
+const playerScoreElement = document.getElementById("playerScore");
+const botScoreElement = document.getElementById("botScore");
+const drawScoreElement = document.getElementById("drawScore");
+const confettiCanvas = document.getElementById("confettiCanvas");
+
+let board = Array(9).fill("");
+let gameOver = false;
+let scores = { player: 0, bot: 0, draw: 0 };
+
+const wins = [
+  [0,1,2], [3,4,5], [6,7,8],
+  [0,3,6], [1,4,7], [2,5,8],
+  [0,4,8], [2,4,6]
+];
+
+if (boardElement) {
+  cells.forEach((cell) => {
+    cell.addEventListener("click", () => handlePlayerMove(Number(cell.dataset.cell)));
+  });
+
+  resetGame?.addEventListener("click", resetBoard);
+}
+
+function handlePlayerMove(index) {
+  if (gameOver || board[index]) return;
+
+  placeMove(index, "X");
+  const result = checkGame();
+
+  if (result) {
+    endGame(result);
+    return;
+  }
+
+  gameStatus.textContent = "DanBot is thinking...";
+  setTimeout(botMove, 420);
+}
+
+function botMove() {
+  if (gameOver) return;
+
+  const index = chooseBotMove();
+  placeMove(index, "O");
+
+  const result = checkGame();
+  if (result) {
+    endGame(result);
+    return;
+  }
+
+  gameStatus.textContent = "Your move. Make it count.";
+  gameMessage.innerHTML = "<span>Tip:</span> try blocking the next threat.";
+}
+
+function placeMove(index, mark) {
+  board[index] = mark;
+  const cell = cells[index];
+  cell.textContent = mark;
+  cell.classList.add(mark.toLowerCase());
+  cell.disabled = true;
+}
+
+function chooseBotMove() {
+  const empty = board.map((value, index) => value ? null : index).filter((v) => v !== null);
+
+  const winMove = findBestMove("O");
+  if (winMove !== null) return winMove;
+
+  const blockMove = findBestMove("X");
+  if (blockMove !== null) return blockMove;
+
+  if (board[4] === "") return 4;
+
+  const corners = [0, 2, 6, 8].filter((i) => board[i] === "");
+  if (corners.length) return corners[Math.floor(Math.random() * corners.length)];
+
+  return empty[Math.floor(Math.random() * empty.length)];
+}
+
+function findBestMove(mark) {
+  for (const combo of wins) {
+    const values = combo.map((index) => board[index]);
+    const markCount = values.filter((value) => value === mark).length;
+    const emptyIndex = combo.find((index) => board[index] === "");
+
+    if (markCount === 2 && emptyIndex !== undefined) {
+      return emptyIndex;
+    }
+  }
+
+  return null;
+}
+
+function checkGame() {
+  for (const combo of wins) {
+    const [a, b, c] = combo;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return { winner: board[a], combo };
+    }
+  }
+
+  if (board.every(Boolean)) {
+    return { winner: "draw", combo: [] };
+  }
+
+  return null;
+}
+
+function endGame(result) {
+  gameOver = true;
+  cells.forEach((cell) => cell.disabled = true);
+
+  result.combo.forEach((index) => cells[index].classList.add("winning"));
+
+  if (result.winner === "X") {
+    scores.player += 1;
+    gameStatus.textContent = "You won. Respect.";
+    gameMessage.innerHTML = "<span>Victory:</span> glowing confetti unlocked.";
+    fireConfetti();
+  } else if (result.winner === "O") {
+    scores.bot += 1;
+    gameStatus.textContent = "DanBot wins this round.";
+    gameMessage.innerHTML = "<span>לא נורא:</span> הפסדת, אבל יצאת עם סטייל. Try again?";
+  } else {
+    scores.draw += 1;
+    gameStatus.textContent = "Draw. That was close.";
+    gameMessage.innerHTML = "<span>Draw:</span> no winner, no excuses.";
+  }
+
+  updateScore();
+}
+
+function updateScore() {
+  if (playerScoreElement) playerScoreElement.textContent = scores.player;
+  if (botScoreElement) botScoreElement.textContent = scores.bot;
+  if (drawScoreElement) drawScoreElement.textContent = scores.draw;
+}
+
+function resetBoard() {
+  board = Array(9).fill("");
+  gameOver = false;
+  cells.forEach((cell) => {
+    cell.textContent = "";
+    cell.disabled = false;
+    cell.classList.remove("x", "o", "winning");
+  });
+
+  if (gameStatus) gameStatus.textContent = "Your move. Make it count.";
+  if (gameMessage) gameMessage.innerHTML = "<span>Tip:</span> corners are powerful.";
+}
+
+function fireConfetti() {
+  if (!confettiCanvas) return;
+
+  const ctx = confettiCanvas.getContext("2d");
+  const particles = [];
+  const colors = ["#ffffff", "#ff3b4e", "#e11d2e", "#ffd1d6"];
+
+  confettiCanvas.width = window.innerWidth;
+  confettiCanvas.height = window.innerHeight;
+
+  for (let i = 0; i < 170; i++) {
+    particles.push({
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+      vx: (Math.random() - 0.5) * 15,
+      vy: (Math.random() - 0.8) * 15,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      life: 90 + Math.random() * 40,
+      rotation: Math.random() * Math.PI
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+
+    particles.forEach((p) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.18;
+      p.rotation += 0.18;
+      p.life -= 1;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 18;
+      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.55);
+      ctx.restore();
+    });
+
+    if (particles.some((p) => p.life > 0)) {
+      requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+    }
+  }
+
+  draw();
 }
