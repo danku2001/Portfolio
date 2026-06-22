@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cost Manager API project by Dan Kuenkas." />
+  <title>Cost Manager API | Dan Kuenkas</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="header page-header">
+    <div class="container">
+      <span class="badge">Backend</span>
+      <h1>Cost Manager API</h1>
+      <p class="subtitle">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
+
+      <div class="tags">
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
+          <span>Mongoose</span>
+          <span>REST API</span>
+          <span>Jest</span>
+          <span>Supertest</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
+        <a class="btn" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container details-grid">
+        <article class="detail-card">
+          <h2>Problem / Goal</h2>
+          <p class="muted">The goal of this project was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Key Features</h2>
+          <ul class="list">
+              <li>User management through a dedicated users service.</li>
+              <li>Expense creation and categorization through a costs service.</li>
+              <li>Monthly reports by user, year, and month.</li>
+              <li>Request validation for user IDs, amounts, categories, and dates.</li>
+              <li>Logging system for service requests.</li>
+              <li>Separate services for users, costs, logs, and about/team information.</li>
+              <li>Automated API tests using Jest and Supertest.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>Technical Highlights</h2>
+          <ul class="list">
+              <li>Built REST API routes with Express.js.</li>
+              <li>Connected the backend to MongoDB using Mongoose.</li>
+              <li>Separated responsibilities across multiple services.</li>
+              <li>Used validation and logging to make the API easier to debug and maintain.</li>
+              <li>Tested endpoints with automated API tests.</li>
+            </ul>
+        </article>
+        <article class="detail-card">
+          <h2>What I Learned</h2>
+          <p class="muted">This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Possible Improvements</h2>
+          <ul class="list">
+              <li>Add full API documentation with request and response examples.</li>
+              <li>Add Swagger or Postman screenshots.</li>
+              <li>Add Docker Compose for easier local setup.</li>
+              <li>Add authentication and authorization for real user accounts.</li>
+            </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Dan Kuenkas
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
