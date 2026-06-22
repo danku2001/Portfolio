@@ -8,38 +8,94 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">Full Stack</span>
-      <h1>Campus Sensors & Shading System</h1>
-      <p class="subtitle">A full-stack smart-campus system for monitoring sensors and controlling shading behavior.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>React</span>
-          <span>Vite</span>
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MySQL</span>
-          <span>REST API</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Full Stack · React · Node.js · MySQL
+      </div>
+      <h1 class="reveal delay-1">Campus Sensors & Shading System</h1>
+      <p class="hero-subtitle reveal delay-2">A smart-campus full-stack platform for monitoring sensors and controlling shading behavior.</p>
+
+      <div class="tags reveal delay-2">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MySQL</span>
+            <span>REST API</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/campus-sensors-system" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">The project simulates a smart-campus system where environmental data such as temperature and light can be monitored across campus areas, and shading behavior can be controlled manually or automatically.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Full-stack academic project</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>React, Node.js, Express, MySQL</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>Infrastructure monitoring and control</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">The project simulates a smart-campus system where environmental data such as temperature and light can be monitored across campus areas, and shading behavior can be controlled manually or automatically.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>React frontend for managing areas, sensors, and shading controls.</li>
               <li>Node.js and Express backend with REST API endpoints.</li>
               <li>MySQL database for persistent data storage.</li>
@@ -48,36 +104,29 @@
               <li>Manual override for administrators.</li>
               <li>Responsive dark-themed interface.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Built a full-stack flow from UI to API to database.</li>
               <li>Modeled realistic smart-campus / IoT-style business logic.</li>
               <li>Separated frontend and backend responsibilities.</li>
               <li>Used REST APIs to connect the React client with the backend.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project strengthened my full-stack development skills, especially React frontend structure, Express APIs, MySQL data modeling, and connecting user actions to backend logic.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add authentication for admin users.</li>
-              <li>Add charts for sensor history.</li>
-              <li>Add an ERD diagram and API examples.</li>
-              <li>Add deployment instructions.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project strengthened my full-stack development skills, especially React frontend structure, Express APIs, MySQL data modeling, and connecting user actions to backend logic.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
