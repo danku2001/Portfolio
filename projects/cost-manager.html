@@ -5,44 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cost Manager API project by Dan Kuenkas." />
   <title>Cost Manager API | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=1310" />
+  <link rel="stylesheet" href="../styles.css?v=14" />
 </head>
 <body>
+  <div class="loader" id="loader">
+    <span>DK</span>
+    <p>Loading project</p>
+  </div>
+
+  <div class="cursor-ring" id="cursorRing"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="site-bg"></div>
+  <div class="stage-bg">
+    <div class="red-orb orb-one"></div>
+    <div class="red-orb orb-two"></div>
+    <div class="grid-bg"></div>
+    <div class="noise-bg"></div>
+  </div>
 
   <header class="topbar">
     <a class="brand" href="../index.html#top">
-      <span class="brand-symbol"></span>
+      <span class="brand-mark">DK</span>
       <span>Dan Kuenkas</span>
     </a>
 
     <div class="top-actions">
-      <a class="hire-link" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I%27d%20like%20to%20hire%20you">Hire me</a>
+      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=%F0%9F%A4%98%20Hi%20Dan%2C%20I'd%20like%20to%20hire%20you">Hire me</a>
       <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
-        <span class="menu-dot"></span>
+        <span></span>
         <span>Menu</span>
       </button>
     </div>
   </header>
 
   <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-inner">
-      <div class="menu-top">
+    <div class="menu-panel">
+      <div class="menu-head">
         <span>Navigation</span>
-        <button class="menu-close" id="menuClose" type="button">Close</button>
+        <button id="menuClose" type="button">Close</button>
       </div>
 
       <nav class="menu-nav">
-        <a href="../index.html#top">Home</a>
-        <a href="../index.html#projects">Work</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#skills">Skills</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="../index.html#top" data-index="01">Home</a>
+        <a href="../index.html#projects" data-index="02">Work</a>
+        <a href="../index.html#about" data-index="03">About</a>
+        <a href="../index.html#experience" data-index="04">Experience</a>
+        <a href="../index.html#skills" data-index="05">Skills</a>
+        <a href="../index.html#contact" data-index="06">Contact</a>
       </nav>
 
-      <div class="menu-social">
+      <div class="menu-socials">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -51,12 +62,12 @@
   </div>
 
   <main>
-    <section class="project-hero">
+    <section class="project-hero scroll-scene">
       <p class="eyebrow reveal">Backend · Node.js · MongoDB · Testing</p>
       <h1 class="reveal delay-1">Cost Manager API</h1>
-      <p class="reveal delay-1">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
+      <p class="reveal delay-2">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
 
-      <div class="tag-row reveal delay-1">
+      <div class="tag-row reveal delay-3">
         <span>Node.js</span>
         <span>Express.js</span>
         <span>MongoDB</span>
@@ -65,14 +76,14 @@
         <span>Jest</span>
       </div>
 
-      <div class="page-actions reveal delay-1">
-        <a class="primary-link" href="../index.html#projects">Back to work</a>
-        <a href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">Open GitHub</a>
+      <div class="page-actions reveal delay-3">
+        <a class="primary-action" href="../index.html#projects">Back to work</a>
+        <a class="secondary-action" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </section>
 
     <section class="case-layout">
-      <aside class="case-card reveal">
+      <aside class="case-card reveal magnetic-card">
         <h2>Quick facts</h2>
         <div class="fact-list">
           <div class="fact">
@@ -95,11 +106,11 @@
       </aside>
 
       <div class="case-stack">
-        <article class="case-card reveal">
+        <article class="case-card reveal magnetic-card">
           <h2>Problem / Goal</h2>
           <p>The goal was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
         </article>
-        <article class="case-card reveal">
+        <article class="case-card reveal magnetic-card">
           <h2>Key Features</h2>
           <ul>
             <li>User management through a dedicated users service.</li>
@@ -111,7 +122,7 @@
             <li>Automated API tests using Jest and Supertest.</li>
           </ul>
         </article>
-        <article class="case-card reveal">
+        <article class="case-card reveal magnetic-card">
           <h2>Technical Highlights</h2>
           <ul>
             <li>Built REST API routes with Express.js.</li>
@@ -121,7 +132,7 @@
             <li>Tested endpoints with automated API tests.</li>
           </ul>
         </article>
-        <article class="case-card reveal">
+        <article class="case-card reveal magnetic-card">
           <h2>What I Learned</h2>
           <p>This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
         </article>
@@ -134,6 +145,6 @@
     <a href="../index.html#projects">Back to work</a>
   </footer>
 
-  <script src="../script.js?v=1310"></script>
+  <script src="../script.js?v=14"></script>
 </body>
 </html>
