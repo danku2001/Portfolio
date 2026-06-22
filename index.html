@@ -5,54 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dan Kuenkas portfolio - software development, backend, full-stack, data, and AI security projects." />
   <title>Dan Kuenkas | Software Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
-  <div class="progress-bar" id="scrollProgress"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="progress" id="scrollProgress"></div>
+  <div class="page-texture"></div>
 
-  <div class="background-stage">
-    <div class="grid-layer"></div>
-    <div class="grain-layer"></div>
-    <div class="shape shape-a"></div>
-    <div class="shape shape-b"></div>
-    <div class="shape shape-c"></div>
-  </div>
-
-  <nav class="topbar">
-    <a class="logo" href="#top" aria-label="Go to top">
-      <span>DK</span>
-      <strong>Dan Kuenkas</strong>
+  <header class="site-header">
+    <a class="mark" href="#top" aria-label="Go to top">
+      <span class="mark-shape"></span>
+      <span class="mark-name">Dan Kuenkas</span>
     </a>
 
-    <div class="desktop-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <div class="header-actions">
+      <a class="hire-button" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity">Hire me</a>
+      <button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-dot"></span>
+        <span>Menu</span>
+      </button>
     </div>
+  </header>
 
-    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
-      <span>Menu</span>
-      <i></i>
-    </button>
-  </nav>
-
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-panel">
-      <div class="menu-head">
+  <div class="menu-screen" id="menuScreen" aria-hidden="true">
+    <div class="menu-screen-inner">
+      <div class="menu-top">
         <span>Navigation</span>
-        <button class="menu-close" id="menuClose" type="button">Close</button>
+        <button id="menuClose" type="button">Close</button>
       </div>
-      <div class="menu-links">
+
+      <nav class="menu-nav">
+        <a href="#top">Home</a>
+        <a href="#projects">Work</a>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-      </div>
-      <div class="menu-socials">
+      </nav>
+
+      <div class="menu-bottom">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -60,244 +50,227 @@
     </div>
   </div>
 
-  <header class="hero" id="top">
-    <div class="hero-inner">
-      <div class="hero-kicker reveal">
-        <span class="live-dot"></span>
-        Computer Science Student · Software Development · Backend & Full-Stack Projects
-      </div>
+  <main id="top">
+    <section class="hero">
+      <div class="side-label">Software portfolio</div>
 
-      <h1 class="hero-title reveal delay-1">
-        Building practical software systems with clean APIs, data workflows, and AI-security thinking.
-      </h1>
+      <div class="hero-copy reveal">
+        <p class="kicker">Computer Science Student · Software Development</p>
+        <h1>Hi, I’m <span>Dan</span>.</h1>
+        <p class="intro">
+          I build practical backend, full-stack, data, and AI-security projects with a focus on APIs, databases, technical analysis, and real-world problem solving.
+        </p>
 
-      <p class="hero-text reveal delay-2">
-        I am a Computer Science student building backend, full-stack, data, and AI-security projects.
-        I am looking for software development opportunities where I can work with APIs, databases,
-        systems, and real-world product problems.
-      </p>
-
-      <div class="hero-actions reveal delay-3">
-        <a class="primary-action" href="#projects">View selected work</a>
-        <a class="secondary-action" href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
-        <a class="secondary-action" href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-
-    <aside class="hero-status reveal delay-2">
-      <div class="status-card tilt-card">
-        <span class="status-label">Current focus</span>
-        <div class="status-lines">
-          <p><b>01</b> Backend systems and REST APIs</p>
-          <p><b>02</b> Full-stack project architecture</p>
-          <p><b>03</b> AI agents and security analysis</p>
-          <p><b>04</b> Data and technical analysis workflows</p>
+        <div class="hero-links">
+          <a href="#projects">View work</a>
+          <a href="mailto:danku2001@gmail.com">Contact</a>
         </div>
       </div>
-    </aside>
 
-    <div class="scroll-hint">
-      <span></span>
-      Scroll
-    </div>
-  </header>
+      <div class="hero-visual reveal delay-1" aria-hidden="true">
+        <div class="portrait-card">
+          <div class="portrait-grid"></div>
+          <svg class="portrait-svg" viewBox="0 0 260 260" role="img" aria-label="Illustrated portrait">
+            <path d="M61 210c13-45 43-63 70-63s58 18 71 63" fill="#b8edf2" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+            <path d="M78 104c0-43 23-72 54-72s52 29 52 72c0 39-22 70-53 70s-53-31-53-70z" fill="#e8fbfd" stroke="#2c2148" stroke-width="4"/>
+            <path d="M84 88c20-4 53-20 78-46 19 17 27 35 29 55" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+            <path d="M98 110h33m27 0h-33" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
 
-  <section class="marquee" aria-label="Technical focus">
-    <div class="marquee-track">
-      <span>Python</span>
-      <span>JavaScript</span>
-      <span>Node.js</span>
-      <span>React</span>
-      <span>MySQL</span>
-      <span>MongoDB</span>
-      <span>REST APIs</span>
-      <span>LLM Agents</span>
-      <span>AWS IAM</span>
-      <span>Data Analysis</span>
-      <span>Python</span>
-      <span>JavaScript</span>
-      <span>Node.js</span>
-      <span>React</span>
-      <span>MySQL</span>
-      <span>MongoDB</span>
-      <span>REST APIs</span>
-      <span>LLM Agents</span>
-      <span>AWS IAM</span>
-      <span>Data Analysis</span>
-    </div>
-  </section>
+            <rect x="88" y="96" width="44" height="32" rx="10" fill="rgba(255,255,255,.24)" stroke="#8f56d9" stroke-width="4"/>
+            <rect x="144" y="96" width="44" height="32" rx="10" fill="rgba(255,255,255,.24)" stroke="#8f56d9" stroke-width="4"/>
+            <path d="M132 111h12" stroke="#8f56d9" stroke-width="4" stroke-linecap="round"/>
 
-  <main>
-    <section class="section about-section" id="about">
-      <div class="section-shell">
-        <div class="section-number reveal">01</div>
-        <div class="section-main reveal delay-1">
-          <p class="small-title">About</p>
-          <h2>Software development profile with production awareness.</h2>
-          <p class="large-copy">
+            <g class="tracking-eyes">
+              <circle class="eye-white" cx="110" cy="112" r="9"/>
+              <circle class="eye-white" cx="166" cy="112" r="9"/>
+              <circle class="pupil" data-origin-x="110" data-origin-y="112" cx="110" cy="112" r="3.7"/>
+              <circle class="pupil" data-origin-x="166" data-origin-y="112" cx="166" cy="112" r="3.7"/>
+            </g>
+
+            <path d="M131 128c-2 10 1 15 9 17" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+            <path d="M115 157c11 8 26 8 38 0" fill="none" stroke="#2c2148" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <a class="scroll-word" href="#about">Scroll</a>
+    </section>
+
+    <section class="ticker" aria-label="Tech stack">
+      <div class="ticker-track">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>React</span>
+        <span>REST APIs</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+        <span>LLM Agents</span>
+        <span>AWS IAM</span>
+        <span>Data Analysis</span>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>React</span>
+        <span>REST APIs</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+        <span>LLM Agents</span>
+        <span>AWS IAM</span>
+        <span>Data Analysis</span>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-line"></div>
+      <div class="section-grid">
+        <div class="section-meta reveal">
+          <span>01</span>
+          <p>About</p>
+        </div>
+
+        <div class="section-body reveal delay-1">
+          <h2>Developer profile with production awareness.</h2>
+          <p class="big-copy">
             My work combines Computer Science studies, practical software projects, and hands-on experience
             around production systems. I enjoy building systems that connect frontend, backend, databases,
             APIs, data analysis, and AI workflows.
           </p>
-          <p class="muted-copy">
-            My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards, incidents,
-            and system stability. I use that perspective as an advantage in development, not as the role I am
-            targeting next.
+          <p>
+            My NOC experience gives me a practical view of monitoring, alerts, logs, dashboards,
+            incidents, and system stability. I use that perspective as an advantage in development,
+            not as the role I am targeting next.
           </p>
 
-          <div class="focus-list">
-            <div class="focus-item reveal">
+          <div class="about-cards">
+            <article>
               <span>Backend</span>
               <p>REST APIs, validation, logging, database integration, and service structure.</p>
-            </div>
-            <div class="focus-item reveal delay-1">
+            </article>
+            <article>
               <span>Full-Stack</span>
               <p>React interfaces connected to backend services and structured data layers.</p>
-            </div>
-            <div class="focus-item reveal delay-2">
+            </article>
+            <article>
               <span>AI & Security</span>
               <p>LLM agents, IAM policy analysis, risk detection, and structured reports.</p>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section projects-section" id="projects">
-      <div class="section-shell wide">
-        <div class="section-intro reveal">
-          <p class="small-title">Selected work</p>
-          <h2>Projects built around real engineering problems.</h2>
-          <p class="muted-copy">
-            The strongest projects are shown first. Each project has a focused case-study page with goals,
-            features, technical highlights, and what I learned.
-          </p>
+    <section class="section work" id="projects">
+      <div class="section-line"></div>
+      <div class="section-grid">
+        <div class="section-meta reveal">
+          <span>02</span>
+          <p>Work</p>
         </div>
 
-        <div class="project-showcase">
-          <article class="work-card big tilt-card reveal">
-            <div class="work-meta">
-              <span>AI Security</span>
-              <span>Private</span>
-            </div>
-            <h3>IAM Policy Security Review Agent</h3>
-            <p>
-              Multi-agent AI system for reviewing AWS IAM policies, detecting risky permissions,
-              and generating remediation recommendations.
-            </p>
-            <div class="work-tags">
-              <span>Python</span><span>Groq API</span><span>LLM Agents</span><span>AWS IAM</span>
-            </div>
-            <a href="projects/iam-policy-agent.html">Open case study</a>
-          </article>
+        <div class="section-body reveal delay-1">
+          <h2>Selected projects.</h2>
+          <p class="big-copy">
+            A focused selection of software projects across backend, full-stack, AI, security,
+            data analysis, and client-server systems.
+          </p>
 
-          <article class="work-card big tilt-card reveal delay-1">
-            <div class="work-meta">
-              <span>Computer Vision</span>
-              <span>Featured</span>
-            </div>
-            <h3>HelmetGuard</h3>
-            <p>
-              Construction-site safety classification using synthetic images, real data, and fine-tuned
-              vision models.
-            </p>
-            <div class="work-tags">
-              <span>Python</span><span>Stable Diffusion</span><span>ResNet18</span><span>ViT</span>
-            </div>
-            <a href="projects/genai.html">Open case study</a>
-          </article>
+          <div class="work-list">
+            <article class="work-item reveal">
+              <a href="projects/iam-policy-agent.html">
+                <span class="work-number">01</span>
+                <div>
+                  <h3>IAM Policy Security Review Agent</h3>
+                  <p>Multi-agent AI system for reviewing AWS IAM policies and generating remediation recommendations.</p>
+                </div>
+                <span class="work-type">AI Security</span>
+              </a>
+            </article>
 
-          <article class="work-card tilt-card reveal delay-2">
-            <div class="work-meta">
-              <span>Full Stack</span>
-              <span>React + API</span>
-            </div>
-            <h3>Campus Sensors & Shading System</h3>
-            <p>
-              Smart-campus platform for monitoring sensors and controlling shading behavior.
-            </p>
-            <div class="work-tags">
-              <span>React</span><span>Node.js</span><span>MySQL</span>
-            </div>
-            <a href="projects/campus.html">Open case study</a>
-          </article>
+            <article class="work-item reveal">
+              <a href="projects/genai.html">
+                <span class="work-number">02</span>
+                <div>
+                  <h3>HelmetGuard</h3>
+                  <p>Computer vision project for construction-site helmet safety classification.</p>
+                </div>
+                <span class="work-type">Computer Vision</span>
+              </a>
+            </article>
 
-          <article class="work-card tilt-card reveal">
-            <div class="work-meta">
-              <span>Java</span>
-              <span>Client-Server</span>
-            </div>
-            <h3>Store Network System</h3>
-            <p>
-              Java system simulating a clothing store network with roles, inventory, reports, sockets,
-              and threads.
-            </p>
-            <div class="work-tags">
-              <span>Java</span><span>OOP</span><span>Sockets</span><span>Threads</span>
-            </div>
-            <a href="projects/store.html">Open case study</a>
-          </article>
+            <article class="work-item reveal">
+              <a href="projects/campus.html">
+                <span class="work-number">03</span>
+                <div>
+                  <h3>Campus Sensors & Shading System</h3>
+                  <p>Full-stack smart-campus platform for monitoring sensors and controlling shading behavior.</p>
+                </div>
+                <span class="work-type">Full Stack</span>
+              </a>
+            </article>
 
-          <article class="work-card tilt-card reveal delay-1">
-            <div class="work-meta">
-              <span>Backend</span>
-              <span>Testing</span>
-            </div>
-            <h3>Cost Manager API</h3>
-            <p>
-              Expense-management backend with services, reports, validation, logging, MongoDB,
-              and API tests.
-            </p>
-            <div class="work-tags">
-              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Jest</span>
-            </div>
-            <a href="projects/cost-manager.html">Open case study</a>
-          </article>
+            <article class="work-item reveal">
+              <a href="projects/store.html">
+                <span class="work-number">04</span>
+                <div>
+                  <h3>Store Network System</h3>
+                  <p>Java client-server system with sockets, threads, roles, inventory, and reports.</p>
+                </div>
+                <span class="work-type">Java</span>
+              </a>
+            </article>
 
-          <article class="work-card tilt-card reveal delay-2">
-            <div class="work-meta">
-              <span>Game Logic</span>
-              <span>Client-Server</span>
-            </div>
-            <h3>Connect Four Game</h3>
-            <p>
-              Two-player game with room creation, turn handling, server-side state, and win detection.
-            </p>
-            <div class="work-tags">
-              <span>JavaScript</span><span>Node.js</span><span>MySQL</span>
-            </div>
-            <a href="projects/connect4.html">Open case study</a>
-          </article>
+            <article class="work-item reveal">
+              <a href="projects/cost-manager.html">
+                <span class="work-number">05</span>
+                <div>
+                  <h3>Cost Manager API</h3>
+                  <p>Backend expense-management API with MongoDB, validation, logging, and tests.</p>
+                </div>
+                <span class="work-type">Backend</span>
+              </a>
+            </article>
 
-          <article class="work-card tilt-card reveal">
-            <div class="work-meta">
-              <span>Machine Learning</span>
-              <span>Data</span>
-            </div>
-            <h3>Titanic ML Pipeline</h3>
-            <p>
-              Supervised learning workflow with data cleaning, feature engineering, training,
-              tuning, and evaluation.
-            </p>
-            <div class="work-tags">
-              <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
-            </div>
-            <a href="projects/titanic.html">Open case study</a>
-          </article>
+            <article class="work-item reveal">
+              <a href="projects/connect4.html">
+                <span class="work-number">06</span>
+                <div>
+                  <h3>Connect Four Client-Server Game</h3>
+                  <p>Two-player game with room creation, server state, turn handling, and win detection.</p>
+                </div>
+                <span class="work-type">Game Logic</span>
+              </a>
+            </article>
+
+            <article class="work-item reveal">
+              <a href="projects/titanic.html">
+                <span class="work-number">07</span>
+                <div>
+                  <h3>Titanic ML Pipeline</h3>
+                  <p>Supervised learning workflow with cleaning, feature engineering, training, and evaluation.</p>
+                </div>
+                <span class="work-type">ML</span>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section experience-section" id="experience">
-      <div class="section-shell">
-        <div class="section-number reveal">02</div>
-        <div class="section-main reveal delay-1">
-          <p class="small-title">Experience</p>
-          <h2>Production monitoring experience used as a development advantage.</h2>
+    <section class="section experience" id="experience">
+      <div class="section-line"></div>
+      <div class="section-grid">
+        <div class="section-meta reveal">
+          <span>03</span>
+          <p>Experience</p>
+        </div>
+
+        <div class="section-body reveal delay-1">
+          <h2>Production monitoring as an engineering advantage.</h2>
 
           <div class="timeline">
-            <article class="timeline-item reveal">
-              <span class="timeline-year">2026 - Present</span>
+            <article>
+              <span>2026 - Present</span>
               <div>
                 <h3>NOC Analyst · Swiftness</h3>
                 <ul>
@@ -309,19 +282,16 @@
               </div>
             </article>
 
-            <article class="timeline-item reveal delay-1">
-              <span class="timeline-year">2024 - Present</span>
+            <article>
+              <span>2024 - Present</span>
               <div>
                 <h3>B.Sc. Computer Science · HIT</h3>
-                <p>
-                  Academic foundation in algorithms, data structures, databases, machine learning,
-                  OOP, and client-server architecture.
-                </p>
+                <p>Algorithms, data structures, databases, machine learning, OOP, and client-server architecture.</p>
               </div>
             </article>
 
-            <article class="timeline-item reveal delay-2">
-              <span class="timeline-year">2025</span>
+            <article>
+              <span>2025</span>
               <div>
                 <h3>Full-Stack Development · INT & HIT</h3>
                 <p>Full-stack development with Node.js and JavaScript.</p>
@@ -332,82 +302,65 @@
       </div>
     </section>
 
-    <section class="section direction-section">
-      <div class="section-shell">
-        <div class="section-number reveal">03</div>
-        <div class="section-main reveal delay-1">
-          <p class="small-title">Direction</p>
-          <h2>What I am looking for</h2>
-          <p class="large-copy">
-            I am focused on software development opportunities that fit a Computer Science student with
-            strong project work, production awareness, and motivation to grow in backend, full-stack,
-            data, and AI/security-related development.
+    <section class="section direction">
+      <div class="section-line"></div>
+      <div class="section-grid">
+        <div class="section-meta reveal">
+          <span>04</span>
+          <p>Direction</p>
+        </div>
+
+        <div class="section-body reveal delay-1">
+          <h2>What I am looking for.</h2>
+          <p class="big-copy">
+            Software development opportunities that fit a Computer Science student with strong project work, analytical thinking, and motivation to grow in backend, full-stack, data, and AI/security-related development.
           </p>
 
-          <div class="direction-grid">
+          <div class="direction-tags">
             <span>Software Development Position</span>
             <span>Backend / API Development</span>
             <span>Full-Stack Development</span>
             <span>Data & Technical Analysis</span>
-            <span>Production-Aware Software Teams</span>
+            <span>System Analysis Workflows</span>
             <span>AI / Security-Oriented Software Projects</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section" id="skills">
-      <div class="section-shell wide">
-        <div class="section-intro reveal">
-          <p class="small-title">Skills</p>
-          <h2>Technical toolkit</h2>
+    <section class="section skills" id="skills">
+      <div class="section-line"></div>
+      <div class="section-grid">
+        <div class="section-meta reveal">
+          <span>05</span>
+          <p>Skills</p>
         </div>
 
-        <div class="skill-strip">
-          <div class="skill-block reveal">
-            <h3>Programming</h3>
-            <p>JavaScript, Python, Java, C, C++, C#</p>
-          </div>
-          <div class="skill-block reveal delay-1">
-            <h3>Web</h3>
-            <p>React, Node.js, Express.js, REST APIs, HTML, CSS, Vite</p>
-          </div>
-          <div class="skill-block reveal delay-2">
-            <h3>Databases</h3>
-            <p>MySQL, SQL, MongoDB, Mongoose</p>
-          </div>
-          <div class="skill-block reveal">
-            <h3>Data & ML</h3>
-            <p>Pandas, Scikit-learn, Matplotlib, Data Processing, Image Classification</p>
-          </div>
-          <div class="skill-block reveal delay-1">
-            <h3>Systems</h3>
-            <p>OOP, Algorithms, Data Structures, Client-Server Architecture, Threads</p>
-          </div>
-          <div class="skill-block reveal delay-2">
-            <h3>Security & AI</h3>
-            <p>AWS IAM, IAM Policy Analysis, LLM Agents, Groq API, Security Automation</p>
-          </div>
-          <div class="skill-block reveal">
-            <h3>Tools</h3>
-            <p>Git, GitHub, Jupyter Notebook, Google Colab, Monitoring Dashboards</p>
-          </div>
-          <div class="skill-block reveal delay-1">
-            <h3>Languages</h3>
-            <p>Hebrew - Native, English - High level, Arabic - Advanced</p>
+        <div class="section-body reveal delay-1">
+          <h2>Technical toolkit.</h2>
+
+          <div class="skill-grid">
+            <article><h3>Programming</h3><p>JavaScript, Python, Java, C, C++, C#</p></article>
+            <article><h3>Web</h3><p>React, Node.js, Express.js, REST APIs, HTML, CSS, Vite</p></article>
+            <article><h3>Databases</h3><p>MySQL, SQL, MongoDB, Mongoose</p></article>
+            <article><h3>Data & ML</h3><p>Pandas, Scikit-learn, Matplotlib, Data Processing, Image Classification</p></article>
+            <article><h3>Systems</h3><p>OOP, Algorithms, Data Structures, Client-Server Architecture, Threads</p></article>
+            <article><h3>Security & AI</h3><p>AWS IAM, IAM Policy Analysis, LLM Agents, Groq API, Security Automation</p></article>
+            <article><h3>Tools</h3><p>Git, GitHub, Jupyter Notebook, Google Colab, Monitoring Dashboards</p></article>
+            <article><h3>Languages</h3><p>Hebrew - Native, English - High level, Arabic - Advanced</p></article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="contact-panel reveal">
-        <p class="small-title">Contact</p>
-        <h2>Let’s talk about software projects.</h2>
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="kicker">Contact</p>
+        <h2>Let’s build something practical.</h2>
         <p>
-          I am looking for software development opportunities focused on backend systems, full-stack
-          applications, APIs, databases, data analysis, and AI/security-oriented projects.
+          I am looking for software development opportunities focused on backend systems, full-stack applications, APIs, databases, data analysis, technical analysis, and AI/security-oriented projects.
         </p>
+
         <div class="contact-links">
           <a href="mailto:danku2001@gmail.com">danku2001@gmail.com</a>
           <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
@@ -422,6 +375,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
