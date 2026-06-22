@@ -3,81 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HelmetGuard - GenAI Computer Vision project by Dan Kuenkas." />
-  <title>HelmetGuard - GenAI Computer Vision | Dan Kuenkas</title>
+  <meta name="description" content="Connect Four Client-Server Game project by Dan Kuenkas." />
+  <title>Connect Four Client-Server Game | Dan Kuenkas</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">AI / Computer Vision</span>
-      <h1>HelmetGuard - GenAI Computer Vision</h1>
-      <p class="subtitle">A computer vision project for classifying construction-site safety based on helmet usage.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Python</span>
-          <span>Computer Vision</span>
-          <span>Stable Diffusion</span>
-          <span>ResNet18</span>
-          <span>ViT</span>
-          <span>Google Colab</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Game Logic · Node.js · MySQL
+      </div>
+      <h1 class="reveal delay-1">Connect Four Client-Server Game</h1>
+      <p class="hero-subtitle reveal delay-2">A two-player Connect Four game with room creation, turns, and server-side game-state handling.</p>
+
+      <div class="tags reveal delay-2">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>MySQL</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/GenAI-Project" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">Construction-site safety monitoring can be time consuming and inconsistent. The goal of this project was to classify images as safe or unsafe based on whether workers are wearing helmets, while exploring the use of synthetic data and real-world images.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
-              <li>Created synthetic training data using Stable Diffusion.</li>
-              <li>Used real-world image data from public sources.</li>
-              <li>Built a safe / unsafe image classification dataset.</li>
-              <li>Fine-tuned pretrained vision models.</li>
-              <li>Compared ResNet18 and Vision Transformer approaches.</li>
-              <li>Used data augmentation to improve generalization.</li>
-              <li>Analyzed limitations, domain gap, and future improvements.</li>
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Game / full-stack practice</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>HTML, CSS, JavaScript, Node.js, MySQL</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>Game state and client-server flow</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">The project implements a two-player Connect Four game where one player creates a room and another joins using a code. The goal was to practice client-server thinking, game state, and turn-based logic.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
+              <li>Room creation with a game code.</li>
+              <li>Two-player joining flow.</li>
+              <li>Turn management.</li>
+              <li>Server-side game-state handling.</li>
+              <li>Win and draw detection.</li>
+              <li>Client, server, and database separation.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
-              <li>Combined generative AI and supervised image classification.</li>
-              <li>Compared model behavior on synthetic and real images.</li>
-              <li>Used pretrained models to improve training efficiency.</li>
-              <li>Presented results and limitations clearly instead of only reporting accuracy.</li>
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
+              <li>Implemented core game logic in JavaScript.</li>
+              <li>Used Node.js for backend game flow.</li>
+              <li>Used MySQL for persistent game-related data.</li>
+              <li>Practiced synchronization between client actions and server state.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project improved my understanding of computer vision, synthetic data, fine-tuning, model comparison, data augmentation, and real-world limitations in machine learning systems.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add more real-world labeled images.</li>
-              <li>Create a lightweight inference script.</li>
-              <li>Add visual examples of predictions.</li>
-              <li>Add a small web demo or notebook demo.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project helped me understand how to structure interactive game logic, manage state, and connect a simple frontend to backend and database layers.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
