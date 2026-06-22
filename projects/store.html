@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Titanic ML Pipeline project by Dan Kuenkas." />
-  <title>Titanic ML Pipeline | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css?v=9" />
+  <meta name="description" content="Store Network System project by Dan Kuenkas." />
+  <title>Store Network System | Dan Kuenkas</title>
+  <link rel="stylesheet" href="../styles.css?v=10" />
 </head>
 <body>
-  <div class="progress" id="scrollProgress"></div>
-  <div class="page-texture"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg"></div>
 
-  <header class="site-header">
-    <a class="mark" href="../index.html#top">
-      <span class="mark-shape"></span>
-      <span class="mark-name">Dan Kuenkas</span>
+  <header class="topbar">
+    <a class="brand" href="../index.html#top">
+      <span class="brand-symbol"></span>
+      <span>Dan Kuenkas</span>
     </a>
 
-    <button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false">
-      <span class="menu-dot"></span>
-      <span>Menu</span>
-    </button>
+    <div class="top-actions">
+      <a class="hire-link" href="mailto:danku2001@gmail.com?subject=Software%20Development%20Opportunity&body=Hi%20Dan,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20software%20development%20opportunity.%0D%0A%0D%0A">Hire me</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-dot"></span>
+        <span>Menu</span>
+      </button>
+    </div>
   </header>
 
-  <div class="menu-screen" id="menuScreen" aria-hidden="true">
-    <div class="menu-screen-inner">
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-inner">
       <div class="menu-top">
         <span>Navigation</span>
-        <button id="menuClose" type="button">Close</button>
+        <button class="menu-close" id="menuClose" type="button">Close</button>
       </div>
 
       <nav class="menu-nav">
@@ -39,7 +42,7 @@
         <a href="../index.html#contact">Contact</a>
       </nav>
 
-      <div class="menu-bottom">
+      <div class="menu-social">
         <a href="https://github.com/danku2001" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/dan-kuenkas-b74833318/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:danku2001@gmail.com">Email</a>
@@ -49,22 +52,22 @@
 
   <main>
     <section class="project-hero">
-      <p class="kicker reveal">Machine Learning · Data Processing · Evaluation</p>
-      <h1 class="reveal delay-1">Titanic ML Pipeline</h1>
-      <p class="reveal delay-2">A supervised learning project for predicting Titanic passenger survival.</p>
+      <p class="eyebrow reveal">Java · Sockets · OOP · Threads</p>
+      <h1 class="reveal delay-1">Store Network System</h1>
+      <p class="reveal delay-1">A Java client-server system that simulates a multi-branch clothing store network.</p>
 
-      <div class="tag-row reveal delay-2">
-        <span>Python</span>
-        <span>Pandas</span>
-        <span>Scikit-learn</span>
-        <span>Random Forest</span>
-        <span>Logistic Regression</span>
-        <span>GridSearchCV</span>
+      <div class="tag-row reveal delay-1">
+        <span>Java</span>
+        <span>OOP</span>
+        <span>Sockets</span>
+        <span>Threads</span>
+        <span>JSON</span>
+        <span>Design Patterns</span>
       </div>
 
-      <div class="page-actions reveal delay-2">
-        <a href="../index.html#projects">Back to work</a>
-        <a href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">Open GitHub</a>
+      <div class="page-actions reveal delay-1">
+        <a class="primary-link" href="../index.html#projects">Back to work</a>
+        <a href="https://github.com/danku2001/StoreNetworkSystem" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </section>
 
@@ -74,15 +77,15 @@
         <div class="fact-list">
           <div class="fact">
             <strong>Project type</strong>
-            <span>Machine learning assignment</span>
+            <span>Java system project</span>
           </div>
           <div class="fact">
             <strong>Main stack</strong>
-            <span>Python, Pandas, Scikit-learn</span>
+            <span>Java, sockets, threads, JSON</span>
           </div>
           <div class="fact">
             <strong>Focus</strong>
-            <span>ML workflow and evaluation</span>
+            <span>Client-server architecture</span>
           </div>
           <div class="fact">
             <strong>Repository</strong>
@@ -94,31 +97,32 @@
       <div class="case-stack">
         <article class="case-card reveal">
           <h2>Problem / Goal</h2>
-          <p>The goal was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
+          <p>The goal was to model a larger business system with multiple branches, employees, customers, inventory, purchases, permissions, reports, and communication between branches.</p>
         </article>
         <article class="case-card reveal">
           <h2>Key Features</h2>
           <ul>
-            <li>Exploratory Data Analysis.</li>
-            <li>Missing-value handling.</li>
-            <li>Feature engineering, including FamilySize and FarePerPerson.</li>
-            <li>Random Forest and Logistic Regression models.</li>
-            <li>Hyperparameter tuning with GridSearchCV.</li>
-            <li>Evaluation using F1 Score and confusion matrix.</li>
+            <li>Server that handles multiple clients using threads.</li>
+            <li>Console-based client application.</li>
+            <li>User authentication and role-based permissions.</li>
+            <li>Duplicate login prevention.</li>
+            <li>Inventory, employee, customer, and purchase management.</li>
+            <li>Reports by branch, product, and category.</li>
+            <li>Inter-branch chat and communication.</li>
           </ul>
         </article>
         <article class="case-card reveal">
           <h2>Technical Highlights</h2>
           <ul>
-            <li>Built a full ML workflow from preprocessing to evaluation.</li>
-            <li>Compared multiple models.</li>
-            <li>Used feature engineering to improve the dataset representation.</li>
-            <li>Evaluated performance using classification metrics.</li>
+            <li>Used Java sockets for client-server communication.</li>
+            <li>Applied OOP principles such as inheritance, polymorphism, and interfaces.</li>
+            <li>Used design patterns such as Singleton, Strategy, and Observer.</li>
+            <li>Handled a larger system structure with multiple responsibilities and entities.</li>
           </ul>
         </article>
         <article class="case-card reveal">
           <h2>What I Learned</h2>
-          <p>This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
+          <p>This project helped me practice Java system design, object-oriented programming, sockets, multithreading, role-based flows, and organizing a larger codebase.</p>
         </article>
       </div>
     </section>
@@ -129,6 +133,6 @@
     <a href="../index.html#projects">Back to work</a>
   </footer>
 
-  <script src="../script.js?v=9"></script>
+  <script src="../script.js?v=10"></script>
 </body>
 </html>
