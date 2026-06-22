@@ -5,41 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Titanic Machine Learning Pipeline project by Dan Kuenkas." />
   <title>Titanic Machine Learning Pipeline | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles.css?v=4" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">Machine Learning</span>
-      <h1>Titanic Machine Learning Pipeline</h1>
-      <p class="subtitle">A supervised learning project for predicting Titanic passenger survival.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Python</span>
-          <span>Pandas</span>
-          <span>Scikit-learn</span>
-          <span>Random Forest</span>
-          <span>Logistic Regression</span>
-          <span>GridSearchCV</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Machine Learning · Data Processing · Evaluation
+      </div>
+      <h1 class="reveal delay-1">Titanic Machine Learning Pipeline</h1>
+      <p class="hero-subtitle reveal delay-2">A supervised learning project for predicting Titanic passenger survival.</p>
+
+      <div class="tags reveal delay-2">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Random Forest</span>
+            <span>Logistic Regression</span>
+            <span>GridSearchCV</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/titanic-ml-assignment" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">The goal of this project was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Machine learning assignment</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>Python, Pandas, Scikit-learn</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>ML workflow and evaluation</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">The goal was to build an end-to-end supervised learning workflow for predicting passenger survival using the Titanic dataset.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>Exploratory Data Analysis.</li>
               <li>Missing-value handling.</li>
               <li>Feature engineering, including FamilySize and FarePerPerson.</li>
@@ -47,39 +103,32 @@
               <li>Hyperparameter tuning with GridSearchCV.</li>
               <li>Evaluation using F1 Score and confusion matrix.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Built a full ML workflow from preprocessing to evaluation.</li>
               <li>Compared multiple models.</li>
               <li>Used feature engineering to improve the dataset representation.</li>
               <li>Evaluated performance using classification metrics.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add a summary of final results to the README.</li>
-              <li>Add key plots to the project page or README.</li>
-              <li>Add a requirements.txt file.</li>
-              <li>Clean the notebook for presentation.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project helped me practice the standard machine learning workflow, including cleaning data, building features, training models, tuning parameters, and interpreting evaluation results.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="../script.js?v=4"></script>
 </body>
 </html>
