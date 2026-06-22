@@ -2,9 +2,11 @@ document.documentElement.classList.add("js");
 
 const year = document.getElementById("year");
 const progress = document.getElementById("scrollProgress");
-const menuTrigger = document.getElementById("menuTrigger");
+const menuButton = document.getElementById("menuButton");
 const menuClose = document.getElementById("menuClose");
-const menuScreen = document.getElementById("menuScreen");
+const menuOverlay = document.getElementById("menuOverlay");
+const pupils = document.querySelectorAll(".pupil");
+const portraitSvg = document.querySelector(".portrait-svg");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -23,20 +25,20 @@ updateProgress();
 
 function openMenu() {
   document.body.classList.add("menu-open");
-  menuTrigger?.setAttribute("aria-expanded", "true");
-  menuScreen?.setAttribute("aria-hidden", "false");
+  menuButton?.setAttribute("aria-expanded", "true");
+  menuOverlay?.setAttribute("aria-hidden", "false");
 }
 
 function closeMenu() {
   document.body.classList.remove("menu-open");
-  menuTrigger?.setAttribute("aria-expanded", "false");
-  menuScreen?.setAttribute("aria-hidden", "true");
+  menuButton?.setAttribute("aria-expanded", "false");
+  menuOverlay?.setAttribute("aria-hidden", "true");
 }
 
-menuTrigger?.addEventListener("click", openMenu);
+menuButton?.addEventListener("click", openMenu);
 menuClose?.addEventListener("click", closeMenu);
 
-document.querySelectorAll(".menu-nav a, .menu-bottom a").forEach((link) => {
+document.querySelectorAll(".menu-nav a, .menu-social a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
@@ -62,17 +64,12 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-
-// V8: portrait eyes follow the cursor
-const pupils = document.querySelectorAll(".pupil");
-const portraitSvg = document.querySelector(".portrait-svg");
-
 function moveEyes(clientX, clientY) {
   if (!portraitSvg || !pupils.length) return;
 
   const rect = portraitSvg.getBoundingClientRect();
-  const svgX = ((clientX - rect.left) / rect.width) * 260;
-  const svgY = ((clientY - rect.top) / rect.height) * 260;
+  const svgX = ((clientX - rect.left) / rect.width) * 300;
+  const svgY = ((clientY - rect.top) / rect.height) * 300;
 
   pupils.forEach((pupil) => {
     const originX = Number(pupil.dataset.originX);
@@ -80,7 +77,7 @@ function moveEyes(clientX, clientY) {
     const dx = svgX - originX;
     const dy = svgY - originY;
     const distance = Math.hypot(dx, dy) || 1;
-    const maxMove = 4.4;
+    const maxMove = 5;
 
     const moveX = (dx / distance) * Math.min(maxMove, distance);
     const moveY = (dy / distance) * Math.min(maxMove, distance);
