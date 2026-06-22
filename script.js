@@ -404,3 +404,4 @@ document.querySelector(".brand")?.addEventListener("click", (event) => {
     openEgg();
   }
 });
+{}
