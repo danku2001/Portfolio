@@ -8,39 +8,94 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="header page-header">
-    <div class="container">
-      <span class="badge">Backend</span>
-      <h1>Cost Manager API</h1>
-      <p class="subtitle">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-bg">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="noise"></div>
+  </div>
 
-      <div class="tags">
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>MongoDB</span>
-          <span>Mongoose</span>
-          <span>REST API</span>
-          <span>Jest</span>
-          <span>Supertest</span>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html#top">
+        <span class="brand-mark">DK</span>
+        <span>Dan Kuenkas</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="top">
+    <div class="container">
+      <div class="eyebrow reveal">
+        <span class="pulse-dot"></span>
+        Backend · Node.js · MongoDB · Testing
+      </div>
+      <h1 class="reveal delay-1">Cost Manager API</h1>
+      <p class="hero-subtitle reveal delay-2">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
+
+      <div class="tags reveal delay-2">
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Mongoose</span>
+            <span>REST API</span>
+            <span>Jest</span>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="../index.html#projects">Back to Projects</a>
-        <a class="btn" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-actions reveal delay-2">
+        <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container details-grid">
-        <article class="detail-card">
-          <h2>Problem / Goal</h2>
-          <p class="muted">The goal of this project was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Key Features</h2>
-          <ul class="list">
+      <div class="container case-layout">
+        <aside class="case-card reveal">
+          <h2>Quick facts</h2>
+          <div class="fact-list">
+            <div class="fact">
+              <strong>Project type</strong>
+              <span>Backend API project</span>
+            </div>
+            <div class="fact">
+              <strong>Main stack</strong>
+              <span>Node.js, Express, MongoDB</span>
+            </div>
+            <div class="fact">
+              <strong>Focus</strong>
+              <span>REST APIs, validation, logging, tests</span>
+            </div>
+            <div class="fact">
+              <strong>Repository</strong>
+              <span>Public GitHub project</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="case-stack">
+          <article class="case-card reveal">
+            <h2>Problem / Goal</h2>
+            <p class="muted">The goal was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
+          </article>
+          <article class="case-card reveal">
+            <h2>Key Features</h2>
+            <ul class="clean-list">
               <li>User management through a dedicated users service.</li>
               <li>Expense creation and categorization through a costs service.</li>
               <li>Monthly reports by user, year, and month.</li>
@@ -49,37 +104,30 @@
               <li>Separate services for users, costs, logs, and about/team information.</li>
               <li>Automated API tests using Jest and Supertest.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>Technical Highlights</h2>
-          <ul class="list">
+          </article>
+          <article class="case-card reveal">
+            <h2>Technical Highlights</h2>
+            <ul class="clean-list">
               <li>Built REST API routes with Express.js.</li>
               <li>Connected the backend to MongoDB using Mongoose.</li>
               <li>Separated responsibilities across multiple services.</li>
               <li>Used validation and logging to make the API easier to debug and maintain.</li>
               <li>Tested endpoints with automated API tests.</li>
             </ul>
-        </article>
-        <article class="detail-card">
-          <h2>What I Learned</h2>
-          <p class="muted">This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
-        </article>
-        <article class="detail-card">
-          <h2>Possible Improvements</h2>
-          <ul class="list">
-              <li>Add full API documentation with request and response examples.</li>
-              <li>Add Swagger or Postman screenshots.</li>
-              <li>Add Docker Compose for easier local setup.</li>
-              <li>Add authentication and authorization for real user accounts.</li>
-            </ul>
-        </article>
+          </article>
+          <article class="case-card reveal">
+            <h2>What I Learned</h2>
+            <p class="muted">This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Dan Kuenkas
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dan Kuenkas</span>
+      <a href="../index.html#projects">Back to projects</a>
     </div>
   </footer>
 
