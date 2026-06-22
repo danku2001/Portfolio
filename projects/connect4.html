@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Connect Four Client-Server Game project by Dan Kuenkas." />
-  <title>Connect Four Client-Server Game | Dan Kuenkas</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Cost Manager API project by Dan Kuenkas." />
+  <title>Cost Manager API | Dan Kuenkas</title>
+  <link rel="stylesheet" href="../styles.css?v=4" />
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -42,22 +42,23 @@
     <div class="container">
       <div class="eyebrow reveal">
         <span class="pulse-dot"></span>
-        Game Logic · Node.js · MySQL
+        Backend · Node.js · MongoDB · Testing
       </div>
-      <h1 class="reveal delay-1">Connect Four Client-Server Game</h1>
-      <p class="hero-subtitle reveal delay-2">A two-player Connect Four game with room creation, turns, and server-side game-state handling.</p>
+      <h1 class="reveal delay-1">Cost Manager API</h1>
+      <p class="hero-subtitle reveal delay-2">A backend expense-management system for tracking user expenses and generating monthly reports.</p>
 
       <div class="tags reveal delay-2">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
             <span>Node.js</span>
-            <span>MySQL</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Mongoose</span>
+            <span>REST API</span>
+            <span>Jest</span>
       </div>
 
       <div class="hero-actions reveal delay-2">
         <a class="btn magnetic" href="../index.html#projects">Back to Projects</a>
-        <a class="btn primary magnetic" href="https://github.com/danku2001/four-in-a-row" target="_blank" rel="noopener">Open GitHub</a>
+        <a class="btn primary magnetic" href="https://github.com/danku2001/cost-manager-final-project" target="_blank" rel="noopener">Open GitHub</a>
       </div>
     </div>
   </header>
@@ -70,15 +71,15 @@
           <div class="fact-list">
             <div class="fact">
               <strong>Project type</strong>
-              <span>Game / full-stack practice</span>
+              <span>Backend API project</span>
             </div>
             <div class="fact">
               <strong>Main stack</strong>
-              <span>HTML, CSS, JavaScript, Node.js, MySQL</span>
+              <span>Node.js, Express, MongoDB</span>
             </div>
             <div class="fact">
               <strong>Focus</strong>
-              <span>Game state and client-server flow</span>
+              <span>REST APIs, validation, logging, tests</span>
             </div>
             <div class="fact">
               <strong>Repository</strong>
@@ -90,31 +91,33 @@
         <div class="case-stack">
           <article class="case-card reveal">
             <h2>Problem / Goal</h2>
-            <p class="muted">The project implements a two-player Connect Four game where one player creates a room and another joins using a code. The goal was to practice client-server thinking, game state, and turn-based logic.</p>
+            <p class="muted">The goal was to build a structured backend system that manages users, expenses, logs, and monthly cost reports through REST APIs.</p>
           </article>
           <article class="case-card reveal">
             <h2>Key Features</h2>
             <ul class="clean-list">
-              <li>Room creation with a game code.</li>
-              <li>Two-player joining flow.</li>
-              <li>Turn management.</li>
-              <li>Server-side game-state handling.</li>
-              <li>Win and draw detection.</li>
-              <li>Client, server, and database separation.</li>
+              <li>User management through a dedicated users service.</li>
+              <li>Expense creation and categorization through a costs service.</li>
+              <li>Monthly reports by user, year, and month.</li>
+              <li>Request validation for user IDs, amounts, categories, and dates.</li>
+              <li>Logging system for service requests.</li>
+              <li>Separate services for users, costs, logs, and about/team information.</li>
+              <li>Automated API tests using Jest and Supertest.</li>
             </ul>
           </article>
           <article class="case-card reveal">
             <h2>Technical Highlights</h2>
             <ul class="clean-list">
-              <li>Implemented core game logic in JavaScript.</li>
-              <li>Used Node.js for backend game flow.</li>
-              <li>Used MySQL for persistent game-related data.</li>
-              <li>Practiced synchronization between client actions and server state.</li>
+              <li>Built REST API routes with Express.js.</li>
+              <li>Connected the backend to MongoDB using Mongoose.</li>
+              <li>Separated responsibilities across multiple services.</li>
+              <li>Used validation and logging to make the API easier to debug and maintain.</li>
+              <li>Tested endpoints with automated API tests.</li>
             </ul>
           </article>
           <article class="case-card reveal">
             <h2>What I Learned</h2>
-            <p class="muted">This project helped me understand how to structure interactive game logic, manage state, and connect a simple frontend to backend and database layers.</p>
+            <p class="muted">This project helped me practice backend service separation, REST API design, database modeling, validation, logging, and automated testing.</p>
           </article>
         </div>
       </div>
@@ -128,6 +131,6 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="../script.js?v=4"></script>
 </body>
 </html>
